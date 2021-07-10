@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_portgroup-Add-Portgroup-with-Promiscuous-Mode-Enabled

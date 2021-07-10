@@ -1,0 +1,22 @@
+---
+# tasks file forvmware_guest_instant_clone
+# From file: vmware_guest_instant_clone.py
+- name: Instant clone in check mode
+
+  community.vmware.vmware_guest_instant_clone:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    validate_certs: False
+    folder: "{{ f0 }}"
+    datastore: "{{ rw_datastore }}"
+    datacenter: "{{ dc1 }}"
+    host: "{{ esx1 }}"
+    name: "{{ Clone_vm }}"
+    parent_vm: "{{ testvm_2 }}"
+    resource_pool: "{{ test_resource_001 }}"
+  check_mode: true
+  register: check_mode_clone
+  delegate_to: localhost
+- debug:
+    var: check_mode_clone

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_local_role_manager-Remove-local-role-from-ESXi

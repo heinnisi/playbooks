@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_portgroup
+# From file: vmware_portgroup.py
+- name: Add Management Network VM Portgroup to specific hosts
+
+  community.vmware.vmware_portgroup:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    hosts: [esxi_hostname_one]
+    switch: "{{ vswitch_name }}"
+    portgroup: "{{ portgroup_name }}"
+    vlan_id: "{{ vlan_id }}"
+  delegate_to: localhost

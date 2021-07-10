@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_host_snmp
+# From file: vmware_host_snmp.py
+- name: Disable SNMP
+
+  community.vmware.vmware_host_snmp:
+    hostname: '{{ esxi_hostname }}'
+    username: '{{ esxi_username }}'
+    password: '{{ esxi_password }}'
+    state: disabled
+  delegate_to: localhost
+'''

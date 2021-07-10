@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_portgroup
+# From file: vmware_portgroup.py
+- name: Add Portgroup with Promiscuous Mode Enabled
+
+  community.vmware.vmware_portgroup:
+    hostname: "{{ esxi_hostname }}"
+    username: "{{ esxi_username }}"
+    password: "{{ esxi_password }}"
+    switch: "{{ vswitch_name }}"
+    portgroup: "{{ portgroup_name }}"
+    security:
+        promiscuous_mode: True
+  delegate_to: localhost

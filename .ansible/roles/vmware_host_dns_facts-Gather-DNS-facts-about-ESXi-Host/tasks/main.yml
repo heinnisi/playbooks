@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_host_dns_facts
+# From file: vmware_host_dns_facts.py
+- name: Gather DNS facts about ESXi Host
+
+  community.vmware.vmware_host_dns_facts:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+  delegate_to: localhost
+'''

@@ -1,0 +1,16 @@
+---
+# tasks file forvmware_host_firewall_manager
+# From file: vmware_host_firewall_manager.py
+- name: Enable vvold rule set for an ESXi Host
+
+  community.vmware.vmware_host_firewall_manager:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+    rules:
+        - name: vvold
+          enabled: True
+          allowed_hosts:
+            all_ip: True
+  delegate_to: localhost

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_iscsi_info-Gather-iSCSI-configuration-information-of-ESXi-host

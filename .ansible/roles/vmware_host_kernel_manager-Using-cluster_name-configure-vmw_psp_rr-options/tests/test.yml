@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_kernel_manager-Using-cluster_name-configure-vmw_psp_rr-options

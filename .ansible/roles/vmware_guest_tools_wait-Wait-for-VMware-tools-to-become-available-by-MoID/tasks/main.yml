@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_guest_tools_wait
+# From file: vmware_guest_tools_wait.py
+- name: Wait for VMware tools to become available by MoID
+
+  community.vmware.vmware_guest_tools_wait:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    moid: vm-42
+  delegate_to: localhost
+  register: facts

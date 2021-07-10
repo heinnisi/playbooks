@@ -1,0 +1,17 @@
+---
+# tasks file forvmware_local_role_facts
+# From file: vmware_local_role_facts.py
+- name: Gather facts about local role from an ESXi
+
+  community.vmware.vmware_local_role_facts:
+    hostname: '{{ esxi_hostname }}'
+    username: '{{ esxi_username }}'
+    password: '{{ esxi_password }}'
+  register: fact_details
+  delegate_to: localhost
+- name: Get Admin privileges
+  set_fact:
+    admin_priv: "{{ fact_details.local_role_facts['Admin']['privileges'] }}"
+- debug:
+    msg: "{{ admin_priv }}"
+'''

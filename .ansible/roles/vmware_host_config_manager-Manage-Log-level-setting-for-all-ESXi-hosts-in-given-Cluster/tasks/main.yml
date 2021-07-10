@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_host_config_manager
+# From file: vmware_host_config_manager.py
+- name: Manage Log level setting for all ESXi hosts in given Cluster
+
+  community.vmware.vmware_host_config_manager:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    cluster_name: cluster_name
+    options:
+        'Config.HostAgent.log.level': 'info'
+  delegate_to: localhost

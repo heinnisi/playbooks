@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_guest_tools_wait
+# From file: vmware_guest_tools_wait.py
+- name: Wait for VMware tools to become available by UUID
+
+  vmware_guest_facts:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter }}"
+    folder: "/{{datacenter}}/vm"
+    name: "{{ vm_name }}"
+  delegate_to: localhost
+  register: vm_facts

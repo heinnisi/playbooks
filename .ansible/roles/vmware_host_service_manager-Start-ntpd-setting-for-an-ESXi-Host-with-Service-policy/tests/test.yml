@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_service_manager-Start-ntpd-setting-for-an-ESXi-Host-with-Service-policy

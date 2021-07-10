@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_network-change-network-for-005056112233-on-vm01domainfake

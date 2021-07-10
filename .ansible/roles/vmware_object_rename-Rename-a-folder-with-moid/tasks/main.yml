@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_object_rename
+# From file: vmware_object_rename.py
+- name: Rename a folder with moid
+
+  community.vmware.vmware_object_rename:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    new_name: backup
+    object_moid: group-v46
+    object_type: Folder
+  delegate_to: localhost

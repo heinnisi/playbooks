@@ -1,0 +1,16 @@
+---
+# tasks file forvmware_guest_register_operation
+# From file: vmware_guest_register_operation.py
+- name: Register VM in Cluster
+
+  community.vmware.vmware_guest_register_operation:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter }}"
+    folder: "/vm"
+    cluster: "{{ cluster_name }}"
+    name: "{{ vm_name }}"
+    template: false
+    path: "[datastore1] vm/vm.vmx"
+    state: present

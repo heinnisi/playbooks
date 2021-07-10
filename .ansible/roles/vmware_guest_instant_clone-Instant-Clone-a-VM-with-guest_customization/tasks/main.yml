@@ -1,0 +1,28 @@
+---
+# tasks file forvmware_guest_instant_clone
+# From file: vmware_guest_instant_clone.py
+- name: Instant Clone a VM with guest_customization
+
+  community.vmware.vmware_guest_instant_clone:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    vm_username: "root"
+    vm_password: "SuperSecret"
+    validate_certs: False
+    folder: "{{ f0 }}"
+    datastore: "{{ rw_datastore }}"
+    datacenter: "{{ dc1 }}"
+    host: "{{ esxi1 }}"
+    guestinfo_vars:
+      - hostname: "{{ guestinfo.ic.hostname }}"
+        ipaddress: "{{ guestinfo.ic.ipaddress }}"
+        netmask: "{{ guestinfo.ic.netmask }}"
+        gateway: "{{ guestinfo.ic.gateway }}"
+        dns: "{{ guestinfo.ic.dns }}"
+        domain: "{{ guestinfo.ic.domain }}"
+    name: "Instant_clone_guest_customize"
+    parent_vm: "test_vm1"
+    resource_pool: DC0_C0_RP1
+  register: Instant_cloned_guest_customize
+  delegate_to: localhost

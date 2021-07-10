@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_move-Get-UUID-from-previous-task-and-pass-it-to-this-task

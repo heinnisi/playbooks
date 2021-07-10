@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_vmhba_info-Gather-info-about-vmhbas-of-an-ESXi-Host

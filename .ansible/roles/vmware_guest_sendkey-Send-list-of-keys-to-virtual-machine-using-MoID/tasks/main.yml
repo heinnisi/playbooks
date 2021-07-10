@@ -1,0 +1,16 @@
+---
+# tasks file forvmware_guest_sendkey
+# From file: vmware_guest_sendkey.py
+- name: Send list of keys to virtual machine using MoID
+
+  community.vmware.vmware_guest_sendkey:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    folder: "{{ folder_name }}"
+    moid: vm-42
+    keys_send:
+      - CTRL_ALT_DEL
+  delegate_to: localhost
+  register: ctrl_alt_del_sent

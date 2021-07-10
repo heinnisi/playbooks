@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_object_role_permission_info-Gather-permission-information-about-Datastore

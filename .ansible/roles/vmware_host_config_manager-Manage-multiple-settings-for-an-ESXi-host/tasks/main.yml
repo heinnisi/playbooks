@@ -1,0 +1,16 @@
+---
+# tasks file forvmware_host_config_manager
+# From file: vmware_host_config_manager.py
+- name: Manage multiple settings for an ESXi host
+
+  community.vmware.vmware_host_config_manager:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+    options:
+        'Config.HostAgent.log.level': 'verbose'
+        'Annotations.WelcomeMessage': 'Hello World'
+        'Config.HostAgent.plugins.solo.enableMob': false
+  delegate_to: localhost
+'''

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_sriov-enable-SR-IOV-on-vmnic0-with-8-functions

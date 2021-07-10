@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_guest_storage_policy
+# From file: vmware_guest_storage_policy.py
+- name: Enforce storepol1 policy for VM Home using name
+
+  community.vmware.vmware_guest_storage_policy:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    validate_certs: no
+    name: hostname1
+    vm_home: storepol1
+  delegate_to: localhost
+'''

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_snapshot_facts-Gather-snapshot-information-about-the-virtual-machine-using-MoID

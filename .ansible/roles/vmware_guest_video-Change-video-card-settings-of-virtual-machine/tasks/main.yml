@@ -1,0 +1,20 @@
+---
+# tasks file forvmware_guest_video
+# From file: vmware_guest_video.py
+- name: Change video card settings of virtual machine
+
+  community.vmware.vmware_guest_video:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    name: test-vm
+    gather_video_facts: false
+    use_auto_detect: false
+    display_number: 2
+    video_memory_mb: 8.0
+    enable_3D: true
+    renderer_3D: automatic
+    memory_3D_mb: 512
+  delegate_to: localhost
+  register: video_facts

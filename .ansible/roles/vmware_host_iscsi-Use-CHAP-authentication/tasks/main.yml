@@ -1,0 +1,18 @@
+---
+# tasks file forvmware_host_iscsi
+# From file: vmware_host_iscsi.py
+- name: Use CHAP authentication
+
+  community.vmware.vmware_host_iscsi:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    esxi_hostname: "{{ esxi_hostname }}"
+    iscsi_config:
+      vmhba_name: vmhba65
+      authentication:
+        chap_auth_enabled: true
+        chap_authentication_type: chapPreferred
+        chap_name: chap_user_name
+        chap_secret: secret
+    state: present

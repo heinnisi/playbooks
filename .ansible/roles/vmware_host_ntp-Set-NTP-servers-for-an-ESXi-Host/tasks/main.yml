@@ -1,0 +1,15 @@
+---
+# tasks file forvmware_host_ntp
+# From file: vmware_host_ntp.py
+- name: Set NTP servers for an ESXi Host
+
+  community.vmware.vmware_host_ntp:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+    state: present
+    ntp_servers:
+        - 0.pool.ntp.org
+        - 1.pool.ntp.org
+  delegate_to: localhost

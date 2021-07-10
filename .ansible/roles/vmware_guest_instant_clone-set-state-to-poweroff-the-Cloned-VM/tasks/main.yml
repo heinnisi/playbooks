@@ -1,0 +1,15 @@
+---
+# tasks file forvmware_guest_instant_clone
+# From file: vmware_guest_instant_clone.py
+- name: set state to poweroff the Cloned VM
+
+  community.vmware.vmware_guest_powerstate:
+    validate_certs: false
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    name: "cloned_vm_from_vm_cluster"
+    folder: "{{ f0 }}"
+    state: powered-off
+  register: poweroff_instant_clone_from_vm_when_cluster
+  delegate_to: localhost

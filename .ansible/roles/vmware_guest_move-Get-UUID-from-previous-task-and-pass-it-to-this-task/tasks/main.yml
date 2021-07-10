@@ -1,0 +1,15 @@
+---
+# tasks file forvmware_guest_move
+# From file: vmware_guest_move.py
+- name: Get UUID from previous task and pass it to this task
+
+  community.vmware.vmware_guest_move:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter }}"
+    uuid: "{{ vm_facts.instance.hw_product_uuid }}"
+    dest_folder: "/DataCenter/vm/path/to/new/folder/where/we/want"
+  delegate_to: localhost
+  register: facts
+'''

@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_host_snmp
+# From file: vmware_host_snmp.py
+- name: Enable and configure SNMP community
+
+  community.vmware.vmware_host_snmp:
+    hostname: '{{ esxi_hostname }}'
+    username: '{{ esxi_username }}'
+    password: '{{ esxi_password }}'
+    community: [ test ]
+    state: enabled
+  delegate_to: localhost

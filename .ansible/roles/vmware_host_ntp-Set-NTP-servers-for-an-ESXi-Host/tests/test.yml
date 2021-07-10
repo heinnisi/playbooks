@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_ntp-Set-NTP-servers-for-an-ESXi-Host

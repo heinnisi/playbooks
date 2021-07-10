@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_capability_info-Gather-capability-info-about-all-ESXi-Host-in-given-Cluster

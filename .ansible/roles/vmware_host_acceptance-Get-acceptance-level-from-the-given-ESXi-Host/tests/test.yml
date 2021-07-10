@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_acceptance-Get-acceptance-level-from-the-given-ESXi-Host

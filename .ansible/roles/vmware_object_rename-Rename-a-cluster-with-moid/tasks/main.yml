@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_object_rename
+# From file: vmware_object_rename.py
+- name: Rename a cluster with moid
+
+  community.vmware.vmware_object_rename:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    new_name: CCR_1
+    object_moid: domain-c33
+    object_type: Cluster
+  delegate_to: localhost
+'''

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_scanhba-Recan-HBAs-for-a-given-ESXi-host-and-dont-refresh-storage-system-objects

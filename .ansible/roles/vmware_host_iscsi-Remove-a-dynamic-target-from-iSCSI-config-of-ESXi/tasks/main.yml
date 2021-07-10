@@ -1,0 +1,16 @@
+---
+# tasks file forvmware_host_iscsi
+# From file: vmware_host_iscsi.py
+- name: Remove a dynamic target from iSCSI config of ESXi
+
+  community.vmware.vmware_host_iscsi:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    esxi_hostname: "{{ esxi_hostname }}"
+    iscsi_config:
+      vmhba_name: vmhba65
+      send_target:
+        address: "{{ send_target_address }}"
+    state: absent
+'''

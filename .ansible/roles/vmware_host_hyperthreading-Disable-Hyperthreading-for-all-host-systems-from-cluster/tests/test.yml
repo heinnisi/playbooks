@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_hyperthreading-Disable-Hyperthreading-for-all-host-systems-from-cluster

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_portgroup-Remove-Management-Network-VM-Portgroup-to-all-hosts-in-a-cluster

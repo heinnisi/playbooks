@@ -1,0 +1,17 @@
+---
+# tasks file forvmware_guest_vnc
+# From file: vmware_guest_vnc.py
+- name: Enable VNC remote display on the VM
+
+  community.vmware.vmware_guest_vnc:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    folder: /mydatacenter/vm
+    name: testvm1
+    vnc_port: 5990
+    vnc_password: vNc5ecr3t
+    datacenter: "{{ datacenter_name }}"
+    state: present
+  delegate_to: localhost
+  register: vnc_result

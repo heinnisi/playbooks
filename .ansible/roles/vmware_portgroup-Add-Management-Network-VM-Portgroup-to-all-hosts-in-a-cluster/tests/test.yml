@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_portgroup-Add-Management-Network-VM-Portgroup-to-all-hosts-in-a-cluster

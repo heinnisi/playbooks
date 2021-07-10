@@ -1,0 +1,18 @@
+---
+# tasks file forvmware_guest_powerstate
+# From file: vmware_guest_powerstate.py
+- name: Set the state of a virtual machine to poweroff at given scheduled time
+
+  community.vmware.vmware_guest_powerstate:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    folder: "/{{ datacenter_name }}/vm/my_folder"
+    name: "{{ guest_name }}"
+    state: powered-off
+    scheduled_at: "09/01/2018 10:18"
+    schedule_task_name: "task_00001"
+    schedule_task_description: "Sample task to poweroff VM"
+    schedule_task_enabled: True
+  delegate_to: localhost
+  register: deploy_at_schedule_datetime

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_instant_clone-Instant-Clone-a-VM-when-skipping-optional-params

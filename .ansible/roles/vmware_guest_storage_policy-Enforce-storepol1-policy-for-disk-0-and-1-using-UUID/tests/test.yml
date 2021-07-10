@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_storage_policy-Enforce-storepol1-policy-for-disk-0-and-1-using-UUID

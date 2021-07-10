@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_object_role_permission-Assign-domain-user-to-VM-folder

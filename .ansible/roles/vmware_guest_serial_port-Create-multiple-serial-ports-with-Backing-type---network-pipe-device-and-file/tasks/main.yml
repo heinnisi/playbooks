@@ -1,0 +1,24 @@
+---
+# tasks file forvmware_guest_serial_port
+# From file: vmware_guest_serial_port.py
+- name: Create multiple serial ports with Backing type - network, pipe, device and file
+
+  community.vmware.vmware_guest_serial_port:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    name: "test_vm1"
+    backings:
+    - type: 'network'
+      direction: 'client'
+      service_uri: 'tcp://6000'
+      yield_on_poll: True
+    - type: 'pipe'
+      pipe_name: 'serial_pipe'
+      endpoint: 'client'
+    - type: 'device'
+      device_name: '/dev/char/serial/uart0'
+    - type: 'file'
+      file_path: '[datastore1]/file1'
+      yield_on_poll:  True
+    register: create_multiple_ports

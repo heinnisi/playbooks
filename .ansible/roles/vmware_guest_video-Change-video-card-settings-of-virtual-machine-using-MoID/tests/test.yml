@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_video-Change-video-card-settings-of-virtual-machine-using-MoID

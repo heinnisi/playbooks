@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_host_logbundle_info
+# From file: vmware_host_logbundle_info.py
+- name: fetch the manifests for logbundle from ESXi
+
+  community.vmware.vmware_host_logbundle_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    esxi_hostname: "{{ esxi_hostname }}"
+  register: fetch_manifests_result
+'''

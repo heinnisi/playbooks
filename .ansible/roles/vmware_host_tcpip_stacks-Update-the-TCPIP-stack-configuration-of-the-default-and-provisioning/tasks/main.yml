@@ -1,0 +1,26 @@
+---
+# tasks file forvmware_host_tcpip_stacks
+# From file: vmware_host_tcpip_stacks.py
+- name: Update the TCP/IP stack configuration of the default and provisioning
+
+  community.vmware.vmware_host_tcpip_stacks:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    validate_certs: false
+    esxi_hostname: "{{ esxi_hostname }}"
+    default:
+      hostname: "{{ esxi_hostname }}"
+      domain: example.com
+      preferred_dns: 192.168.10.1
+      alternate_dns: 192.168.20.1
+      search_domains:
+        - hoge.com
+        - fuga.com
+      gateway: 192.168.10.1
+      congestion_algorithm: cubic
+      max_num_connections: 12000
+    provisioning:
+      congestion_algorithm: newreno
+      max_num_connections: 12000
+      gateway: 10.10.10.254

@@ -1,0 +1,18 @@
+---
+# tasks file forvmware_guest_storage_policy
+# From file: vmware_guest_storage_policy.py
+- name: Enforce storepol1 policy for disk 0 and 1 using UUID
+
+  community.vmware.vmware_guest_storage_policy:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    validate_certs: no
+    uuid: cefd316c-fc19-45f3-a539-2cd03427a78d
+    disk:
+      - unit_number: 0
+        policy: storepol1
+      - unit_number: 1
+        policy: storepol1
+  delegate_to: localhost
+  register: policy_status

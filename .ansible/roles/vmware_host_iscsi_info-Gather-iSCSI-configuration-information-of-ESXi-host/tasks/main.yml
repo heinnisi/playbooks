@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_host_iscsi_info
+# From file: vmware_host_iscsi_info.py
+- name: Gather iSCSI configuration information of ESXi host
+
+  community.vmware.vmware_host_iscsi_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    esxi_hostname: "{{ esxi_hostname }}"
+  register: iscsi_info
+'''

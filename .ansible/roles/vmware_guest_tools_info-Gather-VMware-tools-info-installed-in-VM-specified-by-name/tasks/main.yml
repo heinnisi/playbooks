@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_guest_tools_info
+# From file: vmware_guest_tools_info.py
+- name: Gather VMware tools info installed in VM specified by name
+
+  community.vmware.vmware_guest_tools_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    name: "{{ vm_name }}"
+  delegate_to: localhost
+  register: vmtools_info
+'''

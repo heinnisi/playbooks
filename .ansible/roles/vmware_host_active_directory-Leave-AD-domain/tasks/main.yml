@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_host_active_directory
+# From file: vmware_host_active_directory.py
+- name: Leave AD domain
+
+  community.vmware.vmware_host_active_directory:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+    ad_state: absent
+  delegate_to: localhost
+'''

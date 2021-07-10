@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_object_rename
+# From file: vmware_object_rename.py
+- name: Rename a datacenter
+
+  community.vmware.vmware_object_rename:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    new_name: Asia_Datacenter
+    object_name: dc1
+    object_type: Datacenter
+  delegate_to: localhost

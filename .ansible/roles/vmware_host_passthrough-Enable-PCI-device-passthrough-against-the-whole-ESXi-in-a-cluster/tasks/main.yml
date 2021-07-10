@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_host_passthrough
+# From file: vmware_host_passthrough.py
+- name: Enable PCI device passthrough against the whole ESXi in a cluster
+
+  community.vmware.vmware_host_passthrough:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    validate_certs: false
+    cluster: "{{ ccr1 }}"
+    devices:
+      - device_name: "Dual Band Wireless AC 3165"
+    state: present

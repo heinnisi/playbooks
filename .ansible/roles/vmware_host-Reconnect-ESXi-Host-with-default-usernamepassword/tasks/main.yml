@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_host
+# From file: vmware_host.py
+- name: Reconnect ESXi Host (with default username/password)
+
+  community.vmware.vmware_host:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter: datacenter_name
+    cluster: cluster_name
+    esxi_hostname: '{{ esxi_hostname }}'
+    state: reconnect
+  delegate_to: localhost

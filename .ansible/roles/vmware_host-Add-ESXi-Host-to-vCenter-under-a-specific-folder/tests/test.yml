@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host-Add-ESXi-Host-to-vCenter-under-a-specific-folder

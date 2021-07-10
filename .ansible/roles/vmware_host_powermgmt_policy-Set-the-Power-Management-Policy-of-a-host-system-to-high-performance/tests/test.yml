@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_powermgmt_policy-Set-the-Power-Management-Policy-of-a-host-system-to-high-performance

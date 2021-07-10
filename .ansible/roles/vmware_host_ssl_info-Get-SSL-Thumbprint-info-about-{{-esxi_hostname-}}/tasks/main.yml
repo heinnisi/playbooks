@@ -1,0 +1,28 @@
+---
+# tasks file forvmware_host_ssl_info
+# From file: vmware_host_ssl_info.py
+- name: Get SSL Thumbprint info about "{{ esxi_hostname }}"
+
+  community.vmware.vmware_host_ssl_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    esxi_hostname: '{{ esxi_hostname }}'
+  register: ssl_info
+- set_fact:
+    ssl_thumbprint: "{{ ssl_info['host_ssl_info'][esxi_hostname]['ssl_thumbprints'][0] }}"
+- debug:
+    msg: "{{ ssl_thumbprint }}"
+- name: Add ESXi Host to vCenter
+  vmware_host:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter_name: '{{ datacenter_name }}'
+    cluster_name: '{{ cluster_name }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+    esxi_username: '{{ esxi_username }}'
+    esxi_password: '{{ esxi_password }}'
+    esxi_ssl_thumbprint: '{{ ssl_thumbprint }}'
+    state: present
+'''

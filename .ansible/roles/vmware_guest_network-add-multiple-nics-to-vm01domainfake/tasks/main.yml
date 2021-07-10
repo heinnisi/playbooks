@@ -1,0 +1,21 @@
+---
+# tasks file forvmware_guest_network
+# From file: vmware_guest_network.py
+- name: add multiple nics to vm01.domain.fake
+
+  community.vmware.vmware_guest_network:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    name: vm01.domain.fake
+    state: present
+    vlan_id: "{{ item.vlan_id | default(omit) }}"
+    network_name: "{{ item.network_name | default(omit) }}"
+    connected: "{{ item.connected | default(omit) }}"
+  loop:
+    - vlan_id: 2000
+      connected: false
+    - network_name: guest-net
+      connected: true
+'''

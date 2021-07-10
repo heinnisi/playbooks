@@ -1,0 +1,20 @@
+---
+# tasks file forvmware_host_datastore
+# From file: vmware_host_datastore.py
+- name: Mount NFS datastores to ESXi
+
+  community.vmware.vmware_host_datastore:
+      hostname: '{{ vcenter_hostname }}'
+      username: '{{ vcenter_username }}'
+      password: '{{ vcenter_password }}'
+      datastore_name: '{{ item.name }}'
+      datastore_type: '{{ item.type }}'
+      nfs_server: '{{ item.server }}'
+      nfs_path: '{{ item.path }}'
+      nfs_ro: no
+      esxi_hostname: '{{ inventory_hostname }}'
+      state: present
+  delegate_to: localhost
+  loop:
+      - { 'name': 'NasDS_vol01', 'server': 'nas01', 'path': '/mnt/vol01', 'type': 'nfs'}
+      - { 'name': 'NasDS_vol02', 'server': 'nas01', 'path': '/mnt/vol02', 'type': 'nfs'}

@@ -1,0 +1,5 @@
+---
+# tasks file forvmware_host_lockdown
+# From file: vmware_host_lockdown.py
+- name: Exit host systems from lockdown mode
+

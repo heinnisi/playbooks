@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_guest_move
+# From file: vmware_guest_move.py
+- name: Move Virtual Machine using MoID
+
+  community.vmware.vmware_guest_move:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: datacenter
+    moid: vm-42
+    dest_folder: "/{{ datacenter }}/vm"
+  delegate_to: localhost

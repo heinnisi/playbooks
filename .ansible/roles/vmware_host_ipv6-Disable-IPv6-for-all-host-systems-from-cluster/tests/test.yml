@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_ipv6-Disable-IPv6-for-all-host-systems-from-cluster

@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_local_role_manager
+# From file: vmware_local_role_manager.py
+- name: Add local role to ESXi
+
+  community.vmware.vmware_local_role_manager:
+    hostname: '{{ esxi_hostname }}'
+    username: '{{ esxi_username }}'
+    password: '{{ esxi_password }}'
+    local_role_name: vmware_qa
+    state: present
+  delegate_to: localhost

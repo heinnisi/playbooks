@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_tools_info-Gather-VMware-tools-info-installed-in-VM-specified-by-name

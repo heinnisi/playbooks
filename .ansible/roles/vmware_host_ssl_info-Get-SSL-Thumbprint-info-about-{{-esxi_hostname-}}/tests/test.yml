@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_ssl_info-Get-SSL-Thumbprint-info-about-{{-esxi_hostname-}}

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_service_manager-Start-ntpd-service-setting-for-all-ESXi-Host-in-given-Cluster

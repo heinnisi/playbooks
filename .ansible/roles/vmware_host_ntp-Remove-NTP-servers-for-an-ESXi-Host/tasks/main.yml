@@ -1,0 +1,15 @@
+---
+# tasks file forvmware_host_ntp
+# From file: vmware_host_ntp.py
+- name: Remove NTP servers for an ESXi Host
+
+  community.vmware.vmware_host_ntp:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+    state: absent
+    ntp_servers:
+        - bad.server.ntp.org
+  delegate_to: localhost
+'''

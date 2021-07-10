@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_local_role_info-Gather-info-about-local-role-from-an-ESXi

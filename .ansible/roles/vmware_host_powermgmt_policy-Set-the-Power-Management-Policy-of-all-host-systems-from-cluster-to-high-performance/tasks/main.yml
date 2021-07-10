@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_host_powermgmt_policy
+# From file: vmware_host_powermgmt_policy.py
+- name: Set the Power Management Policy of all host systems from cluster to high-performance
+
+  community.vmware.vmware_host_powermgmt_policy:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    cluster_name: '{{ cluster_name }}'
+    policy: high-performance
+  delegate_to: localhost
+'''

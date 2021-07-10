@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_host_auto_start
+# From file: vmware_host_auto_start.py
+- name: Update for system defaults config.
+
+  community.vmware.vmware_host_auto_start:
+    hostname: "{{ hostname }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    esxi_hostname: "{{ esxi_hostname }}"
+    system_defaults:
+      enabled: true
+      start_delay: 100
+      stop_action: guestShutdown

@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_guest_tools_upgrade
+# From file: vmware_guest_tools_upgrade.py
+- name: Upgrade VMware Tools using uuid
+
+  community.vmware.vmware_guest_tools_upgrade:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    uuid: "{{ vm_facts.instance.hw_product_uuid }}"
+  delegate_to: localhost

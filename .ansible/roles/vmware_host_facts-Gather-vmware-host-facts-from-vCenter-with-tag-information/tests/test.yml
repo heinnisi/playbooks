@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_facts-Gather-vmware-host-facts-from-vCenter-with-tag-information

@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_host_scanhba
+# From file: vmware_host_scanhba.py
+- name: Rescan HBA's for a given cluster - all found hosts will be scanned
+
+  community.vmware.vmware_host_scanhba:
+      hostname: '{{ vcenter_hostname }}'
+      username: '{{ vcenter_username }}'
+      password: '{{ vcenter_password }}'
+      esxi_hostname: '{{ inventory_hostname }}'
+      refresh_storage: true
+  delegate_to: localhost

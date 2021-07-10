@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_vnc-Enable-VNC-remote-display-on-the-VM

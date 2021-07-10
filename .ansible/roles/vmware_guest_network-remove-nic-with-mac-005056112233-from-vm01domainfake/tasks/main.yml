@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_guest_network
+# From file: vmware_guest_network.py
+- name: remove nic with mac 00:50:56:11:22:33 from vm01.domain.fake
+
+  community.vmware.vmware_guest_network:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    mac_address: 00:50:56:11:22:33
+    name: vm01.domain.fake
+    state: absent

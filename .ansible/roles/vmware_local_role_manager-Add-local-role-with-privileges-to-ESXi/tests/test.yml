@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_local_role_manager-Add-local-role-with-privileges-to-ESXi

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_feature_facts-Gather-feature-capability-facts-about-all-ESXi-Hosts-in-given-Cluster

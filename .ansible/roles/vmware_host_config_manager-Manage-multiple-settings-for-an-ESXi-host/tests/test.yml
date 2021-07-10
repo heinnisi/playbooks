@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_config_manager-Manage-multiple-settings-for-an-ESXi-host

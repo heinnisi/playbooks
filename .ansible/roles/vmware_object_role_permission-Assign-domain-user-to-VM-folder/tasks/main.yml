@@ -1,0 +1,16 @@
+---
+# tasks file forvmware_object_role_permission
+# From file: vmware_object_role_permission.py
+- name: Assign domain user to VM folder
+
+  community.vmware.vmware_object_role_permission:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    validate_certs: false
+    role: Admin
+    principal: "vsphere.local\\domainuser"
+    object_name: services
+    state: present
+  delegate_to: localhost
+'''

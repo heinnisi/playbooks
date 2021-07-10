@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_guest_register_operation
+# From file: vmware_guest_register_operation.py
+- name: UnRegister VM from inventory
+
+  community.vmware.vmware_guest_register_operation:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter }}"
+    folder: "/vm"
+    name: "{{ vm_name }}"
+    state: absent
+'''

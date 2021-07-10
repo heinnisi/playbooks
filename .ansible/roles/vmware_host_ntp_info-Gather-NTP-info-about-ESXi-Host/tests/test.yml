@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_ntp_info-Gather-NTP-info-about-ESXi-Host

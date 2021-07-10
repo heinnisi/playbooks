@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_guest_vnc
+# From file: vmware_guest_vnc.py
+- name: Disable VNC remote display on the VM
+
+  community.vmware.vmware_guest_vnc:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    uuid: 32074771-7d6b-699a-66a8-2d9cf8236fff
+    state: absent
+  delegate_to: localhost
+  register: vnc_result

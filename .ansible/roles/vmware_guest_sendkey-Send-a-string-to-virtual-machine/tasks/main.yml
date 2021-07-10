@@ -1,0 +1,16 @@
+---
+# tasks file forvmware_guest_sendkey
+# From file: vmware_guest_sendkey.py
+- name: Send a string to virtual machine
+
+  community.vmware.vmware_guest_sendkey:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    folder: "{{ folder_name }}"
+    name: "{{ vm_name }}"
+    string_send: "user_logon"
+  delegate_to: localhost
+  register: keys_num_sent
+'''

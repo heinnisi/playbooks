@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_local_user_facts-Gather-facts-about-all-Users-on-given-ESXi-host-system

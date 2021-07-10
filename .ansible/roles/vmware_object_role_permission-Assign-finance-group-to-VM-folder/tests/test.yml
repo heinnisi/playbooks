@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_object_role_permission-Assign-finance-group-to-VM-folder

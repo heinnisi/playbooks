@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_guest_snapshot_info
+# From file: vmware_guest_snapshot_info.py
+- name: Gather snapshot information about the virtual machine using MoID
+
+  community.vmware.vmware_guest_snapshot_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    moid: vm-42
+  delegate_to: localhost
+  register: snapshot_info
+'''

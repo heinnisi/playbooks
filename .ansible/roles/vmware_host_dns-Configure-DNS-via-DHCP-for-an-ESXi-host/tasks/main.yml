@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_host_dns
+# From file: vmware_host_dns.py
+- name: Configure DNS via DHCP for an ESXi host
+
+  community.vmware.vmware_host_dns:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+    type: dhcp
+    device: vmk0
+  delegate_to: localhost
+'''

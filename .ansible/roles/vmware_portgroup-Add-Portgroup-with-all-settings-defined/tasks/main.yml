@@ -1,0 +1,34 @@
+---
+# tasks file forvmware_portgroup
+# From file: vmware_portgroup.py
+- name: Add Portgroup with all settings defined
+
+  community.vmware.vmware_portgroup:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    esxi_hostname: "{{ inventory_hostname }}"
+    switch: "{{ vswitch_name }}"
+    portgroup: "{{ portgroup_name }}"
+    vlan_id: 10
+    security:
+        promiscuous_mode: False
+        mac_changes: False
+        forged_transmits: False
+    traffic_shaping:
+        enabled: True
+        average_bandwidth: 100000
+        peak_bandwidth: 100000
+        burst_size: 102400
+    teaming:
+        load_balancing: failover_explicit
+        network_failure_detection: link_status_only
+        notify_switches: true
+        failback: true
+        active_adapters:
+            - vmnic0
+        standby_adapters:
+            - vmnic1
+  delegate_to: localhost
+  register: teaming_result
+'''

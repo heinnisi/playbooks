@@ -1,0 +1,16 @@
+---
+# tasks file forvmware_guest_instant_clone
+# From file: vmware_guest_instant_clone.py
+- name: Clean VM
+
+  community.vmware.vmware_guest:
+    validate_certs: false
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    name: "cloned_vm_from_vm_cluster"
+    datacenter: "{{ dc1 }}"
+    state: absent
+  register: delete_instant_clone_from_vm_when_cluster
+  ignore_errors: true
+  delegate_to: localhost

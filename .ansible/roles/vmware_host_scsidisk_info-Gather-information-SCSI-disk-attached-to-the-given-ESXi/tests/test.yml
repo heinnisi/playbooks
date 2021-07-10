@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_scsidisk_info-Gather-information-SCSI-disk-attached-to-the-given-ESXi

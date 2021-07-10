@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_host_tcpip_stacks
+# From file: vmware_host_tcpip_stacks.py
+- name: Update the ipv6 gateway of the provisioning TCP/IP stack
+
+  community.vmware.vmware_host_tcpip_stacks:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    validate_certs: false
+    esxi_hostname: "{{ esxi_hostname }}"
+    provisioning:
+      ipv6_gateway: ::ffff:6440:301
+'''

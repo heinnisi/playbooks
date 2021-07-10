@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_datastore-Mount-NFS-v41-datastores-to-ESXi

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_config_facts-Gather-facts-about-all-ESXi-Host-in-given-Cluster

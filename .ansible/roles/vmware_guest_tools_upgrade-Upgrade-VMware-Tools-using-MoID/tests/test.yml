@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_tools_upgrade-Upgrade-VMware-Tools-using-MoID

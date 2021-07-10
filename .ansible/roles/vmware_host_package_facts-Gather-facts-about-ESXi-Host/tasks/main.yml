@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_host_package_facts
+# From file: vmware_host_package_facts.py
+- name: Gather facts about ESXi Host
+
+  community.vmware.vmware_host_package_facts:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+  delegate_to: localhost
+  register: host_packages
+'''

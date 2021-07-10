@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_object_custom_attributes_info
+# From file: vmware_object_custom_attributes_info.py
+- name: Gather custom attributes of a virtual machine with moid
+
+  community.vmware.vmware_object_custom_attributes_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    validate_certs: false
+    object_type: VirtualMachine
+    moid: "{{ moid }}"
+  register: vm_attributes
+"""

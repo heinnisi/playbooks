@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_host_capability_info
+# From file: vmware_host_capability_info.py
+- name: Gather capability info about ESXi Host
+
+  community.vmware.vmware_host_capability_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+  delegate_to: localhost
+  register: hosts_info
+'''

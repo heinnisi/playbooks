@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_vmnic_info-Gather-info-about-vmnics-of-an-ESXi-Host

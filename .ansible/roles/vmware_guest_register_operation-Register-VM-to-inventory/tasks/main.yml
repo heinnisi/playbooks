@@ -1,0 +1,16 @@
+---
+# tasks file forvmware_guest_register_operation
+# From file: vmware_guest_register_operation.py
+- name: Register VM to inventory
+
+  community.vmware.vmware_guest_register_operation:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter }}"
+    folder: "/vm"
+    esxi_hostname: "{{ esxi_hostname }}"
+    name: "{{ vm_name }}"
+    template: false
+    path: "[datastore1] vm/vm.vmx"
+    state: present

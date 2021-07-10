@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_local_role_manager
+# From file: vmware_local_role_manager.py
+- name: Set a privilege to an existing local role
+
+  community.vmware.vmware_local_role_manager:
+    hostname: '{{ esxi_hostname }}'
+    username: '{{ esxi_username }}'
+    password: '{{ esxi_password }}'
+    local_role_name: vmware_qa
+    local_privilege_ids: [ 'Folder.Create' ]
+    action: set
+  delegate_to: localhost
+'''

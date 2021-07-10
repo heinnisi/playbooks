@@ -1,0 +1,16 @@
+---
+# tasks file forvmware_guest_serial_port
+# From file: vmware_guest_serial_port.py
+- name: Modify Network backing type
+
+  community.vmware.vmware_guest_serial_port:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    name: '{{ name }}'
+    backings:
+    - type: 'network'
+      state: 'present'
+      direction: 'server'
+      service_uri: 'tcp://6000'
+  delegate_to: localhost

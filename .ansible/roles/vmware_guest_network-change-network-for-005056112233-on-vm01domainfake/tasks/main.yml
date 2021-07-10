@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_guest_network
+# From file: vmware_guest_network.py
+- name: change network for 00:50:56:11:22:33 on vm01.domain.fake
+
+  community.vmware.vmware_guest_network:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    name: vm01.domain.fake
+    mac_address: 00:50:56:11:22:33
+    network_name: admin-network
+    state: present

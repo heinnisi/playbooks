@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_powerstate-Set-the-state-of-a-virtual-machine-to-poweroff

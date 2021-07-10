@@ -1,0 +1,17 @@
+---
+# tasks file forvmware_guest_instant_clone
+# From file: vmware_guest_instant_clone.py
+- name: Instant Clone a VM when skipping optional params
+
+  community.vmware.vmware_guest_instant_clone:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    validate_certs: False
+    name: "{{ Clone_vm }}"
+    parent_vm: "{{ testvm_1 }}"
+    datacenter: "{{ dc1 }}"
+    datastore: "{{ rw_datastore }}"
+    host: "{{ esxi1 }}"
+  register: VM_clone_optional_arguments
+  delegate_to: localhost

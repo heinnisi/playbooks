@@ -1,0 +1,15 @@
+---
+# tasks file forvmware_guest_screenshot
+# From file: vmware_guest_screenshot.py
+- name: take a screenshot of the virtual machine console
+
+  community.vmware.vmware_guest_screenshot:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    folder: "{{ folder_name }}"
+    name: "{{ vm_name }}"
+    local_path: "/tmp/"
+  delegate_to: localhost
+  register: take_screenshot

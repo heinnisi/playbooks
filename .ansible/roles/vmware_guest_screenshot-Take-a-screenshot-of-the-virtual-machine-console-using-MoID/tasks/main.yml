@@ -1,0 +1,16 @@
+---
+# tasks file forvmware_guest_screenshot
+# From file: vmware_guest_screenshot.py
+- name: Take a screenshot of the virtual machine console using MoID
+
+  community.vmware.vmware_guest_screenshot:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    folder: "{{ folder_name }}"
+    moid: vm-42
+    local_path: "/tmp/"
+  delegate_to: localhost
+  register: take_screenshot
+'''

@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_guest_network
+# From file: vmware_guest_network.py
+- name: add a nic on network with vlan id 2001 for 422d000d-2000-ffff-0000-b00000000000
+
+  community.vmware.vmware_guest_network:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    uuid: 422d000d-2000-ffff-0000-b00000000000
+    vlan_id: 2001

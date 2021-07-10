@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_custom_attributes-Add-ESXi-host-custom-attributes

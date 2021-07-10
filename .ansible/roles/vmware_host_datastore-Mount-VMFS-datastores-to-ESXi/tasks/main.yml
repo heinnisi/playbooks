@@ -1,0 +1,16 @@
+---
+# tasks file forvmware_host_datastore
+# From file: vmware_host_datastore.py
+- name: Mount VMFS datastores to ESXi
+
+  community.vmware.vmware_host_datastore:
+      hostname: '{{ vcenter_hostname }}'
+      username: '{{ vcenter_username }}'
+      password: '{{ vcenter_password }}'
+      datastore_name: '{{ item.name }}'
+      datastore_type: '{{ item.type }}'
+      vmfs_device_name: 'naa.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+      vmfs_version: 6
+      esxi_hostname: '{{ inventory_hostname }}'
+      state: present
+  delegate_to: localhost

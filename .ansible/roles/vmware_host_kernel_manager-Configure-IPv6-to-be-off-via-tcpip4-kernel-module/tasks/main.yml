@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_host_kernel_manager
+# From file: vmware_host_kernel_manager.py
+- name: Configure IPv6 to be off via tcpip4 kernel module
+
+  community.vmware.vmware_host_kernel_manager:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+    kernel_module_name: "tcpip4"
+    kernel_module_option: "ipv6=0"

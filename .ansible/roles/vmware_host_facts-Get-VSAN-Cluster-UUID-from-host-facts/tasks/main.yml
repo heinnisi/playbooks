@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_host_facts
+# From file: vmware_host_facts.py
+- name: Get VSAN Cluster UUID from host facts
+
+  community.vmware.vmware_host_facts:
+    hostname: "{{ esxi_server }}"
+    username: "{{ esxi_username }}"
+    password: "{{ esxi_password }}"
+  register: host_facts
+- set_fact:
+    cluster_uuid: "{{ host_facts['ansible_facts']['vsan_cluster_uuid'] }}"

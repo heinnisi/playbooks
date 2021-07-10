@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_screenshot-take-a-screenshot-of-the-virtual-machine-console

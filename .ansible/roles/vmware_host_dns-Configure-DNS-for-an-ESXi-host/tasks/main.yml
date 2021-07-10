@@ -1,0 +1,20 @@
+---
+# tasks file forvmware_host_dns
+# From file: vmware_host_dns.py
+- name: Configure DNS for an ESXi host
+
+  community.vmware.vmware_host_dns:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+    type: static
+    host_name: esx01
+    domain: example.local
+    dns_servers:
+      - 192.168.1.10
+      - 192.168.1.11
+    search_domains:
+      - subdomain.example.local
+      - example.local
+  delegate_to: localhost

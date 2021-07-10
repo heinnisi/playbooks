@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_network-remove-nic-with-mac-005056112233-from-vm01domainfake

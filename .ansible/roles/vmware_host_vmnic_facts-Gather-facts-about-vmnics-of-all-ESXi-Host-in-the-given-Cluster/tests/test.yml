@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_vmnic_facts-Gather-facts-about-vmnics-of-all-ESXi-Host-in-the-given-Cluster

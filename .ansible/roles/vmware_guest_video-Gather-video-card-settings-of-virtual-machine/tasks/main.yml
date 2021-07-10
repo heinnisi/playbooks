@@ -1,0 +1,15 @@
+---
+# tasks file forvmware_guest_video
+# From file: vmware_guest_video.py
+- name: Gather video card settings of virtual machine
+
+  community.vmware.vmware_guest_video:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    name: test-vm
+    gather_video_facts: false
+  delegate_to: localhost
+  register: video_facts
+'''

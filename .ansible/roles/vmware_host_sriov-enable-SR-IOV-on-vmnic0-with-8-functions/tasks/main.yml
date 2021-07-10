@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_host_sriov
+# From file: vmware_host_sriov.py
+- name: enable SR-IOV on vmnic0 with 8 functions
+
+  community.vmware.vmware_host_sriov:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    esxi_hostname: "{{ esxi1 }}"
+    vmnic: vmnic0
+    sriov_on: true
+    num_virt_func: 8

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_host_passthrough-Enable-PCI-device-passthrough-against-one-ESXi

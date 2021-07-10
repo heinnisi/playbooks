@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_guest_powerstate
+# From file: vmware_guest_powerstate.py
+- name: Set the state of a virtual machine to poweron using MoID
+
+  community.vmware.vmware_guest_powerstate:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    folder: "/{{ datacenter_name }}/vm/my_folder"
+    moid: vm-42
+    state: powered-on
+  delegate_to: localhost
+  register: deploy

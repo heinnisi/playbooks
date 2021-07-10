@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_host_lockdown
+# From file: vmware_host_lockdown.py
+- name: Enter host systems into lockdown mode
+
+  community.vmware.vmware_host_lockdown:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname:
+        - '{{ esxi_hostname_1 }}'
+        - '{{ esxi_hostname_2 }}'
+    state: present
+  delegate_to: localhost

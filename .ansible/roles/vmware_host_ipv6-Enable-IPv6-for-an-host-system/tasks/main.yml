@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_host_ipv6
+# From file: vmware_host_ipv6.py
+- name: Enable IPv6 for an host system
+
+  community.vmware.vmware_host_ipv6:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+    state: enabled
+  delegate_to: localhost
