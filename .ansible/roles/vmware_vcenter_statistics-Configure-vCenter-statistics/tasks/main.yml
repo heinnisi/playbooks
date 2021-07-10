@@ -1,0 +1,26 @@
+---
+# tasks file forvmware_vcenter_statistics
+# From file: vmware_vcenter_statistics.py
+- name: Configure vCenter statistics
+
+  community.vmware.vmware_vcenter_statistics:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    interval_past_day:
+      enabled: true
+      interval_minutes: 5
+      save_for_days: 1
+      level: 1
+    interval_past_week:
+      enabled: true
+      level: 1
+    interval_past_month:
+      enabled: true
+      level: 1
+    interval_past_year:
+      enabled: true
+      save_for_years: 1
+      level: 1
+  delegate_to: localhost
+'''

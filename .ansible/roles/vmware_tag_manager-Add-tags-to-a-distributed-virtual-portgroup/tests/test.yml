@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_tag_manager-Add-tags-to-a-distributed-virtual-portgroup

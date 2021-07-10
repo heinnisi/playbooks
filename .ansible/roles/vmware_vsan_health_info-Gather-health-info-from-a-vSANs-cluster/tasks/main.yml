@@ -1,0 +1,11 @@
+---
+# tasks file forvmware_vsan_health_info
+# From file: vmware_vsan_health_info.py
+- name: Gather health info from a vSAN's cluster
+
+  community.vmware.vmware_vsan_health_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    cluster_name: 'vSAN01'
+    fetch_from_cache: False

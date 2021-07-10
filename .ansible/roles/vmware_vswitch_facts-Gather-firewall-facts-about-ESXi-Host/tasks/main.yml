@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_vswitch_facts
+# From file: vmware_vswitch_facts.py
+- name: Gather firewall facts about ESXi Host
+
+  community.vmware.vmware_vswitch_facts:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+    delegate_to: localhost
+  register: all_vswitch_facts
+'''

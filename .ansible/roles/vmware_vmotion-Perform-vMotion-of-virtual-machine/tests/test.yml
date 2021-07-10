@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_vmotion-Perform-vMotion-of-virtual-machine

@@ -1,0 +1,38 @@
+---
+# tasks file forvmware_vcenter_settings
+# From file: vmware_vcenter_settings.py
+- name: Configure vCenter general settings
+
+  community.vmware.vmware_vcenter_settings:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    database:
+      max_connections: 50
+      task_cleanup: true
+      task_retention: 30
+      event_cleanup: true
+      event_retention: 30
+    runtime_settings:
+      unique_id: 1
+      managed_address: "{{ lookup('dig', inventory_hostname) }}"
+      vcenter_server_name: "{{ inventory_hostname }}"
+    user_directory:
+      timeout: 60
+      query_limit: true
+      query_limit_size: 5000
+      validation: true
+      validation_period: 1440
+    mail:
+      server: mail.example.com
+      sender: vcenter@{{ inventory_hostname }}
+    snmp_receivers:
+      snmp_receiver_1_url: localhost
+      snmp_receiver_1_enabled: true
+      snmp_receiver_1_port: 162
+      snmp_receiver_1_community: public
+    timeout_settings:
+      normal_operations: 30
+      long_operations: 120
+    logging_options: info
+  delegate_to: localhost

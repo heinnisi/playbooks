@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_vm_shell-Run-command-inside-a-virtual-machine-with-wait-and-timeout

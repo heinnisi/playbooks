@@ -1,0 +1,11 @@
+---
+# tasks file forvmware_vm_facts
+# From file: vmware_vm_facts.py
+- name: Gather all registered virtual machines
+
+  community.vmware.vmware_vm_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+  delegate_to: localhost
+  register: vminfo

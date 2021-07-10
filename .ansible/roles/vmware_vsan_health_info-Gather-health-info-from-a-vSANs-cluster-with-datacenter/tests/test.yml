@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_vsan_health_info-Gather-health-info-from-a-vSANs-cluster-with-datacenter

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vsphere_file-Query-a-file-on-a-datastore

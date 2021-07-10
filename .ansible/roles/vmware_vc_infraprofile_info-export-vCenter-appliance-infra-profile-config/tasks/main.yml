@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_vc_infraprofile_info
+# From file: vmware_vc_infraprofile_info.py
+- name: export vCenter appliance infra profile config
+
+  vmware_vc_infraprofile_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    api: "export"
+    profiles: "ApplianceManagement"
+  delegate_to: localhost

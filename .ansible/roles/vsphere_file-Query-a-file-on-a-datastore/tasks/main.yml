@@ -1,0 +1,15 @@
+---
+# tasks file forvsphere_file
+# From file: vsphere_file.py
+- name: Query a file on a datastore
+
+  community.vmware.vsphere_file:
+    host: '{{ vhost }}'
+    username: '{{ vuser }}'
+    password: '{{ vpass }}'
+    datacenter: DC1 Someplace
+    datastore: datastore1
+    path: some/remote/file
+    state: touch
+  delegate_to: localhost
+  ignore_errors: true

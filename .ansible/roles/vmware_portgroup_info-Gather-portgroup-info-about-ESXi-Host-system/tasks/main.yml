@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_portgroup_info
+# From file: vmware_portgroup_info.py
+- name: Gather portgroup info about ESXi Host system
+
+  community.vmware.vmware_portgroup_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+  delegate_to: localhost
+'''

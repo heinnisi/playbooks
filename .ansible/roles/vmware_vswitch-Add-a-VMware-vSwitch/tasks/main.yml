@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_vswitch
+# From file: vmware_vswitch.py
+- name: Add a VMware vSwitch
+
+  community.vmware.vmware_vswitch:
+    hostname: '{{ esxi_hostname }}'
+    username: '{{ esxi_username }}'
+    password: '{{ esxi_password }}'
+    switch: vswitch_name
+    nics: vmnic_name
+    mtu: 9000
+  delegate_to: localhost

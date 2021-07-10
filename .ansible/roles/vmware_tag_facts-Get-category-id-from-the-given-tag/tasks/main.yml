@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_tag_facts
+# From file: vmware_tag_facts.py
+- name: Get category id from the given tag
+
+  community.vmware.vmware_tag_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+  delegate_to: localhost
+  register: tag_details
+- debug:
+    msg: "{{ tag_details.tag_facts['fedora_machines']['tag_category_id'] }}"

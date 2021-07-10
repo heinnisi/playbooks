@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_vmkernel_info-Gather-VMKernel-info-about-all-ESXi-Host-in-given-Cluster

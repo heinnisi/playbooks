@@ -1,0 +1,14 @@
+---
+# tasks file forvsphere_c.py
+# From file: vsphere_copy.py
+- name: Copy file to datastore when datacenter is inside folder called devel
+
+  community.vmware.vsphere_copy:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    src: /some/local/file
+    datacenter: devel/DC1
+    datastore: datastore1
+    path: some/remote/file
+  delegate_to: localhost

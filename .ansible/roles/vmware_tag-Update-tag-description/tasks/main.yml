@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_tag
+# From file: vmware_tag.py
+- name: Update tag description
+
+  community.vmware.vmware_tag:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    tag_name: Sample_Tag_0002
+    tag_description: Some fancy description
+    state: present
+  delegate_to: localhost

@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_vm_vss_dvs_migrate
+# From file: vmware_vm_vss_dvs_migrate.py
+- name: Migrate VCSA to vDS
+
+  community.vmware.vmware_vm_vss_dvs_migrate:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    vm_name: '{{ vm_name }}'
+    dvportgroup_name: '{{ distributed_portgroup_name }}'
+  delegate_to: localhost
+'''

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_vc_infraprofile_info-export-vCenter-appliance-infra-profile-config

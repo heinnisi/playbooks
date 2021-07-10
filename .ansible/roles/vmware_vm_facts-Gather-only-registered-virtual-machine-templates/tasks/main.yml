@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_vm_facts
+# From file: vmware_vm_facts.py
+- name: Gather only registered virtual machine templates
+
+  community.vmware.vmware_vm_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    vm_type: template
+  delegate_to: localhost
+  register: template_info

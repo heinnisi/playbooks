@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_resource_pool_info
+# From file: vmware_resource_pool_info.py
+- name: Gather resource pool info about all resource pools available
+
+  community.vmware.vmware_resource_pool_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+  register: rp_info
+  delegate_to: localhost
+'''

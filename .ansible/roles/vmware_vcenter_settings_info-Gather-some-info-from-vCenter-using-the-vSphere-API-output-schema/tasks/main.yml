@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_vcenter_settings_info
+# From file: vmware_vcenter_settings_info.py
+- name: "Gather some info from vCenter using the vSphere API output schema"
+
+  community.vmware.vmware_vcenter_settings_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    schema: vsphere
+    properties:
+      - config.workflow.port
+  register: vcenter_settings_info_vsphere_api
+"""

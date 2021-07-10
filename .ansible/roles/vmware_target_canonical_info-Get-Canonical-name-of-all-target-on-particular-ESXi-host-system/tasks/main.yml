@@ -1,0 +1,11 @@
+---
+# tasks file forvmware_target_canonical_info
+# From file: vmware_target_canonical_info.py
+- name: Get Canonical name of all target on particular ESXi host system
+
+  community.vmware.vmware_target_canonical_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+  delegate_to: localhost

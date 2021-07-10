@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_vm_vm_drs_rule-Create-DRS-Anti-Affinity-Rule-for-VM-VM

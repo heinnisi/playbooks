@@ -1,0 +1,10 @@
+---
+# tasks file forvmware_vcenter_settings_info
+# From file: vmware_vcenter_settings_info.py
+- name: "Gather info about vCenter settings"
+
+  community.vmware.vmware_vcenter_settings_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+  register: vcenter_settings_info

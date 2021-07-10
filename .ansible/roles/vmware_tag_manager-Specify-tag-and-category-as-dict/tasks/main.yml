@@ -1,0 +1,18 @@
+---
+# tasks file forvmware_tag_manager
+# From file: vmware_tag_manager.py
+- name: Specify tag and category as dict
+
+  community.vmware.vmware_tag_manager:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    tag_names:
+      - tag: tag_0001
+        category: cat_0001
+      - tag: tag_0002
+        category: cat_0002
+    object_name: Fedora_VM
+    object_type: VirtualMachine
+    state: add
+  delegate_to: localhost

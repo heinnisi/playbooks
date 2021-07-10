@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_vm_storage_policy
+# From file: vmware_vm_storage_policy.py
+- name: Remove a vSphere tag-based storage policy
+
+  community.vmware.vmware_vm_storage_policy:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    name: "vSphere storage policy"
+    state: "absent"
+  delegate_to: localhost
+'''

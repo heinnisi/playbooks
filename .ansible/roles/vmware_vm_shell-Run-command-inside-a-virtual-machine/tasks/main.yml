@@ -1,0 +1,22 @@
+---
+# tasks file forvmware_vm_shell
+# From file: vmware_vm_shell.py
+- name: Run command inside a virtual machine
+
+  community.vmware.vmware_vm_shell:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter }}"
+    folder: "/{{datacenter}}/vm"
+    vm_id: "{{ vm_name }}"
+    vm_username: root
+    vm_password: superSecret
+    vm_shell: /bin/echo
+    vm_shell_args: " $var >> myFile "
+    vm_shell_env:
+      - "PATH=/bin"
+      - "VAR=test"
+    vm_shell_cwd: "/tmp"
+  delegate_to: localhost
+  register: shell_command_output

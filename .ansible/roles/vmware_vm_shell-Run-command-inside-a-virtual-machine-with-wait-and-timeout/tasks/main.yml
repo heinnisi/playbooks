@@ -1,0 +1,20 @@
+---
+# tasks file forvmware_vm_shell
+# From file: vmware_vm_shell.py
+- name: Run command inside a virtual machine with wait and timeout
+
+  community.vmware.vmware_vm_shell:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter }}"
+    folder: "/{{datacenter}}/vm"
+    vm_id: NameOfVM
+    vm_username: root
+    vm_password: superSecret
+    vm_shell: /bin/sleep
+    vm_shell_args: 100
+    wait_for_process: True
+    timeout: 2000
+  delegate_to: localhost
+  register: shell_command_with_wait_timeout

@@ -1,0 +1,15 @@
+---
+# tasks file forvmware_tag_manager
+# From file: vmware_tag_manager.py
+- name: Add tags to a distributed virtual switch
+
+  community.vmware.vmware_tag_manager:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    tag_names:
+      - Sample_Tag_0003
+    object_name: Switch_0001
+    object_type: DistributedVirtualSwitch
+    state: add
+  delegate_to: localhost

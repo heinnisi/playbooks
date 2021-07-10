@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_vswitch_info
+# From file: vmware_vswitch_info.py
+- name: Gather vswitch info about all ESXi Host in given Cluster
+
+  community.vmware.vmware_vswitch_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    cluster_name: '{{ cluster_name }}'
+    delegate_to: localhost
+  register: all_hosts_vswitch_info

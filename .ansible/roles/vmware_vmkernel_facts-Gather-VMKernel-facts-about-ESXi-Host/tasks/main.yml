@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_vmkernel_facts
+# From file: vmware_vmkernel_facts.py
+- name: Gather VMKernel facts about ESXi Host
+
+  community.vmware.vmware_vmkernel_facts:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+  delegate_to: localhost
+  register: host_vmks
+'''

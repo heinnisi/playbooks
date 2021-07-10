@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_vswitch_facts-Gather-firewall-facts-about-ESXi-Host

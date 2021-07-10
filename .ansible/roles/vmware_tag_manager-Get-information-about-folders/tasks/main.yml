@@ -1,0 +1,26 @@
+---
+# tasks file forvmware_tag_manager
+# From file: vmware_tag_manager.py
+- name: Get information about folders
+
+  community.vmware.vmware_folder_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter: 'Asia-Datacenter1'
+  delegate_to: localhost
+  register: r
+- name: Set Managed object ID for the given folder
+  ansible.builtin.set_fact:
+    folder_mo_id: "{{ (r.flat_folder_info | selectattr('path', 'equalto', '/Asia-Datacenter1/vm/tier1/tier2') | map(attribute='moid'))[0] }}"
+- name: Add tags to a Folder using managed object id
+  community.vmware.vmware_tag_manager:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    tag_names:
+      - Sample_Cat_0004:Sample_Tag_0004
+    object_type: Folder
+    moid: "{{ folder_mo_id }}"
+    state: add
+  delegate_to: localhost

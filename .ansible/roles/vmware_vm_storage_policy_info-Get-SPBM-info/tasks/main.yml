@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_vm_storage_policy_info
+# From file: vmware_vm_storage_policy_info.py
+- name: Get SPBM info
+
+  community.vmware.vmware_vm_storage_policy_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+  delegate_to: localhost
+  register: profiles
+'''

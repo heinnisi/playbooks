@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_vmkernel_ip_config-Configure-IP-address-on-ESX-host

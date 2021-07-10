@@ -1,0 +1,18 @@
+---
+# tasks file forvmware_vm_shell
+# From file: vmware_vm_shell.py
+- name: Change hostname of guest machine
+
+  community.vmware.vmware_vm_shell:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter }}"
+    folder: "/{{datacenter}}/vm"
+    vm_id: "{{ vm_name }}"
+    vm_username: testUser
+    vm_password: SuperSecretPassword
+    vm_shell: "/usr/bin/hostnamectl"
+    vm_shell_args: "set-hostname new_hostname > /tmp/$$.txt 2>&1"
+  delegate_to: localhost
+'''

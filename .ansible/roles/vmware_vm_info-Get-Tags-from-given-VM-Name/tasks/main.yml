@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_vm_info
+# From file: vmware_vm_info.py
+- name: Get Tags from given VM Name
+
+  block:
+    - name: Get virtual machine info
+      community.vmware.vmware_vm_info:
+        hostname: '{{ vcenter_hostname }}'
+        username: '{{ vcenter_username }}'
+        password: '{{ vcenter_password }}'
+        folder: "/datacenter/vm/folder"
+      delegate_to: localhost
+      register: vm_info

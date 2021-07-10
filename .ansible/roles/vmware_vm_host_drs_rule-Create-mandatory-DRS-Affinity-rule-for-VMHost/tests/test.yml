@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_vm_host_drs_rule-Create-mandatory-DRS-Affinity-rule-for-VMHost

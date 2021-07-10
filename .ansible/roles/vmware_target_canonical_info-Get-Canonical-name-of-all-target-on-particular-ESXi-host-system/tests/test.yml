@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_target_canonical_info-Get-Canonical-name-of-all-target-on-particular-ESXi-host-system

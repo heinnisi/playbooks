@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_vm_info-Gather-all-VMs-from-a-specific-folder

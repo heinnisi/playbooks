@@ -1,0 +1,18 @@
+---
+# tasks file forvmware_vm_vm_drs_rule
+# From file: vmware_vm_vm_drs_rule.py
+- name: Create DRS Affinity Rule for VM-VM
+
+  community.vmware.vmware_vm_vm_drs_rule:
+    hostname: "{{ esxi_server }}"
+    username: "{{ esxi_username }}"
+    password: "{{ esxi_password }}"
+    cluster_name: "{{ cluster_name }}"
+    vms:
+        - vm1
+        - vm2
+    drs_rule_name: vm1-vm2-affinity-rule-001
+    enabled: True
+    mandatory: True
+    affinity_rule: True
+  delegate_to: localhost

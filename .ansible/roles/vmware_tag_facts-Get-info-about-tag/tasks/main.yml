@@ -1,0 +1,10 @@
+---
+# tasks file forvmware_tag_facts
+# From file: vmware_tag_facts.py
+- name: Get info about tag
+
+  community.vmware.vmware_tag_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+  delegate_to: localhost

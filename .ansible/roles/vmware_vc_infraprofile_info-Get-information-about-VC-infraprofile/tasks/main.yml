@@ -1,0 +1,10 @@
+---
+# tasks file forvmware_vc_infraprofile_info
+# From file: vmware_vc_infraprofile_info.py
+- name: Get information about VC infraprofile
+
+  vmware_vc_infraprofile_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+  delegate_to: localhost

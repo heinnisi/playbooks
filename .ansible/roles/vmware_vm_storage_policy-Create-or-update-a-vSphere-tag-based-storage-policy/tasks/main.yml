@@ -1,0 +1,16 @@
+---
+# tasks file forvmware_vm_storage_policy
+# From file: vmware_vm_storage_policy.py
+- name: Create or update a vSphere tag-based storage policy
+
+  community.vmware.vmware_vm_storage_policy:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    name: "vSphere storage policy"
+    description: "vSphere storage performance policy"
+    tag_category: "performance_tier"
+    tag_name: "gold"
+    tag_affinity: true
+    state: "present"
+  delegate_to: localhost

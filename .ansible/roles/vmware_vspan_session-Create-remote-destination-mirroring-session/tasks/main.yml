@@ -1,0 +1,5 @@
+---
+# tasks file forvmware_vspan_session
+# From file: vmware_vspan_session.py
+- name: Create remote destination mirroring session.
+

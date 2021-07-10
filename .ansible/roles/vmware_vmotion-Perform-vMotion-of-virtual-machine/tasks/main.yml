@@ -1,0 +1,5 @@
+---
+# tasks file forvmware_vmotion
+# From file: vmware_vmotion.py
+- name: Perform vMotion of virtual machine
+

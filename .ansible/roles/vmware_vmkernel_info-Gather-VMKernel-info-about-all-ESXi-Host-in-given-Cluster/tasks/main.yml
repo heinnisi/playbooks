@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_vmkernel_info
+# From file: vmware_vmkernel_info.py
+- name: Gather VMKernel info about all ESXi Host in given Cluster
+
+  community.vmware.vmware_vmkernel_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    cluster_name: cluster_name
+  delegate_to: localhost
+  register: cluster_host_vmks

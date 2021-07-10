@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_vswitch_info
+# From file: vmware_vswitch_info.py
+- name: Gather firewall info about ESXi Host
+
+  community.vmware.vmware_vswitch_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+    delegate_to: localhost
+  register: all_vswitch_info
+'''
