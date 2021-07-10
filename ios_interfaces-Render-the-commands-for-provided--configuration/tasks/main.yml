@@ -1,0 +1,19 @@
+---
+# tasks file forios_interfaces
+# From file: ios_interfaces.py
+- name: Render the commands for provided  configuration
+
+  cisco.ios.ios_interfaces:
+    config:
+    - name: GigabitEthernet0/1
+      description: Configured by Ansible-Network
+      mtu: 110
+      enabled: true
+      duplex: half
+    - name: GigabitEthernet0/2
+      description: Configured by Ansible-Network
+      mtu: 2800
+      enabled: false
+      speed: 100
+      duplex: full
+    state: rendered

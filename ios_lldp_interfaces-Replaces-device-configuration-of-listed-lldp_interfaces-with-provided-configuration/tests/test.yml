@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_lldp_interfaces-Replaces-device-configuration-of-listed-lldp_interfaces-with-provided-configuration

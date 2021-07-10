@@ -1,0 +1,8 @@
+---
+# tasks file forservice_provider
+# From file: service_provider.py
+- name: delete_sp_profile
+
+  cisco.dnac.service_provider:
+    state: delete  # required
+    sp_profile_name: SomeValue  # string, required

@@ -1,0 +1,8 @@
+---
+# tasks file forsite
+# From file: site.py
+- name: delete_site
+
+  cisco.dnac.site:
+    state: absent  # required
+    site_id: SomeValue  # string, required

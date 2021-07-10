@@ -1,0 +1,8 @@
+---
+# tasks file forios_bgp_global
+# From file: ios_bgp_global.py
+- name: 'Delete the configured global BGP (Note: This WILL delete the the configured
+
+    global BGP)'
+  cisco.ios.ios_bgp_global:
+    state: purged

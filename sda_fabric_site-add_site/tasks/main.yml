@@ -1,0 +1,10 @@
+---
+# tasks file forsda_fabric_site
+# From file: sda_fabric_site.py
+- name: add_site
+
+  cisco.dnac.sda_fabric_site:
+    state: create  # required
+    payload:  # required
+    - fabricName: SomeValue  # string
+      siteNameHierarchy: SomeValue  # string

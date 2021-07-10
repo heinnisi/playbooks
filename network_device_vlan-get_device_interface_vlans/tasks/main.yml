@@ -1,0 +1,10 @@
+---
+# tasks file fornetwork_device_vlan
+# From file: network_device_vlan.py
+- name: get_device_interface_vlans
+
+  cisco.dnac.network_device_vlan:
+    state: query  # required
+    id: SomeValue  # string, required
+    interface_type: SomeValue  # string
+  register: nm_get_device_interface_vlans

@@ -1,0 +1,9 @@
+---
+# tasks file fornetwork
+# From file: network.py
+- name: get_network
+
+  cisco.dnac.network:
+    state: query  # required
+    site_id: SomeValue  # string
+  register: nm_get_network

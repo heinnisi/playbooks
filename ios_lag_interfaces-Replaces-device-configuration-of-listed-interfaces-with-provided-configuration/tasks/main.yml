@@ -1,0 +1,12 @@
+---
+# tasks file forios_lag_interfaces
+# From file: ios_lag_interfaces.py
+- name: Replaces device configuration of listed interfaces with provided configuration
+
+  cisco.ios.ios_lag_interfaces:
+    config:
+    - name: 40
+      members:
+      - member: GigabitEthernet0/3
+        mode: auto
+    state: replaced

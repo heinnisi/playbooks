@@ -1,0 +1,11 @@
+---
+# tasks file fornetwork_device_update_role
+# From file: network_device_update_role.py
+- name: update_device_role
+
+  cisco.dnac.network_device_update_role:
+    state: update  # required
+    id: SomeValue  # string, required
+    role: SomeValue  # string, required
+    roleSource: SomeValue  # string, required
+    summary: True  # boolean, required

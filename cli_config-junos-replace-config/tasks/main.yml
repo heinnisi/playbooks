@@ -1,0 +1,7 @@
+---
+# tasks file forcli_config
+# From file: cli_config.py
+- name: junos replace config
+
+  ansible.netcommon.cli_config:
+    replace: /var/home/ansible/junos01.cfg

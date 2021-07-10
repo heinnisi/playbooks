@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - global_credential-get_credential_sub_type_by_credential_id

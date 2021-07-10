@@ -1,0 +1,47 @@
+---
+# tasks file forios_command
+# From file: ios_command.py
+- name: run commands that require answering a prompt
+
+  cisco.ios.ios_command:
+    commands:
+    - command: clear counters GigabitEthernet0/1
+      prompt: Clear "show interface" counters on this interface [confirm]
+      answer: y
+    - command: clear counters GigabitEthernet0/2
+      prompt: '[confirm]'
+      answer: '\r'
+"""
+RETURN = """
+stdout:
+  description: The set of responses from the commands
+  returned: always apart from low level errors (such as action plugin)
+  type: list
+  sample: ['...', '...']
+stdout_lines:
+  description: The value of stdout split into a list
+  returned: always apart from low level errors (such as action plugin)
+  type: list
+  sample: [['...', '...'], ['...'], ['...']]
+failed_conditions:
+  description: The list of conditionals that have failed
+  returned: failed
+  type: list
+  sample: ['...', '...']
+"""
+import time
+from ansible.module_utils._text import to_text
+from ansible.module_utils.basic import AnsibleModule
+from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.parsing import (
+    Conditional,
+)
+from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.utils import (
+    transform_commands,
+    to_lines,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    run_commands,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    ios_argument_spec,
+)

@@ -1,0 +1,11 @@
+---
+# tasks file forglobal_credential
+# From file: global_credential.py
+- name: get_global_credentials
+
+  cisco.dnac.global_credential:
+    state: query  # required
+    credential_sub_type: SomeValue  # string, required
+    order: SomeValue  # string
+    sort_by: SomeValue  # string
+  register: nm_get_global_credentials

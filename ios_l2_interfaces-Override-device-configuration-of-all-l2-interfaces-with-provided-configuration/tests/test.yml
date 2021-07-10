@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_l2_interfaces-Override-device-configuration-of-all-l2-interfaces-with-provided-configuration

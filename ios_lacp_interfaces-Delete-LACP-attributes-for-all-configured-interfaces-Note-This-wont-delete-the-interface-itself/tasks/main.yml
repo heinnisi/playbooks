@@ -1,0 +1,7 @@
+---
+# tasks file forios_lacp_interfaces
+# From file: ios_lacp_interfaces.py
+- name: "Delete LACP attributes for all configured interfaces (Note: This won't delete the interface itself)"
+
+  cisco.ios.ios_lacp_interfaces:
+    state: deleted

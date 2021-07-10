@@ -1,0 +1,42 @@
+---
+# tasks file forios_interface
+# From file: ios_interface.py
+- name: Delete interface using aggregate
+
+  cisco.ios.ios_interface:
+    aggregate:
+    - name: Loopback9
+    - name: Loopback10
+    state: absent
+"""
+RETURN = """
+commands:
+  description: The list of configuration mode commands to send to the device.
+  returned: always, except for the platforms that use Netconf transport to manage the device.
+  type: list
+  sample:
+  - interface GigabitEthernet0/2
+  - description test-interface
+  - duplex half
+  - mtu 512
+"""
+import re
+from copy import deepcopy
+from time import sleep
+from ansible.module_utils._text import to_text
+from ansible.module_utils.basic import AnsibleModule
+from ansible.module_utils.connection import exec_command
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    get_config,
+    load_config,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    ios_argument_spec,
+)
+from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.config import (
+    NetworkConfig,
+)
+from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.utils import (
+    conditional,
+    remove_default_spec,
+)

@@ -1,0 +1,11 @@
+---
+# tasks file fornet_user
+# From file: net_user.py
+- name: set multiple users to privilege level 15
+
+  ansible.netcommon.net_user:
+    aggregate:
+    - {name: netop}
+    - {name: netend}
+    privilege: 15
+    state: present

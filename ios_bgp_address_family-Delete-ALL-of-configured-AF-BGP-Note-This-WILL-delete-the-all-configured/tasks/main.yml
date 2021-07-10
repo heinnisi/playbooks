@@ -1,0 +1,8 @@
+---
+# tasks file forios_bgp_address_family
+# From file: ios_bgp_address_family.py
+- name: 'Delete ALL of configured AF BGP (Note: This WILL delete the all configured
+
+    AF BGP)'
+  cisco.ios.ios_bgp_address_family:
+    state: deleted

@@ -1,0 +1,8 @@
+---
+# tasks file fornetwork_device_polling_interval
+# From file: network_device_polling_interval.py
+- name: get_polling_interval_for_all_devices
+
+  cisco.dnac.network_device_polling_interval:
+    state: query  # required
+  register: nm_get_polling_interval_for_all_devices

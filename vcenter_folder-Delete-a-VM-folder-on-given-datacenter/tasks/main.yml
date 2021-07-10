@@ -1,0 +1,16 @@
+---
+# tasks file forvcenter_folder
+# From file: vcenter_folder.py
+- name: Delete a VM folder on given datacenter
+
+  community.vmware.vcenter_folder:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter_name: datacenter_name
+    folder_name: sample_vm_folder
+    folder_type: vm
+    state: absent
+  register: vm_folder_deletion_result
+  delegate_to: localhost
+'''

@@ -1,0 +1,9 @@
+---
+# tasks file fornetwork_health
+# From file: network_health.py
+- name: get_overall_network_health
+
+  cisco.dnac.network_health:
+    state: query  # required
+    timestamp: 1  #  integer
+  register: nm_get_overall_network_health

@@ -1,0 +1,10 @@
+---
+# tasks file forios_user
+# From file: ios_user.py
+- name: Add a user with MD5 hashed password
+
+  cisco.ios.ios_user:
+    name: ansibletest5
+    hashed_password:
+      type: 5
+      value: $3$8JcDilcYgFZi.yz4ApaqkHG2.8/

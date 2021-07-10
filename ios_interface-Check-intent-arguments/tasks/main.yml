@@ -1,0 +1,10 @@
+---
+# tasks file forios_interface
+# From file: ios_interface.py
+- name: Check intent arguments
+
+  cisco.ios.ios_interface:
+    name: GigabitEthernet0/2
+    state: up
+    tx_rate: ge(0)
+    rx_rate: le(0)

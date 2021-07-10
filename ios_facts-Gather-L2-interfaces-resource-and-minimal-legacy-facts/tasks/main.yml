@@ -1,0 +1,8 @@
+---
+# tasks file forios_facts
+# From file: ios_facts.py
+- name: Gather L2 interfaces resource and minimal legacy facts
+
+  cisco.ios.ios_facts:
+    gather_subset: min
+    gather_network_resources: l2_interfaces

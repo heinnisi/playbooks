@@ -1,0 +1,14 @@
+---
+# tasks file forcredential_to_site
+# From file: credential_to_site.py
+- name: assign_credential_to_site
+
+  cisco.dnac.credential_to_site:
+    state: create  # required
+    site_id: SomeValue  # string, required
+    cliId: SomeValue  # string
+    httpRead: SomeValue  # string
+    httpWrite: SomeValue  # string
+    snmpV2ReadId: SomeValue  # string
+    snmpV2WriteId: SomeValue  # string
+    snmpV3Id: SomeValue  # string

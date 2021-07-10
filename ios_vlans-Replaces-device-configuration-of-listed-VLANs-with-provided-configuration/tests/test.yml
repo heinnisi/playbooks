@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_vlans-Replaces-device-configuration-of-listed-VLANs-with-provided-configuration

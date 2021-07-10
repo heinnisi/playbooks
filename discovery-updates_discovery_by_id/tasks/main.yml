@@ -1,0 +1,64 @@
+---
+# tasks file fordiscovery
+# From file: discovery.py
+- name: updates_discovery_by_id
+
+  cisco.dnac.discovery:
+    state: update  # required
+    discoveryStatus: SomeValue  # string, required
+    id: SomeValue  # string, required
+    attributeInfo:
+    cdpLevel: 1  #  integer
+    deviceIds: SomeValue  # string
+    discoveryCondition: SomeValue  # string
+    discoveryType: SomeValue  # string
+    enablePasswordList: SomeValue  # string
+    globalCredentialIdList:
+    - SomeValue  # string
+    httpReadCredential:
+      comments: SomeValue  # string
+      credentialType: SomeValue  # string
+      description: SomeValue  # string
+      id: SomeValue  # string
+      instanceTenantId: SomeValue  # string
+      instanceUuid: SomeValue  # string
+      password: SomeValue  # string
+      port: 1  #  integer
+      secure: True  # boolean
+      username: SomeValue  # string
+    httpWriteCredential:
+      comments: SomeValue  # string
+      credentialType: SomeValue  # string
+      description: SomeValue  # string
+      id: SomeValue  # string
+      instanceTenantId: SomeValue  # string
+      instanceUuid: SomeValue  # string
+      password: SomeValue  # string
+      port: 1  #  integer
+      secure: True  # boolean
+      username: SomeValue  # string
+    ipAddressList: SomeValue  # string
+    ipFilterList: SomeValue  # string
+    isAutoCdp: True  # boolean
+    lldpLevel: 1  #  integer
+    name: SomeValue  # string
+    netconfPort: SomeValue  # string
+    numDevices: 1  #  integer
+    parentDiscoveryId: SomeValue  # string
+    passwordList: SomeValue  # string
+    preferredMgmtIPMethod: SomeValue  # string
+    protocolOrder: SomeValue  # string
+    retryCount: 1  #  integer
+    snmpAuthPassphrase: SomeValue  # string
+    snmpAuthProtocol: SomeValue  # string
+    snmpMode: SomeValue  # string
+    snmpPrivPassphrase: SomeValue  # string
+    snmpPrivProtocol: SomeValue  # string
+    snmpRoCommunity: SomeValue  # string
+    snmpRoCommunityDesc: SomeValue  # string
+    snmpRwCommunity: SomeValue  # string
+    snmpRwCommunityDesc: SomeValue  # string
+    snmpUserName: SomeValue  # string
+    timeOut: 1  #  integer
+    updateMgmtIp: True  # boolean
+    userNameList: SomeValue  # string

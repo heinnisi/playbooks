@@ -1,0 +1,10 @@
+---
+# tasks file forios_user
+# From file: ios_user.py
+- name: Change Password for User netop
+
+  cisco.ios.ios_user:
+    name: netop
+    configured_password: '{{ new_password }}'
+    update_password: always
+    state: present

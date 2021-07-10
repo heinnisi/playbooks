@@ -1,0 +1,11 @@
+---
+# tasks file forios_vrf
+# From file: ios_vrf.py
+- name: configure set of VRFs and purge any others
+
+  cisco.ios.ios_vrf:
+    vrfs:
+    - red
+    - blue
+    - green
+    purge: yes

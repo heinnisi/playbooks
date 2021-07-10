@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - net_lldp_interface-Enable-LLDP-on-specific-interfaces

@@ -1,0 +1,8 @@
+---
+# tasks file fornfv_provision_detail
+# From file: nfv_provision_detail.py
+- name: nfv_provisioning_detail
+
+  cisco.dnac.nfv_provision_detail:
+    state: create  # required
+    device_ip: SomeValue  # string, required

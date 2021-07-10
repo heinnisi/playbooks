@@ -1,0 +1,76 @@
+---
+# tasks file forios_l3_interface
+# From file: ios_l3_interface.py
+- name: Remove GigabitEthernet0/3 IPv4 and IPv6 address
+
+  cisco.ios.ios_l3_interface:
+    name: GigabitEthernet0/3
+    state: absent
+- name: Set GigabitEthernet0/3 IPv4 address
+  cisco.ios.ios_l3_interface:
+    name: GigabitEthernet0/3
+    ipv4: 192.168.0.1/24
+- name: Set GigabitEthernet0/3 IPv6 address
+  cisco.ios.ios_l3_interface:
+    name: GigabitEthernet0/3
+    ipv6: fd5d:12c9:2201:1::1/64
+- name: Set GigabitEthernet0/3 in dhcp
+  cisco.ios.ios_l3_interface:
+    name: GigabitEthernet0/3
+    ipv4: dhcp
+    ipv6: dhcp
+- name: Set interface Vlan1 (SVI) IPv4 address
+  cisco.ios.ios_l3_interface:
+    name: Vlan1
+    ipv4: 192.168.0.5/24
+- name: Set IP addresses on aggregate
+  cisco.ios.ios_l3_interface:
+    aggregate:
+    - name: GigabitEthernet0/3
+      ipv4: 192.168.2.10/24
+    - name: GigabitEthernet0/3
+      ipv4: 192.168.3.10/24
+      ipv6: fd5d:12c9:2201:1::1/64
+- name: Remove IP addresses on aggregate
+  cisco.ios.ios_l3_interface:
+    aggregate:
+    - name: GigabitEthernet0/3
+      ipv4: 192.168.2.10/24
+    - name: GigabitEthernet0/3
+      ipv4: 192.168.3.10/24
+      ipv6: fd5d:12c9:2201:1::1/64
+    state: absent
+"""
+RETURN = """
+commands:
+  description: The list of configuration mode commands to send to the device
+  returned: always, except for the platforms that use Netconf transport to manage the device.
+  type: list
+  sample:
+    - interface GigabitEthernet0/2
+    - ip address 192.168.0.1 255.255.255.0
+    - ipv6 address fd5d:12c9:2201:1::1/64
+"""
+import re
+from copy import deepcopy
+from ansible.module_utils._text import to_text
+from ansible.module_utils.basic import AnsibleModule
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    get_config,
+    load_config,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    ios_argument_spec,
+)
+from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.config import (
+    NetworkConfig,
+)
+from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.utils import (
+    remove_default_spec,
+)
+from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.utils import (
+    is_netmask,
+    is_masklen,
+    to_netmask,
+    to_masklen,
+)

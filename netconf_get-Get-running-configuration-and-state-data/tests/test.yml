@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - netconf_get-Get-running-configuration-and-state-data

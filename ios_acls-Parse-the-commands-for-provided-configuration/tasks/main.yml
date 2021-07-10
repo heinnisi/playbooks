@@ -1,0 +1,8 @@
+---
+# tasks file forios_acls
+# From file: ios_acls.py
+- name: Parse the commands for provided configuration
+
+  cisco.ios.ios_acls:
+    running_config: "{{ lookup('file', 'parsed.cfg') }}"
+    state: parsed

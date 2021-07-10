@@ -1,0 +1,15 @@
+---
+# tasks file forvsphere_c.py
+# From file: vsphere_copy.py
+- name: Copy file to datastore using other_system
+
+  community.vmware.vsphere_copy:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    src: /other/local/file
+    datacenter: DC2 Someplace
+    datastore: datastore2
+    path: other/remote/file
+  delegate_to: other_system
+'''

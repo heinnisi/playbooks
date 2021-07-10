@@ -1,0 +1,8 @@
+---
+# tasks file fornet_l3_interface
+# From file: net_l3_interface.py
+- name: Remove eth0 IPv4 address
+
+  ansible.netcommon.net_l3_interface:
+    name: eth0
+    state: absent

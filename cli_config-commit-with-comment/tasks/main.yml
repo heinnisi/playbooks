@@ -1,0 +1,8 @@
+---
+# tasks file forcli_config
+# From file: cli_config.py
+- name: commit with comment
+
+  ansible.netcommon.cli_config:
+    config: set system host-name foo
+    commit_comment: this is a test

@@ -1,0 +1,9 @@
+---
+# tasks file forpnp_workflow
+# From file: pnp_workflow.py
+- name: get_workflow_by_id
+
+  cisco.dnac.pnp_workflow:
+    state: query  # required
+    id: SomeValue  # string, required
+  register: nm_get_workflow_by_id

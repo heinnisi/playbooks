@@ -1,0 +1,11 @@
+---
+# tasks file fornet_linkagg
+# From file: net_linkagg.py
+- name: Remove aggregate of linkagg definitions
+
+  ansible.netcommon.net_linkagg:
+    aggregate:
+    - name: bond0
+    - name: bond1
+    state: absent
+"""

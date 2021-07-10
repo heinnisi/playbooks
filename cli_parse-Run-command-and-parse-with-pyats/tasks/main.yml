@@ -1,0 +1,10 @@
+---
+# tasks file forcli_parse
+# From file: cli_parse.py
+- name: Run command and parse with pyats
+
+  ansible.netcommon.cli_parse:
+    command: "show interface"
+    parser:
+        name: ansible.netcommon.pyats
+  register: parser_output

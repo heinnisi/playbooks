@@ -1,0 +1,16 @@
+---
+# tasks file forglobal_credential_snmpv2_write_community
+# From file: global_credential_snmpv2_write_community.py
+- name: update_snmp_write_community
+
+  cisco.dnac.global_credential_snmpv2_write_community:
+    state: update  # required
+    writeCommunity: SomeValue  # string, required
+    comments: SomeValue  # string
+    credentialType: # valid values are 'GLOBAL',
+      # 'APP'.
+      SomeValue  # string
+    description: SomeValue  # string
+    id: SomeValue  # string
+    instanceTenantId: SomeValue  # string
+    instanceUuid: SomeValue  # string

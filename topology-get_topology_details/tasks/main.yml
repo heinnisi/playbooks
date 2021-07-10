@@ -1,0 +1,10 @@
+---
+# tasks file fortopology
+# From file: topology.py
+- name: get_topology_details
+
+  cisco.dnac.topology:
+    state: query  # required
+    vlan_id: SomeValue  # string, required
+    layer2: True  # boolean, required
+  register: nm_get_topology_details

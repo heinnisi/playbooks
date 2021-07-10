@@ -1,0 +1,9 @@
+---
+# tasks file forinterface
+# From file: interface.py
+- name: get_isis_interfaces
+
+  cisco.dnac.interface:
+    state: query  # required
+    isis: True  # boolean, required
+  register: nm_get_isis_interfaces

@@ -1,0 +1,13 @@
+---
+# tasks file forservice_provider
+# From file: service_provider.py
+- name: update_sp_profile
+
+  cisco.dnac.service_provider:
+    state: update  # required
+    settings:  # required
+      qos:
+      - oldProfileName: SomeValue  # string, required
+        profileName: SomeValue  # string
+        model: SomeValue  # string
+        wanProvider: SomeValue  # string

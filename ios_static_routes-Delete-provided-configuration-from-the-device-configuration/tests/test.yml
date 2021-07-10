@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_static_routes-Delete-provided-configuration-from-the-device-configuration

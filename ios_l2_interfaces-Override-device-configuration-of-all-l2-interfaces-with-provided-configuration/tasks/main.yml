@@ -1,0 +1,13 @@
+---
+# tasks file forios_l2_interfaces
+# From file: ios_l2_interfaces.py
+- name: Override device configuration of all l2 interfaces with provided configuration
+
+  cisco.ios.ios_l2_interfaces:
+    config:
+    - name: GigabitEthernet0/2
+      access:
+        vlan: 20
+      voice:
+        vlan: 40
+    state: overridden

@@ -1,0 +1,8 @@
+---
+# tasks file forios_interface
+# From file: ios_interface.py
+- name: remove interface
+
+  cisco.ios.ios_interface:
+    name: Loopback9
+    state: absent

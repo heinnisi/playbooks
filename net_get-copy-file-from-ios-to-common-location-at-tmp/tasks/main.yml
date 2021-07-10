@@ -1,0 +1,9 @@
+---
+# tasks file fornet_get
+# From file: net_get.py
+- name: copy file from ios to common location at /tmp
+
+  ansible.netcommon.net_get:
+    src: running_cfg_sw1.txt
+    dest: /tmp/ios1.txt
+"""

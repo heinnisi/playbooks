@@ -1,0 +1,9 @@
+---
+# tasks file fortemplate_project
+# From file: template_project.py
+- name: get_projects
+
+  cisco.dnac.template_project:
+    state: query  # required
+    name: SomeValue  # string
+  register: nm_get_projects

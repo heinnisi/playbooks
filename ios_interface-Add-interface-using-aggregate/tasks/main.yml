@@ -1,0 +1,12 @@
+---
+# tasks file forios_interface
+# From file: ios_interface.py
+- name: Add interface using aggregate
+
+  cisco.ios.ios_interface:
+    aggregate:
+    - {name: GigabitEthernet0/1, mtu: 256, description: test-interface-1}
+    - {name: GigabitEthernet0/2, mtu: 516, description: test-interface-2}
+    duplex: full
+    speed: 100
+    state: present

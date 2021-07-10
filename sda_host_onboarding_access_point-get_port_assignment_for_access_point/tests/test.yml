@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - sda_host_onboarding_access_point-get_port_assignment_for_access_point

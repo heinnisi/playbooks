@@ -1,0 +1,10 @@
+---
+# tasks file forpnp_workflow
+# From file: pnp_workflow.py
+- name: get_workflow_count
+
+  cisco.dnac.pnp_workflow:
+    state: query  # required
+    count: True  # boolean, required
+    name: SomeValue  # string
+  register: nm_get_workflow_count

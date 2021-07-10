@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - net_get-copy-file-from-the-network-device-to-Ansible-controller

@@ -1,0 +1,19 @@
+---
+# tasks file fortag
+# From file: tag.py
+- name: get_tag
+
+  cisco.dnac.tag:
+    state: query  # required
+    additional_info_attributes: SomeValue  # string
+    additional_info_name_space: SomeValue  # string
+    field: SomeValue  # string
+    level: SomeValue  # string
+    limit: SomeValue  # string
+    name: SomeValue  # string
+    offset: SomeValue  # string
+    order: SomeValue  # string
+    size: SomeValue  # string
+    sort_by: SomeValue  # string
+    system_tag: SomeValue  # string
+  register: nm_get_tag

@@ -1,0 +1,7 @@
+---
+# tasks file fornet_vrf
+# From file: net_vrf.py
+- name: Create VRF named MANAGEMENT
+
+  ansible.netcommon.net_vrf:
+    name: MANAGEMENT

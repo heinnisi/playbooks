@@ -1,0 +1,9 @@
+---
+# tasks file fornet_logging
+# From file: net_logging.py
+- name: configure console logging
+
+  ansible.netcommon.net_logging:
+    dest: console
+    facility: any
+    level: critical

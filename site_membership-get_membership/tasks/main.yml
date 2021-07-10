@@ -1,0 +1,9 @@
+---
+# tasks file forsite_membership
+# From file: site_membership.py
+- name: get_membership
+
+  cisco.dnac.site_membership:
+    state: query  # required
+    site_id: SomeValue  # string, required
+  register: nm_get_membership

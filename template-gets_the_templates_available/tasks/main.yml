@@ -1,0 +1,15 @@
+---
+# tasks file fortemplate
+# From file: template.py
+- name: gets_the_templates_available
+
+  cisco.dnac.template:
+    state: query  # required
+    filter_conflicting_templates: True  # boolean
+    product_family: SomeValue  # string
+    product_series: SomeValue  # string
+    product_type: SomeValue  # string
+    project_id: SomeValue  # string
+    software_type: SomeValue  # string
+    software_version: SomeValue  # string
+  register: nm_gets_the_templates_available

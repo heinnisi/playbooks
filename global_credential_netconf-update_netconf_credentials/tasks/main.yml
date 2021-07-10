@@ -1,0 +1,16 @@
+---
+# tasks file forglobal_credential_netconf
+# From file: global_credential_netconf.py
+- name: update_netconf_credentials
+
+  cisco.dnac.global_credential_netconf:
+    state: update  # required
+    netconfPort: SomeValue  # string, required
+    comments: SomeValue  # string
+    credentialType: # valid values are 'GLOBAL',
+      # 'APP'.
+      SomeValue  # string
+    description: SomeValue  # string
+    id: SomeValue  # string
+    instanceTenantId: SomeValue  # string
+    instanceUuid: SomeValue  # string

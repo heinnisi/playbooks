@@ -1,0 +1,10 @@
+---
+# tasks file fornetwork_device_register
+# From file: network_device_register.py
+- name: register_device_for_wsa
+
+  cisco.dnac.network_device_register:
+    state: query  # required
+    macaddress: SomeValue  # string
+    serial_number: SomeValue  # string
+  register: nm_register_device_for_wsa

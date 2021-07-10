@@ -1,0 +1,8 @@
+---
+# tasks file fornet_lldp_interface
+# From file: net_lldp_interface.py
+- name: Delete LLDP on specific interfaces
+
+  ansible.netcommon.net_lldp_interface:
+    name: eth1
+    state: absent

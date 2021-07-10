@@ -1,0 +1,9 @@
+---
+# tasks file fornfv_profile
+# From file: nfv_profile.py
+- name: delete_nfv_profile
+
+  cisco.dnac.nfv_profile:
+    state: delete  # required
+    id: SomeValue  # string, required
+    name: SomeValue  # string

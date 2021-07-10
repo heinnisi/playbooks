@@ -1,0 +1,9 @@
+---
+# tasks file forsda_auth_profile
+# From file: sda_auth_profile.py
+- name: get_default_authentication_profile
+
+  cisco.dnac.sda_auth_profile:
+    state: query  # required
+    site_name_hierarchy: SomeValue  # string, required
+  register: nm_get_default_authentication_profile

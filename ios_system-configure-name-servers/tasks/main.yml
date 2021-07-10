@@ -1,0 +1,31 @@
+---
+# tasks file forios_system
+# From file: ios_system.py
+- name: configure name servers
+
+  cisco.ios.ios_system:
+    name_servers:
+    - 8.8.8.8
+    - 8.8.4.4
+"""
+RETURN = """
+commands:
+  description: The list of configuration mode commands to send to the device
+  returned: always
+  type: list
+  sample:
+    - hostname ios01
+    - ip domain name test.example.com
+"""
+import re
+from ansible.module_utils.basic import AnsibleModule
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    get_config,
+    load_config,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    ios_argument_spec,
+)
+from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.utils import (
+    ComplexList,
+)

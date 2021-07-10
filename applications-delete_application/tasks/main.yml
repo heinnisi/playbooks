@@ -1,0 +1,8 @@
+---
+# tasks file forapplications
+# From file: applications.py
+- name: delete_application
+
+  cisco.dnac.applications:
+    state: delete  # required
+    id: SomeValue  # string, required

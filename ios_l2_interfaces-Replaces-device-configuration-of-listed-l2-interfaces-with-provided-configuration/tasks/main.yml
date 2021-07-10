@@ -1,0 +1,14 @@
+---
+# tasks file forios_l2_interfaces
+# From file: ios_l2_interfaces.py
+- name: Replaces device configuration of listed l2 interfaces with provided configuration
+
+  cisco.ios.ios_l2_interfaces:
+    config:
+    - name: GigabitEthernet0/2
+      trunk:
+        allowed_vlans: 20-25,40
+        native_vlan: 20
+        pruning_vlans: 10
+        encapsulation: isl
+    state: replaced

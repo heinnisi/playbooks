@@ -1,0 +1,9 @@
+---
+# tasks file fordevice_credential
+# From file: device_credential.py
+- name: get_device_credential_details
+
+  cisco.dnac.device_credential:
+    state: query  # required
+    site_id: SomeValue  # string
+  register: nm_get_device_credential_details

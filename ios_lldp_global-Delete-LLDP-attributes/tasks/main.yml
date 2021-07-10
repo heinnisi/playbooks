@@ -1,0 +1,7 @@
+---
+# tasks file forios_lldp_global
+# From file: ios_lldp_global.py
+- name: Delete LLDP attributes
+
+  cisco.ios.ios_lldp_global:
+    state: deleted

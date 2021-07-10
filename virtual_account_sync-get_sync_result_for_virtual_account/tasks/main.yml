@@ -1,0 +1,10 @@
+---
+# tasks file forvirtual_account_sync
+# From file: virtual_account_sync.py
+- name: get_sync_result_for_virtual_account
+
+  cisco.dnac.virtual_account_sync:
+    state: query  # required
+    domain: SomeValue  # string, required
+    name: SomeValue  # string, required
+  register: nm_get_sync_result_for_virtual_account

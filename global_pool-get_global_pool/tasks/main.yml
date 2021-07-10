@@ -1,0 +1,10 @@
+---
+# tasks file forglobal_pool
+# From file: global_pool.py
+- name: get_global_pool
+
+  cisco.dnac.global_pool:
+    state: query  # required
+    limit: SomeValue  # string
+    offset: SomeValue  # string
+  register: nm_get_global_pool

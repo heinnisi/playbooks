@@ -1,0 +1,68 @@
+---
+# tasks file forios_config
+# From file: ios_config.py
+- name: configurable backup path
+
+  cisco.ios.ios_config:
+    src: ios_template.j2
+    backup: yes
+    backup_options:
+      filename: backup.cfg
+      dir_path: /home/user
+"""
+RETURN = """
+updates:
+  description: The set of commands that will be pushed to the remote device
+  returned: always
+  type: list
+  sample: ['hostname foo', 'router ospf 1', 'router-id 192.0.2.1']
+commands:
+  description: The set of commands that will be pushed to the remote device
+  returned: always
+  type: list
+  sample: ['hostname foo', 'router ospf 1', 'router-id 192.0.2.1']
+backup_path:
+  description: The full path to the backup file
+  returned: when backup is yes
+  type: str
+  sample: /playbooks/ansible/backup/ios_config.2016-07-16@22:28:34
+filename:
+  description: The name of the backup file
+  returned: when backup is yes and filename is not specified in backup options
+  type: str
+  sample: ios_config.2016-07-16@22:28:34
+shortname:
+  description: The full path to the backup file excluding the timestamp
+  returned: when backup is yes and filename is not specified in backup options
+  type: str
+  sample: /playbooks/ansible/backup/ios_config
+date:
+  description: The date extracted from the backup file name
+  returned: when backup is yes
+  type: str
+  sample: "2016-07-16"
+time:
+  description: The time extracted from the backup file name
+  returned: when backup is yes
+  type: str
+  sample: "22:28:34"
+"""
+import json
+from ansible.module_utils._text import to_text
+from ansible.module_utils.connection import ConnectionError
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    run_commands,
+    get_config,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    get_defaults_flag,
+    get_connection,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    ios_argument_spec,
+)
+from ansible.module_utils.basic import AnsibleModule
+from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.config import (
+    NetworkConfig,
+    dumps,
+)

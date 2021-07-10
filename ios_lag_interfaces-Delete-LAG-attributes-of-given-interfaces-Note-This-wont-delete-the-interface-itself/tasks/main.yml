@@ -1,0 +1,10 @@
+---
+# tasks file forios_lag_interfaces
+# From file: ios_lag_interfaces.py
+- name: "Delete LAG attributes of given interfaces (Note: This won't delete the interface itself)"
+
+  cisco.ios.ios_lag_interfaces:
+    config:
+    - name: 10
+    - name: 20
+    state: deleted

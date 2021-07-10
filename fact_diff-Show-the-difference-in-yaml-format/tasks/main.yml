@@ -1,0 +1,8 @@
+---
+# tasks file forfact_diff
+# From file: fact_diff.py
+- name: Show the difference in yaml format
+
+  ansible.utils.fact_diff:
+    before: "{{ before|to_nice_yaml }}"
+    after: "{{ after|to_nice_yaml }}"

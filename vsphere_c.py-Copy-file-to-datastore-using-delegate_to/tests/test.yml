@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vsphere_c.py-Copy-file-to-datastore-using-delegate_to

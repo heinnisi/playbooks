@@ -1,0 +1,10 @@
+---
+# tasks file fornet_lldp_interface
+# From file: net_lldp_interface.py
+- name: Create aggregate of LLDP interface configurations
+
+  ansible.netcommon.net_lldp_interface:
+    aggregate:
+    - {name: eth1}
+    - {name: eth2}
+    state: present

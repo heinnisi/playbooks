@@ -1,0 +1,8 @@
+---
+# tasks file forfile_namespace
+# From file: file_namespace.py
+- name: get_list_of_available_namespaces
+
+  cisco.dnac.file_namespace:
+    state: query  # required
+  register: nm_get_list_of_available_namespaces

@@ -1,0 +1,14 @@
+---
+# tasks file forpnp_workflow
+# From file: pnp_workflow.py
+- name: get_workflows
+
+  cisco.dnac.pnp_workflow:
+    state: query  # required
+    limit: 1  #  integer
+    name: SomeValue  # string
+    offset: 1  #  integer
+    sort: SomeValue  # string
+    sort_order: SomeValue  # string
+    type: SomeValue  # string
+  register: nm_get_workflows

@@ -1,0 +1,9 @@
+---
+# tasks file forios_acl_interfaces
+# From file: ios_acl_interfaces.py
+- name: Delete module attributes of given Interface
+
+  cisco.ios.ios_acl_interfaces:
+    config:
+    - name: GigabitEthernet0/1
+    state: deleted

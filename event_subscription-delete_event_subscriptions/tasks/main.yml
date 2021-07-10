@@ -1,0 +1,8 @@
+---
+# tasks file forevent_subscription
+# From file: event_subscription.py
+- name: delete_event_subscriptions
+
+  cisco.dnac.event_subscription:
+    state: delete  # required
+    subscriptions: SomeValue  # string, required

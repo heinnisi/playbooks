@@ -1,0 +1,5 @@
+---
+# tasks file forcli_parse
+# From file: cli_parse.py
+- name: Pass text and command
+

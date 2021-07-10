@@ -1,0 +1,10 @@
+---
+# tasks file forios_logging
+# From file: ios_logging.py
+- name: configure console logging level and facility
+
+  cisco.ios.ios_logging:
+    dest: console
+    facility: local7
+    level: debugging
+    state: present

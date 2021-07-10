@@ -1,0 +1,9 @@
+---
+# tasks file forsda_device
+# From file: sda_device.py
+- name: get_device_info
+
+  cisco.dnac.sda_device:
+    state: query  # required
+    device_ipaddress: SomeValue  # string, required
+  register: nm_get_device_info

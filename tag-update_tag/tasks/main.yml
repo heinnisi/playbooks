@@ -1,0 +1,21 @@
+---
+# tasks file fortag
+# From file: tag.py
+- name: update_tag
+
+  cisco.dnac.tag:
+    state: present  # required
+    description: SomeValue  # string
+    dynamicRules:
+    - memberType: SomeValue  # string
+      rules:
+        values:
+        - SomeValue  # string
+        items: None
+        operation: SomeValue  # string
+        name: SomeValue  # string
+        value: SomeValue  # string
+    id: SomeValue  # string
+    instanceTenantId: SomeValue  # string
+    name: SomeValue  # string
+    systemTag: True  # boolean

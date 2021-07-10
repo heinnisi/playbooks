@@ -1,0 +1,16 @@
+---
+# tasks file forios_lldp_interfaces
+# From file: ios_lldp_interfaces.py
+- name: Render the commands for provided  configuration
+
+  cisco.ios.ios_lldp_interfaces:
+    config:
+    - name: GigabitEthernet0/0
+      receive: true
+      transmit: true
+    - name: GigabitEthernet0/1
+      receive: true
+      transmit: true
+    - name: GigabitEthernet0/2
+      receive: true
+    state: rendered

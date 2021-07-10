@@ -1,0 +1,35 @@
+---
+# tasks file forios_bgp
+# From file: ios_bgp.py
+- name: remove bgp as 64496 from config
+
+  cisco.ios.ios_bgp:
+    config:
+      bgp_as: 64496
+    operation: delete
+"""
+RETURN = """
+commands:
+  description: The list of configuration mode commands to send to the device
+  returned: always
+  type: list
+  sample:
+    - router bgp 64496
+    - bgp router-id 192.0.2.1
+    - bgp log-neighbor-changes
+    - neighbor 203.0.113.5 remote-as 64511
+    - neighbor 203.0.113.5 timers 300 360 360
+    - neighbor 198.51.100.2 remote-as 64498
+    - network 198.51.100.0 route-map RMAP_1
+    - network 192.0.2.0 mask 255.255.254.0
+    - address-family ipv4
+    - redistribute ospf 223 metric 70
+    - exit-address-family
+"""
+from ansible.module_utils._text import to_text
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.providers.module import (
+    NetworkModule,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.providers.cli.config.bgp.process import (
+    REDISTRIBUTE_PROTOCOLS,
+)

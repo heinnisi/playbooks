@@ -1,0 +1,9 @@
+---
+# tasks file forios_static_route
+# From file: ios_static_route.py
+- name: configure static route
+
+  cisco.ios.ios_static_route:
+    prefix: 192.168.2.0
+    mask: 255.255.255.0
+    next_hop: 10.0.0.1

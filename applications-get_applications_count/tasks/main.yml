@@ -1,0 +1,9 @@
+---
+# tasks file forapplications
+# From file: applications.py
+- name: get_applications_count
+
+  cisco.dnac.applications:
+    state: query  # required
+    count: True  # boolean, required
+  register: nm_get_applications_count

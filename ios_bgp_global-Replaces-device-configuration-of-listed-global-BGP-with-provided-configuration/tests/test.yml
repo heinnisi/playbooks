@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_bgp_global-Replaces-device-configuration-of-listed-global-BGP-with-provided-configuration

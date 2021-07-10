@@ -1,0 +1,9 @@
+---
+# tasks file fornetwork_device_meraki_org
+# From file: network_device_meraki_org.py
+- name: get_organization_list_for_meraki
+
+  cisco.dnac.network_device_meraki_org:
+    state: query  # required
+    id: SomeValue  # string, required
+  register: nm_get_organization_list_for_meraki

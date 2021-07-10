@@ -1,0 +1,5 @@
+---
+# tasks file forios_vrf
+# From file: ios_vrf.py
+- name: Creates a list of import RTs in address-family configuration submode for the
+

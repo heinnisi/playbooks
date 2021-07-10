@@ -1,0 +1,9 @@
+---
+# tasks file fornetwork_device
+# From file: network_device.py
+- name: get_network_device_by_ip
+
+  cisco.dnac.network_device:
+    state: query  # required
+    ip_address: SomeValue  # string, required
+  register: nm_get_network_device_by_ip

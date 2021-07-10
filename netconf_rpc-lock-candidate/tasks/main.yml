@@ -1,0 +1,10 @@
+---
+# tasks file fornetconf_rpc
+# From file: netconf_rpc.py
+- name: lock candidate
+
+  ansible.netcommon.netconf_rpc:
+    rpc: lock
+    content:
+      target:
+        candidate:

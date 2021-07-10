@@ -1,0 +1,262 @@
+---
+# tasks file forpnp_device
+# From file: pnp_device.py
+- name: add_device
+
+  cisco.dnac.pnp_device:
+    state: create  # required
+    deviceInfo:  # required
+      aaaCredentials:
+        password: SomeValue  # string
+        username: SomeValue  # string
+      addedOn: 1  #  integer
+      addnMacAddrs:
+      - SomeValue  # string
+      agentType: SomeValue  # string
+      authStatus: SomeValue  # string
+      authenticatedSudiSerialNo: SomeValue  # string
+      capabilitiesSupported:
+      - SomeValue  # string
+      cmState: SomeValue  # string
+      description: SomeValue  # string
+      deviceSudiSerialNos:
+      - SomeValue  # string
+      deviceType: SomeValue  # string
+      featuresSupported:
+      - SomeValue  # string
+      fileSystemList:
+      - freespace: 1  #  integer
+        name: SomeValue  # string
+        readable: True  # boolean
+        size: 1  #  integer
+        type: SomeValue  # string
+        writeable: True  # boolean
+      firstContact: 1  #  integer
+      hostname: SomeValue  # string
+      httpHeaders:
+      - key: SomeValue  # string
+        value: SomeValue  # string
+      imageFile: SomeValue  # string
+      imageVersion: SomeValue  # string
+      ipInterfaces:
+      - ipv4Address: None
+        ipv6AddressList:
+        macAddress: SomeValue  # string
+        name: SomeValue  # string
+        status: SomeValue  # string
+      lastContact: 1  #  integer
+      lastSyncTime: 1  #  integer
+      lastUpdateOn: 1  #  integer
+      location:
+        address: SomeValue  # string
+        altitude: SomeValue  # string
+        latitude: SomeValue  # string
+        longitude: SomeValue  # string
+        siteId: SomeValue  # string
+      macAddress: SomeValue  # string
+      mode: SomeValue  # string
+      name: SomeValue  # string
+      neighborLinks:
+      - localInterfaceName: SomeValue  # string
+        localMacAddress: SomeValue  # string
+        localShortInterfaceName: SomeValue  # string
+        remoteDeviceName: SomeValue  # string
+        remoteInterfaceName: SomeValue  # string
+        remoteMacAddress: SomeValue  # string
+        remotePlatform: SomeValue  # string
+        remoteShortInterfaceName: SomeValue  # string
+        remoteVersion: SomeValue  # string
+      onbState: SomeValue  # string
+      pid: SomeValue  # string
+      pnpProfileList:
+      - createdBy: SomeValue  # string
+        discoveryCreated: True  # boolean
+        primaryEndpoint:
+          certificate: SomeValue  # string
+          fqdn: SomeValue  # string
+          ipv4Address: None
+          ipv6Address: None
+          port: 1  #  integer
+          protocol: SomeValue  # string
+        profileName: SomeValue  # string
+        secondaryEndpoint:
+          certificate: SomeValue  # string
+          fqdn: SomeValue  # string
+          ipv4Address: None
+          ipv6Address: None
+          port: 1  #  integer
+          protocol: SomeValue  # string
+      populateInventory: True  # boolean
+      preWorkflowCliOuputs:
+      - cli: SomeValue  # string
+        cliOutput: SomeValue  # string
+      projectId: SomeValue  # string
+      projectName: SomeValue  # string
+      reloadRequested: True  # boolean
+      serialNumber: SomeValue  # string
+      smartAccountId: SomeValue  # string
+      source: SomeValue  # string
+      stack: True  # boolean
+      stackInfo:
+        isFullRing: True  # boolean
+        stackMemberList:
+        - hardwareVersion: SomeValue  # string
+          licenseLevel: SomeValue  # string
+          licenseType: SomeValue  # string
+          macAddress: SomeValue  # string
+          pid: SomeValue  # string
+          priority: 1  #  integer
+          role: SomeValue  # string
+          serialNumber: SomeValue  # string
+          softwareVersion: SomeValue  # string
+          stackNumber: 1  #  integer
+          state: SomeValue  # string
+          sudiSerialNumber: SomeValue  # string
+        stackRingProtocol: SomeValue  # string
+        supportsStackWorkflows: True  # boolean
+        totalMemberCount: 1  #  integer
+        validLicenseLevels:
+        - SomeValue  # string
+      state: SomeValue  # string
+      sudiRequired: True  # boolean
+      tags: None
+      userSudiSerialNos:
+      - SomeValue  # string
+      virtualAccountId: SomeValue  # string
+      workflowId: SomeValue  # string
+      workflowName: SomeValue  # string
+    _id: SomeValue  # string
+    runSummaryList:
+    - details: SomeValue  # string
+      errorFlag: True  # boolean
+      historyTaskInfo:
+        addnDetails:
+        - key: SomeValue  # string
+          value: SomeValue  # string
+        name: SomeValue  # string
+        timeTaken: 1  #  integer
+        type: SomeValue  # string
+        workItemList:
+        - command: SomeValue  # string
+          endTime: 1  #  integer
+          outputStr: SomeValue  # string
+          startTime: 1  #  integer
+          state: SomeValue  # string
+          timeTaken: 1  #  integer
+      timestamp: 1  #  integer
+    systemResetWorkflow:
+      _id: SomeValue  # string
+      addToInventory: True  # boolean
+      addedOn: 1  #  integer
+      configId: SomeValue  # string
+      currTaskIdx: 1  #  integer
+      description: SomeValue  # string
+      endTime: 1  #  integer
+      execTime: 1  #  integer
+      imageId: SomeValue  # string
+      instanceType: SomeValue  # string
+      lastupdateOn: 1  #  integer
+      name: SomeValue  # string
+      startTime: 1  #  integer
+      state: SomeValue  # string
+      tasks:
+      - currWorkItemIdx: 1  #  integer
+        endTime: 1  #  integer
+        name: SomeValue  # string
+        startTime: 1  #  integer
+        state: SomeValue  # string
+        taskSeqNo: 1  #  integer
+        timeTaken: 1  #  integer
+        type: SomeValue  # string
+        workItemList:
+        - command: SomeValue  # string
+          endTime: 1  #  integer
+          outputStr: SomeValue  # string
+          startTime: 1  #  integer
+          state: SomeValue  # string
+          timeTaken: 1  #  integer
+      tenantId: SomeValue  # string
+      type: SomeValue  # string
+      useState: SomeValue  # string
+      version: 1  #  integer
+    systemWorkflow:
+      _id: SomeValue  # string
+      addToInventory: True  # boolean
+      addedOn: 1  #  integer
+      configId: SomeValue  # string
+      currTaskIdx: 1  #  integer
+      description: SomeValue  # string
+      endTime: 1  #  integer
+      execTime: 1  #  integer
+      imageId: SomeValue  # string
+      instanceType: SomeValue  # string
+      lastupdateOn: 1  #  integer
+      name: SomeValue  # string
+      startTime: 1  #  integer
+      state: SomeValue  # string
+      tasks:
+      - currWorkItemIdx: 1  #  integer
+        endTime: 1  #  integer
+        name: SomeValue  # string
+        startTime: 1  #  integer
+        state: SomeValue  # string
+        taskSeqNo: 1  #  integer
+        timeTaken: 1  #  integer
+        type: SomeValue  # string
+        workItemList:
+        - command: SomeValue  # string
+          endTime: 1  #  integer
+          outputStr: SomeValue  # string
+          startTime: 1  #  integer
+          state: SomeValue  # string
+          timeTaken: 1  #  integer
+      tenantId: SomeValue  # string
+      type: SomeValue  # string
+      useState: SomeValue  # string
+      version: 1  #  integer
+    tenantId: SomeValue  # string
+    version: 1  #  integer
+    workflow:
+      _id: SomeValue  # string
+      addToInventory: True  # boolean
+      addedOn: 1  #  integer
+      configId: SomeValue  # string
+      currTaskIdx: 1  #  integer
+      description: SomeValue  # string
+      endTime: 1  #  integer
+      execTime: 1  #  integer
+      imageId: SomeValue  # string
+      instanceType: SomeValue  # string
+      lastupdateOn: 1  #  integer
+      name: SomeValue  # string
+      startTime: 1  #  integer
+      state: SomeValue  # string
+      tasks:
+      - currWorkItemIdx: 1  #  integer
+        endTime: 1  #  integer
+        name: SomeValue  # string
+        startTime: 1  #  integer
+        state: SomeValue  # string
+        taskSeqNo: 1  #  integer
+        timeTaken: 1  #  integer
+        type: SomeValue  # string
+        workItemList:
+        - command: SomeValue  # string
+          endTime: 1  #  integer
+          outputStr: SomeValue  # string
+          startTime: 1  #  integer
+          state: SomeValue  # string
+          timeTaken: 1  #  integer
+      tenantId: SomeValue  # string
+      type: SomeValue  # string
+      useState: SomeValue  # string
+      version: 1  #  integer
+    workflowParameters:
+      configList:
+      - configId: SomeValue  # string
+        configParameters:
+        - key: SomeValue  # string
+          value: SomeValue  # string
+      licenseLevel: SomeValue  # string
+      licenseType: SomeValue  # string
+      topOfStackSerialNumber: SomeValue  # string

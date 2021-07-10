@@ -1,0 +1,32 @@
+---
+# tasks file forwireless_rf_profile
+# From file: wireless_rf_profile.py
+- name: create_or_update_rf_profile
+
+  cisco.dnac.wireless_rf_profile:
+    state: create  # required
+    channelWidth: SomeValue  # string, required
+    defaultRfProfile: True  # boolean, required
+    enableBrownField: True  # boolean, required
+    enableCustom: True  # boolean, required
+    enableRadioTypeA: True  # boolean, required
+    enableRadioTypeB: True  # boolean, required
+    name: SomeValue  # string, required
+    radioTypeAProperties:
+      parentProfile: SomeValue  # string
+      radioChannels: SomeValue  # string
+      dataRates: SomeValue  # string
+      mandatoryDataRates: SomeValue  # string
+      powerThresholdV1: 1  #  number
+      rxSopThreshold: SomeValue  # string
+      minPowerLevel: 1  #  number
+      maxPowerLevel: 1  #  number
+    radioTypeBProperties:
+      parentProfile: SomeValue  # string
+      radioChannels: SomeValue  # string
+      dataRates: SomeValue  # string
+      mandatoryDataRates: SomeValue  # string
+      powerThresholdV1: 1  #  number
+      rxSopThreshold: SomeValue  # string
+      minPowerLevel: 1  #  number
+      maxPowerLevel: 1  #  number

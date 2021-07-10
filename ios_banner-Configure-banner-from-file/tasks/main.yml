@@ -1,0 +1,30 @@
+---
+# tasks file forios_banner
+# From file: ios_banner.py
+- name: Configure banner from file
+
+  cisco.ios.ios_banner:
+    banner: motd
+    text: "{{ lookup('file', './config_partial/raw_banner.cfg') }}"
+    state: present
+"""
+RETURN = """
+commands:
+  description: The list of configuration mode commands to send to the device
+  returned: always
+  type: list
+  sample:
+    - banner login
+    - this is my login banner
+    - that contains a multiline
+    - string
+"""
+from ansible.module_utils.basic import AnsibleModule
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    get_config,
+    load_config,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    ios_argument_spec,
+)
+from re import search, M

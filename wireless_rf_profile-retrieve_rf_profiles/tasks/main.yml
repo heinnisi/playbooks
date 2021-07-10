@@ -1,0 +1,9 @@
+---
+# tasks file forwireless_rf_profile
+# From file: wireless_rf_profile.py
+- name: retrieve_rf_profiles
+
+  cisco.dnac.wireless_rf_profile:
+    state: query  # required
+    rf_profile_name: SomeValue  # string
+  register: nm_retrieve_rf_profiles

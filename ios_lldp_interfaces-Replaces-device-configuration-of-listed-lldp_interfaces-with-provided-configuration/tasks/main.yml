@@ -1,0 +1,13 @@
+---
+# tasks file forios_lldp_interfaces
+# From file: ios_lldp_interfaces.py
+- name: Replaces device configuration of listed lldp_interfaces with provided configuration
+
+  cisco.ios.ios_lldp_interfaces:
+    config:
+    - name: GigabitEthernet0/2
+      receive: true
+      transmit: true
+    - name: GigabitEthernet0/3
+      receive: true
+    state: replaced

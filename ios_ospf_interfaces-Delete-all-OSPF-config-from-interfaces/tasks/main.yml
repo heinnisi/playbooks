@@ -1,0 +1,7 @@
+---
+# tasks file forios_ospf_interfaces
+# From file: ios_ospf_interfaces.py
+- name: Delete all OSPF config from interfaces
+
+  cisco.ios.ios_ospf_interfaces:
+    state: deleted

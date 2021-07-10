@@ -1,0 +1,8 @@
+---
+# tasks file fornetwork_device_poller_legit_reads
+# From file: network_device_poller_legit_reads.py
+- name: get_all_keywords_of_clis_accepted
+
+  cisco.dnac.network_device_poller_legit_reads:
+    state: query  # required
+  register: nm_get_all_keywords_of_clis_accepted

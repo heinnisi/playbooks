@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - net_l3_interface-Remove-IP-addresses-on-aggregate

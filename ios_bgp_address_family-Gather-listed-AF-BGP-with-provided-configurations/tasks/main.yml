@@ -1,0 +1,8 @@
+---
+# tasks file forios_bgp_address_family
+# From file: ios_bgp_address_family.py
+- name: Gather listed AF BGP with provided configurations
+
+  cisco.ios.ios_bgp_address_family:
+    config:
+    state: gathered

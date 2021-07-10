@@ -1,0 +1,9 @@
+---
+# tasks file forios_interface
+# From file: ios_interface.py
+- name: Config + intent
+
+  cisco.ios.ios_interface:
+    name: GigabitEthernet0/2
+    enabled: false
+    state: down

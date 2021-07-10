@@ -1,0 +1,8 @@
+---
+# tasks file forflow_analysis
+# From file: flow_analysis.py
+- name: deletes_pathtrace_by_id
+
+  cisco.dnac.flow_analysis:
+    state: delete  # required
+    flow_analysis_id: SomeValue  # string, required

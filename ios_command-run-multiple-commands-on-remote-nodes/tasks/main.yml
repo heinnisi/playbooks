@@ -1,0 +1,9 @@
+---
+# tasks file forios_command
+# From file: ios_command.py
+- name: run multiple commands on remote nodes
+
+  cisco.ios.ios_command:
+    commands:
+    - show version
+    - show interfaces

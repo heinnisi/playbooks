@@ -1,0 +1,39 @@
+---
+# tasks file fornetwork_device
+# From file: network_device.py
+- name: get_device_list
+
+  cisco.dnac.network_device:
+    state: query  # required
+    associated_wlc_ip: SomeValue  # string
+    collection_interval: SomeValue  # string
+    collection_status: SomeValue  # string
+    error_code: SomeValue  # string
+    error_description: SomeValue  # string
+    family: SomeValue  # string
+    hostname: SomeValue  # string
+    id: SomeValue  # string
+    license_name: SomeValue  # string
+    license_status: SomeValue  # string
+    license_type: SomeValue  # string
+    location: SomeValue  # string
+    location_name: SomeValue  # string
+    mac_address: SomeValue  # string
+    management_ip_address: SomeValue  # string
+    module_equpimenttype: SomeValue  # string
+    module_name: SomeValue  # string
+    module_operationstatecode: SomeValue  # string
+    module_partnumber: SomeValue  # string
+    module_servicestate: SomeValue  # string
+    module_vendorequipmenttype: SomeValue  # string
+    not_synced_for_minutes: SomeValue  # string
+    platform_id: SomeValue  # string
+    reachability_status: SomeValue  # string
+    role: SomeValue  # string
+    serial_number: SomeValue  # string
+    series: SomeValue  # string
+    software_type: SomeValue  # string
+    software_version: SomeValue  # string
+    type: SomeValue  # string
+    up_time: SomeValue  # string
+  register: nm_get_device_list

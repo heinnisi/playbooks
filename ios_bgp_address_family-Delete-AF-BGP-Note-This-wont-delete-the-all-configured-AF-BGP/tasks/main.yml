@@ -1,0 +1,14 @@
+---
+# tasks file forios_bgp_address_family
+# From file: ios_bgp_address_family.py
+- name: "Delete AF BGP (Note: This won't delete the all configured AF BGP)"
+
+  cisco.ios.ios_bgp_address_family:
+    config:
+      as_number: 65000
+      address_family:
+        - afi: ipv4
+          safi: multicast
+        - afi: ipv4
+          safi: mdt
+    state: deleted

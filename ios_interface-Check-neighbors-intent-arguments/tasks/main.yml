@@ -1,0 +1,10 @@
+---
+# tasks file forios_interface
+# From file: ios_interface.py
+- name: Check neighbors intent arguments
+
+  cisco.ios.ios_interface:
+    name: Gi0/0
+    neighbors:
+    - port: eth0
+      host: netdev

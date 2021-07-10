@@ -1,0 +1,8 @@
+---
+# tasks file forfact_diff
+# From file: fact_diff.py
+- name: Show the difference in path format
+
+  ansible.utils.fact_diff:
+    before: "{{ before|ansible.utils.to_paths }}"
+    after: "{{ after|ansible.utils.to_paths }}"

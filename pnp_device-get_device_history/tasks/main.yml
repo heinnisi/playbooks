@@ -1,0 +1,11 @@
+---
+# tasks file forpnp_device
+# From file: pnp_device.py
+- name: get_device_history
+
+  cisco.dnac.pnp_device:
+    state: query  # required
+    serial_number: SomeValue  # string, required
+    sort: SomeValue  # string
+    sort_order: SomeValue  # string
+  register: nm_get_device_history

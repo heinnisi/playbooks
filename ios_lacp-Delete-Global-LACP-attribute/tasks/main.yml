@@ -1,0 +1,7 @@
+---
+# tasks file forios_lacp
+# From file: ios_lacp.py
+- name: Delete Global LACP attribute
+
+  cisco.ios.ios_lacp:
+    state: deleted

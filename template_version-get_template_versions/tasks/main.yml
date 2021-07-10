@@ -1,0 +1,9 @@
+---
+# tasks file fortemplate_version
+# From file: template_version.py
+- name: get_template_versions
+
+  cisco.dnac.template_version:
+    state: query  # required
+    template_id: SomeValue  # string, required
+  register: nm_get_template_versions

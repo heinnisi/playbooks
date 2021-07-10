@@ -1,0 +1,12 @@
+---
+# tasks file fornfv_profile
+# From file: nfv_profile.py
+- name: get_nfv_profile
+
+  cisco.dnac.nfv_profile:
+    state: query  # required
+    id: SomeValue  # string, required
+    limit: SomeValue  # string
+    name: SomeValue  # string
+    offset: SomeValue  # string
+  register: nm_get_nfv_profile

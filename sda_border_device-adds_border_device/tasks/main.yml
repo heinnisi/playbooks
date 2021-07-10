@@ -1,0 +1,21 @@
+---
+# tasks file forsda_border_device
+# From file: sda_border_device.py
+- name: adds_border_device
+
+  cisco.dnac.sda_border_device:
+    state: create  # required
+    payload:  # required
+    - deviceManagementIpAddress: SomeValue  # string
+      siteNameHierarchy: SomeValue  # string
+      externalDomainRoutingProtocolName: SomeValue  # string
+      externalConnectivityIpPoolName: SomeValue  # string
+      internalAutonomouSystemNumber: SomeValue  # string
+      borderSessionType: SomeValue  # string
+      connectedToInternet: True  # boolean
+      externalConnectivitySettings:
+      - interfaceName: SomeValue  # string
+        externalAutonomouSystemNumber: SomeValue  # string
+        l3Handoff:
+        - virtualNetwork:
+            virtualNetworkName: SomeValue  # string

@@ -1,0 +1,9 @@
+---
+# tasks file fornetconf_config
+# From file: netconf_config.py
+- name: Apply the new configuration
+
+  ansible.netcommon.netconf_config:
+    content:
+      config:
+        interfaces: "{{ updated.pre.output.data.interfaces }}"

@@ -1,0 +1,10 @@
+---
+# tasks file forsda_virtual_network_ip_pool
+# From file: sda_virtual_network_ip_pool.py
+- name: get_ip_pool_from_sda_virtual_network
+
+  cisco.dnac.sda_virtual_network_ip_pool:
+    state: query  # required
+    ip_pool_name: SomeValue  # string, required
+    virtual_network_name: SomeValue  # string, required
+  register: nm_get_ip_pool_from_sda_virtual_network

@@ -1,0 +1,10 @@
+---
+# tasks file fornet_static_route
+# From file: net_static_route.py
+- name: remove configuration
+
+  ansible.netcommon.net_static_route:
+    prefix: 192.168.2.0
+    mask: 255.255.255.0
+    next_hop: 10.0.0.1
+    state: absent

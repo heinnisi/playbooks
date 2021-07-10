@@ -1,0 +1,11 @@
+---
+# tasks file forevents
+# From file: events.py
+- name: count_of_events
+
+  cisco.dnac.events:
+    state: query  # required
+    tags: SomeValue  # string, required
+    count: True  # boolean, required
+    event_id: SomeValue  # string
+  register: nm_count_of_events

@@ -1,0 +1,15 @@
+---
+# tasks file forvcenter_license
+# From file: vcenter_license.py
+- name: Add vSAN license and assign to the given cluster
+
+  community.vmware.vcenter_license:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter: '{{ datacenter_name }}'
+    cluster_name: '{{ cluster_name }}'
+    license: f600d-21ae3-5592b-249e0-dd502
+    state: present
+  delegate_to: localhost
+'''

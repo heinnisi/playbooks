@@ -1,0 +1,9 @@
+---
+# tasks file forios_user
+# From file: ios_user.py
+- name: Add a user specifying password type
+
+  cisco.ios.ios_user:
+    name: ansibletest4
+    configured_password: '{{ new_password }}'
+    password_type: password

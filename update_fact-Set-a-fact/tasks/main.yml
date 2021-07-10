@@ -1,0 +1,5 @@
+---
+# tasks file forupdate_fact
+# From file: update_fact.py
+- name: Set a fact
+

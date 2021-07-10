@@ -1,0 +1,11 @@
+---
+# tasks file forinterface
+# From file: interface.py
+- name: get_device_interfaces_by_specified_range
+
+  cisco.dnac.interface:
+    state: query  # required
+    device_id: SomeValue  # string, required
+    records_to_return: 1  #  integer, required
+    start_index: 1  #  integer, required
+  register: nm_get_device_interfaces_by_specified_range

@@ -1,0 +1,8 @@
+---
+# tasks file fornet_lldp
+# From file: net_lldp.py
+- name: Disable LLDP service
+
+  ansible.netcommon.net_lldp:
+    state: absent
+"""

@@ -1,0 +1,14 @@
+---
+# tasks file fornetconf_rpc
+# From file: netconf_rpc.py
+- name: get schema list with JSON output
+
+  ansible.netcommon.netconf_rpc:
+    rpc: get
+    content: |
+      <filter>
+        <netconf-state xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+          <schemas/>
+        </netconf-state>
+      </filter>
+    display: json

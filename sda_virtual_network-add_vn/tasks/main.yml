@@ -1,0 +1,10 @@
+---
+# tasks file forsda_virtual_network
+# From file: sda_virtual_network.py
+- name: add_vn
+
+  cisco.dnac.sda_virtual_network:
+    state: create  # required
+    payload:  # required
+    - virtualNetworkName: SomeValue  # string
+      siteNameHierarchy: SomeValue  # string

@@ -1,0 +1,12 @@
+---
+# tasks file forios_lacp_interfaces
+# From file: ios_lacp_interfaces.py
+- name: Override device configuration of all lacp_interfaces with provided configuration
+
+  cisco.ios.ios_lacp_interfaces:
+    config:
+    - name: GigabitEthernet0/1
+      port_priority: 20
+    - name: Port-channel10
+      max_bundle: 2
+    state: overridden

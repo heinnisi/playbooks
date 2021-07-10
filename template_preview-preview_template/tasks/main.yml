@@ -1,0 +1,9 @@
+---
+# tasks file fortemplate_preview
+# From file: template_preview.py
+- name: preview_template
+
+  cisco.dnac.template_preview:
+    state: update  # required
+    params:
+    templateId: SomeValue  # string

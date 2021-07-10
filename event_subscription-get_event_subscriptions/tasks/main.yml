@@ -1,0 +1,13 @@
+---
+# tasks file forevent_subscription
+# From file: event_subscription.py
+- name: get_event_subscriptions
+
+  cisco.dnac.event_subscription:
+    state: query  # required
+    event_ids: SomeValue  # string
+    limit: 1  #  number
+    offset: 1  #  number
+    order: SomeValue  # string
+    sort_by: SomeValue  # string
+  register: nm_get_event_subscriptions

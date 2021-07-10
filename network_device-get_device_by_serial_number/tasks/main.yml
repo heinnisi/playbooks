@@ -1,0 +1,9 @@
+---
+# tasks file fornetwork_device
+# From file: network_device.py
+- name: get_device_by_serial_number
+
+  cisco.dnac.network_device:
+    state: query  # required
+    serial_number: SomeValue  # string, required
+  register: nm_get_device_by_serial_number

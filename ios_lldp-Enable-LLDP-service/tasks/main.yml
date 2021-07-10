@@ -1,0 +1,7 @@
+---
+# tasks file forios_lldp
+# From file: ios_lldp.py
+- name: Enable LLDP service
+
+  cisco.ios.ios_lldp:
+    state: present

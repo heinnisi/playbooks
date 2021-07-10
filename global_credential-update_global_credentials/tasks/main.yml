@@ -1,0 +1,10 @@
+---
+# tasks file forglobal_credential
+# From file: global_credential.py
+- name: update_global_credentials
+
+  cisco.dnac.global_credential:
+    state: update  # required
+    global_credential_id: SomeValue  # string, required
+    siteUuids:
+    - SomeValue  # string

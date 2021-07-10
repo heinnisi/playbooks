@@ -1,0 +1,22 @@
+---
+# tasks file forios_acl_interfaces
+# From file: ios_acl_interfaces.py
+- name: Render the commands for provided  configuration
+
+  cisco.ios.ios_acl_interfaces:
+    config:
+    - name: GigabitEthernet0/1
+      access_groups:
+      - afi: ipv4
+        acls:
+        - name: 110
+          direction: in
+        - name: 123
+          direction: out
+      - afi: ipv6
+        acls:
+        - name: test_v6
+          direction: out
+        - name: temp_v6
+          direction: in
+    state: rendered

@@ -1,0 +1,12 @@
+---
+# tasks file forupdate_fact
+# From file: update_fact.py
+- name: Update the fact
+
+  ansible.utils.update_fact:
+    updates:
+    - path: a.b.c.0
+      value: 10
+    - path: "a['b']['c'][1]"
+      value: 20
+  register: updated

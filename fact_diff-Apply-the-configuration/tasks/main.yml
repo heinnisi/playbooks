@@ -1,0 +1,9 @@
+---
+# tasks file forfact_diff
+# From file: fact_diff.py
+- name: Apply the configuration
+
+  ansible.netcommon.restconf_config:
+    path: 'data/Cisco-NX-OS-device:System/intf-items/'
+    content: "{{ updated.pre.response}}"
+    method: patch

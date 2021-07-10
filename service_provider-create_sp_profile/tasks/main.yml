@@ -1,0 +1,12 @@
+---
+# tasks file forservice_provider
+# From file: service_provider.py
+- name: create_sp_profile
+
+  cisco.dnac.service_provider:
+    state: create  # required
+    settings:  # required
+      qos:
+      - profileName: SomeValue  # string, required
+        model: SomeValue  # string, required
+        wanProvider: SomeValue  # string, required

@@ -1,0 +1,37 @@
+---
+# tasks file forvirtual_account_sync
+# From file: virtual_account_sync.py
+- name: sync_virtual_account_devices
+
+  cisco.dnac.virtual_account_sync:
+    state: create  # required
+    profile:  # required
+      addressFqdn: SomeValue  # string
+      addressIpV4: SomeValue  # string
+      cert: SomeValue  # string
+      makeDefault: True  # boolean
+      name: SomeValue  # string
+      port: 1  #  integer
+      profileId: SomeValue  # string
+      proxy: True  # boolean
+    smartAccountId: SomeValue  # string, required
+    syncStatus: # valid values are 'NOT_SYNCED',
+      # 'SYNCING',
+      # 'SUCCESS',
+      # 'FAILURE'.
+      SomeValue  # string, required
+    virtualAccountId: SomeValue  # string, required
+    autoSyncPeriod: 1  #  integer
+    ccoUser: SomeValue  # string
+    expiry: 1  #  integer
+    lastSync: 1  #  integer
+    syncResult:
+      syncList:
+      - deviceSnList:
+        - SomeValue  # string
+        syncType: SomeValue  # string
+      syncMsg: SomeValue  # string
+    syncResultStr: SomeValue  # string
+    syncStartTime: 1  #  integer
+    tenantId: SomeValue  # string
+    token: SomeValue  # string

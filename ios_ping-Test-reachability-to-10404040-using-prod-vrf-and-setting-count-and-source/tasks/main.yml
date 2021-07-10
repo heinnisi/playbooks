@@ -1,0 +1,10 @@
+---
+# tasks file forios_ping
+# From file: ios_ping.py
+- name: Test reachability to 10.40.40.40 using prod vrf and setting count and source
+
+  cisco.ios.ios_ping:
+    dest: 10.40.40.40
+    source: loopback0
+    vrf: prod
+    count: 20

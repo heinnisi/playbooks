@@ -1,0 +1,9 @@
+---
+# tasks file forglobal_credential
+# From file: global_credential.py
+- name: get_credential_sub_type_by_credential_id
+
+  cisco.dnac.global_credential:
+    state: query  # required
+    id: SomeValue  # string, required
+  register: nm_get_credential_sub_type_by_credential_id

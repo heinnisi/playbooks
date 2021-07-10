@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_linkagg-Create-aggregate-of-linkagg-definitions

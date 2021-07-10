@@ -1,0 +1,15 @@
+---
+# tasks file fornetwork_device_module
+# From file: network_device_module.py
+- name: get_modules
+
+  cisco.dnac.network_device_module:
+    state: query  # required
+    device_id: SomeValue  # string, required
+    limit: SomeValue  # string
+    name_list: SomeValue  # string
+    offset: SomeValue  # string
+    operational_state_code_list: SomeValue  # string
+    part_number_list: SomeValue  # string
+    vendor_equipment_type_list: SomeValue  # string
+  register: nm_get_modules

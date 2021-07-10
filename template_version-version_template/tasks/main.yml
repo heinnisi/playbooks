@@ -1,0 +1,9 @@
+---
+# tasks file fortemplate_version
+# From file: template_version.py
+- name: version_template
+
+  cisco.dnac.template_version:
+    state: create  # required
+    comments: SomeValue  # string
+    templateId: SomeValue  # string

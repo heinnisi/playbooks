@@ -1,0 +1,15 @@
+---
+# tasks file forvsphere_file
+# From file: vsphere_file.py
+- name: Delete a file on a datastore
+
+  community.vmware.vsphere_file:
+    host: '{{ vhost }}'
+    username: '{{ vuser }}'
+    password: '{{ vpass }}'
+    datacenter: DC2 Someplace
+    datastore: datastore2
+    path: other/remote/file
+    state: absent
+  delegate_to: localhost
+'''

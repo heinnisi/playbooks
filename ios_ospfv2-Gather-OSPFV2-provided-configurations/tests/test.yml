@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_ospfv2-Gather-OSPFV2-provided-configurations

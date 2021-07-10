@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - netconf_config-Get-the-post-change-config-using-the-filter

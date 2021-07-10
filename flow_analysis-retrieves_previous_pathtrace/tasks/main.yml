@@ -1,0 +1,9 @@
+---
+# tasks file forflow_analysis
+# From file: flow_analysis.py
+- name: retrieves_previous_pathtrace
+
+  cisco.dnac.flow_analysis:
+    state: query  # required
+    flow_analysis_id: SomeValue  # string, required
+  register: nm_retrieves_previous_pathtrace

@@ -1,0 +1,12 @@
+---
+# tasks file forvalidate
+# From file: validate.py
+- name: validate data in with jsonschema engine (by passing task vars as configurable plugin options)
+
+  ansible.utils.validate:
+    data: "{{ data }}"
+    criteria: "{{ criteria }}"
+    engine: ansible.utils.jsonschema
+  vars:
+    ansible_jsonschema_draft: draft7
+"""

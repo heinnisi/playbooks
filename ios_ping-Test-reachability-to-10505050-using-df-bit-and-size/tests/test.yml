@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_ping-Test-reachability-to-10505050-using-df-bit-and-size

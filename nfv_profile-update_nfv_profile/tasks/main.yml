@@ -1,0 +1,37 @@
+---
+# tasks file fornfv_profile
+# From file: nfv_profile.py
+- name: update_nfv_profile
+
+  cisco.dnac.nfv_profile:
+    state: update  # required
+    id: SomeValue  # string, required
+    device:  # required
+    - deviceTag: SomeValue  # string, required
+      directInternetAccessForFirewall: True  # boolean, required
+      currentDeviceTag: SomeValue  # string, required
+      services:
+      - serviceType: SomeValue  # string, required
+        profileType: SomeValue  # string, required
+        serviceName: SomeValue  # string, required
+        imageName: SomeValue  # string, required
+        vNicMapping:  # required
+        - networkType: SomeValue  # string, required
+          assignIpAddressToNetwork: SomeValue  # string
+        firewallMode: SomeValue  # string
+      customNetworks:
+      - networkName: SomeValue  # string, required
+        servicesToConnect:  # required
+        - serviceName: SomeValue  # string, required
+        connectionType: SomeValue  # string, required
+        vlanMode: SomeValue  # string, required
+        vlanId: 1  #  number, required
+      vlanForL2:
+      - vlanType: SomeValue  # string, required
+        vlanId: 1  #  number, required
+        vlanDescription: SomeValue  # string, required
+      customTemplate:
+      - deviceType: SomeValue  # string, required
+        template: SomeValue  # string, required
+        templateType: SomeValue  # string, required
+    name: SomeValue  # string

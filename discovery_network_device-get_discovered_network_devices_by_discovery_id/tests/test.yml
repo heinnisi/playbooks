@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - discovery_network_device-get_discovered_network_devices_by_discovery_id

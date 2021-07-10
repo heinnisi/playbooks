@@ -1,0 +1,8 @@
+---
+# tasks file forios_lldp_interfaces
+# From file: ios_lldp_interfaces.py
+- name: Gather listed LLDP interfaces with provided configurations
+
+  cisco.ios.ios_lldp_interfaces:
+    config:
+    state: gathered

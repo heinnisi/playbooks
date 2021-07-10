@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - validate-validate-data-in-with-jsonschema-engine-by-passing-task-vars-as-configurable-plugin-options

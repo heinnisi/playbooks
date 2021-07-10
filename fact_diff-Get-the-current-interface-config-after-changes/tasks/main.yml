@@ -1,0 +1,9 @@
+---
+# tasks file forfact_diff
+# From file: fact_diff.py
+- name: Get the current interface config after changes
+
+  ansible.netcommon.restconf_get:
+    content: config
+    path: /data/Cisco-NX-OS-device:System/intf-items/phys-items
+  register: post

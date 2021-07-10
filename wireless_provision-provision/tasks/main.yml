@@ -1,0 +1,19 @@
+---
+# tasks file forwireless_provision
+# From file: wireless_provision.py
+- name: provision
+
+  cisco.dnac.wireless_provision:
+    state: create  # required
+    payload:  # required
+    - deviceName: SomeValue  # string, required
+      site: SomeValue  # string, required
+      managedAPLocations:
+      - SomeValue  # string
+      dynamicInterfaces:
+      - interfaceIPAddress: SomeValue  # string
+        interfaceNetmaskInCIDR: 1  #  integer
+        interfaceGateway: SomeValue  # string
+        lagOrPortNumber: 1  #  integer
+        vlanId: 1  #  integer
+        interfaceName: SomeValue  # string

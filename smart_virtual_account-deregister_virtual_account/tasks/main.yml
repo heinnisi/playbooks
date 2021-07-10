@@ -1,0 +1,9 @@
+---
+# tasks file forsmart_virtual_account
+# From file: smart_virtual_account.py
+- name: deregister_virtual_account
+
+  cisco.dnac.smart_virtual_account:
+    state: delete  # required
+    domain: SomeValue  # string, required
+    name: SomeValue  # string, required

@@ -1,0 +1,10 @@
+---
+# tasks file forios_vlan
+# From file: ios_vlan.py
+- name: Add interfaces to VLAN
+
+  cisco.ios.ios_vlan:
+    vlan_id: 100
+    interfaces:
+    - GigabitEthernet0/0
+    - GigabitEthernet0/1

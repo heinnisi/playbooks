@@ -1,0 +1,8 @@
+---
+# tasks file fornet_linkagg
+# From file: net_linkagg.py
+- name: remove configuration
+
+  ansible.netcommon.net_linkagg:
+    name: bond0
+    state: absent

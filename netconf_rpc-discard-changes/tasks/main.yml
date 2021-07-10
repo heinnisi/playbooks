@@ -1,0 +1,7 @@
+---
+# tasks file fornetconf_rpc
+# From file: netconf_rpc.py
+- name: discard changes
+
+  ansible.netcommon.netconf_rpc:
+    rpc: discard-changes

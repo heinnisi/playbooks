@@ -1,0 +1,15 @@
+---
+# tasks file forios_lldp_interfaces
+# From file: ios_lldp_interfaces.py
+- name: Merge provided configuration with device configuration
+
+  cisco.ios.ios_lldp_interfaces:
+    config:
+    - name: GigabitEthernet0/1
+      receive: true
+      transmit: true
+    - name: GigabitEthernet0/2
+      receive: true
+    - name: GigabitEthernet0/3
+      transmit: true
+    state: merged

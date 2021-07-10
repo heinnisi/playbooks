@@ -1,0 +1,14 @@
+---
+# tasks file forevents
+# From file: events.py
+- name: get_events
+
+  cisco.dnac.events:
+    state: query  # required
+    tags: SomeValue  # string, required
+    event_id: SomeValue  # string
+    limit: 1  #  number
+    offset: 1  #  number
+    order: SomeValue  # string
+    sort_by: SomeValue  # string
+  register: nm_get_events

@@ -1,0 +1,11 @@
+---
+# tasks file forios_user
+# From file: ios_user.py
+- name: set multiple users to privilege level 15
+
+  cisco.ios.ios_user:
+    aggregate:
+    - name: netop
+    - name: netend
+    privilege: 15
+    state: present

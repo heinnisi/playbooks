@@ -1,0 +1,10 @@
+---
+# tasks file fornetconf_config
+# From file: netconf_config.py
+- name: configure interface while providing different private key file path (for connection=netconf)
+
+  ansible.netcommon.netconf_config:
+    backup: yes
+  register: backup_junos_location
+  vars:
+    ansible_private_key_file: /home/admin/.ssh/newprivatekeyfile

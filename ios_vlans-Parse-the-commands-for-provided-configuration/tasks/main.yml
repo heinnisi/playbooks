@@ -1,0 +1,8 @@
+---
+# tasks file forios_vlans
+# From file: ios_vlans.py
+- name: Parse the commands for provided configuration
+
+  cisco.ios.ios_vlans:
+    running_config: "{{ lookup('file', './parsed.cfg') }}"
+    state: parsed

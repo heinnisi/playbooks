@@ -1,0 +1,10 @@
+---
+# tasks file fornet_interface
+# From file: net_interface.py
+- name: Config + intent
+
+  ansible.netcommon.net_interface:
+    name: fxp0
+    enabled: false
+    state: down
+"""

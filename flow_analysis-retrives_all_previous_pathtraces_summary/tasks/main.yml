@@ -1,0 +1,23 @@
+---
+# tasks file forflow_analysis
+# From file: flow_analysis.py
+- name: retrives_all_previous_pathtraces_summary
+
+  cisco.dnac.flow_analysis:
+    state: query  # required
+    dest_ip: SomeValue  # string
+    dest_port: SomeValue  # string
+    gt_create_time: SomeValue  # string
+    last_update_time: SomeValue  # string
+    limit: SomeValue  # string
+    lt_create_time: SomeValue  # string
+    offset: SomeValue  # string
+    order: SomeValue  # string
+    periodic_refresh: True  # boolean
+    protocol: SomeValue  # string
+    sort_by: SomeValue  # string
+    source_ip: SomeValue  # string
+    source_port: SomeValue  # string
+    status: SomeValue  # string
+    task_id: SomeValue  # string
+  register: nm_retrives_all_previous_pathtraces_summary

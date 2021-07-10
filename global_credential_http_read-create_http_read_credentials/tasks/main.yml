@@ -1,0 +1,18 @@
+---
+# tasks file forglobal_credential_http_read
+# From file: global_credential_http_read.py
+- name: create_http_read_credentials
+
+  cisco.dnac.global_credential_http_read:
+    state: create  # required
+    payload:  # required
+    - password: SomeValue  # string, required
+      port: 1  #  integer, required
+      username: SomeValue  # string, required
+      comments: SomeValue  # string
+      credentialType: SomeValue  # string
+      description: SomeValue  # string
+      id: SomeValue  # string
+      instanceTenantId: SomeValue  # string
+      instanceUuid: SomeValue  # string
+      secure: True  # boolean

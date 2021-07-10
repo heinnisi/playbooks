@@ -1,0 +1,9 @@
+---
+# tasks file forios_interfaces
+# From file: ios_interfaces.py
+- name: "Delete module attributes of given interfaces (Note: This won't delete the interface itself)"
+
+  cisco.ios.ios_interfaces:
+    config:
+    - name: GigabitEthernet0/2
+    state: deleted

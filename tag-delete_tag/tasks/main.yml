@@ -1,0 +1,8 @@
+---
+# tasks file fortag
+# From file: tag.py
+- name: delete_tag
+
+  cisco.dnac.tag:
+    state: absent  # required
+    id: SomeValue  # string, required

@@ -1,0 +1,9 @@
+---
+# tasks file forsite_health
+# From file: site_health.py
+- name: get_site_health
+
+  cisco.dnac.site_health:
+    state: query  # required
+    timestamp: 1  #  integer
+  register: nm_get_site_health

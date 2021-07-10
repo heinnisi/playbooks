@@ -1,0 +1,24 @@
+---
+# tasks file forios_lldp
+# From file: ios_lldp.py
+- name: Disable LLDP service
+
+  cisco.ios.ios_lldp:
+    state: absent
+"""
+RETURN = """
+commands:
+  description: The list of configuration mode commands to send to the device
+  returned: always, except for the platforms that use Netconf transport to manage the device.
+  type: list
+  sample:
+    - lldp run
+"""
+from ansible.module_utils.basic import AnsibleModule
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    load_config,
+    run_commands,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    ios_argument_spec,
+)

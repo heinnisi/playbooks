@@ -1,0 +1,21 @@
+---
+# tasks file forevent_series
+# From file: event_series.py
+- name: get_notifications
+
+  cisco.dnac.event_series:
+    state: query  # required
+    category: SomeValue  # string
+    domain: SomeValue  # string
+    end_time: SomeValue  # string
+    event_ids: SomeValue  # string
+    limit: 1  #  number
+    offset: 1  #  number
+    order: SomeValue  # string
+    severity: SomeValue  # string
+    sort_by: SomeValue  # string
+    source: SomeValue  # string
+    start_time: SomeValue  # string
+    sub_domain: SomeValue  # string
+    type: SomeValue  # string
+  register: nm_get_notifications

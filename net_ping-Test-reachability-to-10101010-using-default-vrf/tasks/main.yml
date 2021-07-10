@@ -1,0 +1,7 @@
+---
+# tasks file fornet_ping
+# From file: net_ping.py
+- name: Test reachability to 10.10.10.10 using default vrf
+
+  ansible.netcommon.net_ping:
+    dest: 10.10.10.10

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vca_vapp-Creates-a-new-vApp-in-a-VCA-instance

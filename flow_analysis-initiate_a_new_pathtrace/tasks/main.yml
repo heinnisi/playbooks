@@ -1,0 +1,16 @@
+---
+# tasks file forflow_analysis
+# From file: flow_analysis.py
+- name: initiate_a_new_pathtrace
+
+  cisco.dnac.flow_analysis:
+    state: create  # required
+    destIP: SomeValue  # string, required
+    sourceIP: SomeValue  # string, required
+    controlPath: True  # boolean
+    destPort: SomeValue  # string
+    inclusions:
+    - SomeValue  # string
+    periodicRefresh: True  # boolean
+    protocol: SomeValue  # string
+    sourcePort: SomeValue  # string

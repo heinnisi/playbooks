@@ -1,0 +1,8 @@
+---
+# tasks file forios_interfaces
+# From file: ios_interfaces.py
+- name: Parse the commands for provided configuration
+
+  cisco.ios.ios_interfaces:
+    running_config: "{{ lookup('file', 'parsed.cfg') }}"
+    state: parsed

@@ -1,0 +1,11 @@
+---
+# tasks file fortask
+# From file: task.py
+- name: get_task_by_operationid
+
+  cisco.dnac.task:
+    state: query  # required
+    limit: 1  #  integer, required
+    offset: 1  #  integer, required
+    operation_id: SomeValue  # string, required
+  register: nm_get_task_by_operationid

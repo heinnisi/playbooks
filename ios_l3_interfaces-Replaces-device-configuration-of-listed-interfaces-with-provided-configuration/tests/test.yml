@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_l3_interfaces-Replaces-device-configuration-of-listed-interfaces-with-provided-configuration

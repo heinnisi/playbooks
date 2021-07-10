@@ -1,0 +1,11 @@
+---
+# tasks file forios_facts
+# From file: ios_facts.py
+- name: Gather only the interfaces resource facts and no legacy facts
+
+  cisco.ios.ios_facts:
+    gather_subset:
+    - '!all'
+    - '!min'
+    gather_network_resources:
+    - interfaces

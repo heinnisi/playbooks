@@ -1,0 +1,8 @@
+---
+# tasks file forios_acl_interfaces
+# From file: ios_acl_interfaces.py
+- name: Gather listed acl interfaces with provided configurations
+
+  cisco.ios.ios_acl_interfaces:
+    config:
+    state: gathered

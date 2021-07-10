@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_bgp_global-Delete-global-BGP-Note-This-wont-delete-the-configured-global-BGP

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_lag_interfaces-Delete-LAG-attributes-of-given-interfaces-Note-This-wont-delete-the-interface-itself

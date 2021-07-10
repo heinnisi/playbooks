@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_lacp-Gather-listed-LACP-with-provided-configurations

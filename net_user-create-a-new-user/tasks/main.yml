@@ -1,0 +1,9 @@
+---
+# tasks file fornet_user
+# From file: net_user.py
+- name: create a new user
+
+  ansible.netcommon.net_user:
+    name: ansible
+    sshkey: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+    state: present

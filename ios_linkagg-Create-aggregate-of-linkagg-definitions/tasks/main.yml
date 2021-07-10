@@ -1,0 +1,37 @@
+---
+# tasks file forios_linkagg
+# From file: ios_linkagg.py
+- name: Create aggregate of linkagg definitions
+
+  cisco.ios.ios_linkagg:
+    aggregate:
+    - {group: 3, mode: on, members: [GigabitEthernet0/1]}
+    - {group: 100, mode: passive, members: [GigabitEthernet0/2]}
+"""
+RETURN = """
+commands:
+  description: The list of configuration mode commands to send to the device
+  returned: always, except for the platforms that use Netconf transport to manage the device.
+  type: list
+  sample:
+    - interface port-channel 30
+    - interface GigabitEthernet0/3
+    - channel-group 30 mode on
+    - no interface port-channel 30
+"""
+import re
+from copy import deepcopy
+from ansible.module_utils.basic import AnsibleModule
+from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.config import (
+    CustomNetworkConfig,
+)
+from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.utils import (
+    remove_default_spec,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    get_config,
+    load_config,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    ios_argument_spec,
+)

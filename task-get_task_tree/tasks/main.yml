@@ -1,0 +1,10 @@
+---
+# tasks file fortask
+# From file: task.py
+- name: get_task_tree
+
+  cisco.dnac.task:
+    state: query  # required
+    task_id: SomeValue  # string, required
+    tree: True  # boolean, required
+  register: nm_get_task_tree

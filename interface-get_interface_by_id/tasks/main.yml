@@ -1,0 +1,9 @@
+---
+# tasks file forinterface
+# From file: interface.py
+- name: get_interface_by_id
+
+  cisco.dnac.interface:
+    state: query  # required
+    id: SomeValue  # string, required
+  register: nm_get_interface_by_id

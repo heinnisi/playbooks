@@ -1,0 +1,11 @@
+---
+# tasks file fornet_static_route
+# From file: net_static_route.py
+- name: Remove static route collections
+
+  ansible.netcommon.net_static_route:
+    aggregate:
+    - {prefix: 172.24.1.0/24, next_hop: 192.168.42.64}
+    - {prefix: 172.24.3.0/24, next_hop: 192.168.42.64}
+    state: absent
+"""

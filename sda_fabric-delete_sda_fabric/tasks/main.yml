@@ -1,0 +1,8 @@
+---
+# tasks file forsda_fabric
+# From file: sda_fabric.py
+- name: delete_sda_fabric
+
+  cisco.dnac.sda_fabric:
+    state: delete  # required
+    fabric_name: SomeValue  # string, required

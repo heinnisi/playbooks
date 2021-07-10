@@ -1,0 +1,15 @@
+---
+# tasks file fortemplate_project
+# From file: template_project.py
+- name: update_project
+
+  cisco.dnac.template_project:
+    state: update  # required
+    createTime: 1  #  integer
+    description: SomeValue  # string
+    id: SomeValue  # string
+    lastUpdateTime: 1  #  integer
+    name: SomeValue  # string
+    tags:
+    - SomeValue  # string
+    templates: None

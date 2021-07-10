@@ -1,0 +1,18 @@
+---
+# tasks file forglobal_pool
+# From file: global_pool.py
+- name: create_global_pool
+
+  cisco.dnac.global_pool:
+    state: create  # required
+    settings:  # required
+      ippool:
+      - ipPoolName: SomeValue  # string, required
+        type: SomeValue  # string, required
+        ipPoolCidr: SomeValue  # string, required
+        gateway: SomeValue  # string
+        dhcpServerIps:
+        - SomeValue  # string
+        dnsServerIps:
+        - SomeValue  # string
+        IpAddressSpace: SomeValue  # string

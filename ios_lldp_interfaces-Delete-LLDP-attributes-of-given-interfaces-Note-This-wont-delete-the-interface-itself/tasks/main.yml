@@ -1,0 +1,9 @@
+---
+# tasks file forios_lldp_interfaces
+# From file: ios_lldp_interfaces.py
+- name: "Delete LLDP attributes of given interfaces (Note: This won't delete the interface itself)"
+
+  cisco.ios.ios_lldp_interfaces:
+    config:
+    - name: GigabitEthernet0/1
+    state: deleted

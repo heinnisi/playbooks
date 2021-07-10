@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - net_get-copy-file-from-ios-to-common-location-at-tmp

@@ -1,0 +1,8 @@
+---
+# tasks file forios_ospfv3
+# From file: ios_ospfv3.py
+- name: Parse the provided configuration with the exisiting running configuration
+
+  cisco.ios.ios_ospfv3:
+    running_config: "{{ lookup('file', 'parsed.cfg') }}"
+    state: parsed

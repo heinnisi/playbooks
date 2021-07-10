@@ -1,0 +1,7 @@
+---
+# tasks file forios_command
+# From file: ios_command.py
+- name: run show version on remote devices
+
+  cisco.ios.ios_command:
+    commands: show version

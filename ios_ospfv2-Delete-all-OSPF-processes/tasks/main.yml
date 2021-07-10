@@ -1,0 +1,7 @@
+---
+# tasks file forios_ospfv2
+# From file: ios_ospfv2.py
+- name: Delete all OSPF processes
+
+  cisco.ios.ios_ospfv2:
+    state: deleted

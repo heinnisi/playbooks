@@ -1,0 +1,7 @@
+---
+# tasks file forios_user
+# From file: ios_user.py
+- name: remove all users except admin
+
+  cisco.ios.ios_user:
+    purge: yes

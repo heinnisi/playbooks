@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - network_device_polling_interval-get_polling_interval_for_all_devices

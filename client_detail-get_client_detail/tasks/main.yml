@@ -1,0 +1,10 @@
+---
+# tasks file forclient_detail
+# From file: client_detail.py
+- name: get_client_detail
+
+  cisco.dnac.client_detail:
+    state: query  # required
+    mac_address: SomeValue  # string, required
+    timestamp: 1  #  integer
+  register: nm_get_client_detail

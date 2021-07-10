@@ -1,0 +1,8 @@
+---
+# tasks file forglobal_credential
+# From file: global_credential.py
+- name: delete_global_credentials_by_id
+
+  cisco.dnac.global_credential:
+    state: delete  # required
+    global_credential_id: SomeValue  # string, required

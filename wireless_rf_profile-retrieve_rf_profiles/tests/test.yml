@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - wireless_rf_profile-retrieve_rf_profiles

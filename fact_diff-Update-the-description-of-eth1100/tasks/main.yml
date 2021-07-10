@@ -1,0 +1,12 @@
+---
+# tasks file forfact_diff
+# From file: fact_diff.py
+- name: Update the description of eth1/100
+
+  ansible.utils.update_fact:
+    updates:
+    - path: "pre['response']['phys-items']['PhysIf-list'][{{ index }}]['descr']"
+      value: "Configured by ansible {{ 100 | random }}"
+  vars:
+    index: "{{ pre['response']['phys-items']['PhysIf-list']|ansible.utils.index_of('eq', 'eth1/100', 'id') }}"
+  register: updated

@@ -1,0 +1,7 @@
+---
+# tasks file forios_l3_interfaces
+# From file: ios_l3_interfaces.py
+- name: "Delete L3 attributes of ALL interfaces together (NOTE: This won't delete the interface itself)"
+
+  cisco.ios.ios_l3_interfaces:
+    state: deleted

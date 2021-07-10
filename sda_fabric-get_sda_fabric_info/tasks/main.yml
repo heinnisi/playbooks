@@ -1,0 +1,9 @@
+---
+# tasks file forsda_fabric
+# From file: sda_fabric.py
+- name: get_sda_fabric_info
+
+  cisco.dnac.sda_fabric:
+    state: query  # required
+    fabric_name: SomeValue  # string, required
+  register: nm_get_sda_fabric_info

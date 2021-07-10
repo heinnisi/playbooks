@@ -1,0 +1,7 @@
+---
+# tasks file fornet_system
+# From file: net_system.py
+- name: configure DNS lookup sources
+
+  ansible.netcommon.net_system:
+    lookup_source: MgmtEth0/0/CPU0/0

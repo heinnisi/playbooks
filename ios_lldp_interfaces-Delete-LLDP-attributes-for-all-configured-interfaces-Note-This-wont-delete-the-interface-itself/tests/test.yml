@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_lldp_interfaces-Delete-LLDP-attributes-for-all-configured-interfaces-Note-This-wont-delete-the-interface-itself

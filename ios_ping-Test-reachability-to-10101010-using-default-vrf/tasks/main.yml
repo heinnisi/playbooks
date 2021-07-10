@@ -1,0 +1,7 @@
+---
+# tasks file forios_ping
+# From file: ios_ping.py
+- name: Test reachability to 10.10.10.10 using default vrf
+
+  cisco.ios.ios_ping:
+    dest: 10.10.10.10

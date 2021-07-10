@@ -1,0 +1,9 @@
+---
+# tasks file fornetconf_rpc
+# From file: netconf_rpc.py
+- name: unlock candidate
+
+  ansible.netcommon.netconf_rpc:
+    rpc: unlock
+    xmlns: urn:ietf:params:xml:ns:netconf:base:1.0
+    content: "{'target': {'candidate': None}}"

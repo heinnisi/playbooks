@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_acls-Delete-ACLs-Note-This-wont-delete-the-all-configured-ACLs

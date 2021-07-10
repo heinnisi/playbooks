@@ -1,0 +1,16 @@
+---
+# tasks file forios_bgp
+# From file: ios_bgp.py
+- name: Configure root-level networks for BGP
+
+  cisco.ios.ios_bgp:
+    config:
+      bgp_as: 64496
+      networks:
+      - prefix: 203.0.113.0
+        masklen: 27
+        route_map: RMAP_1
+      - prefix: 203.0.113.32
+        masklen: 27
+        route_map: RMAP_2
+    operation: merge

@@ -1,0 +1,7 @@
+---
+# tasks file fornetconf_get
+# From file: netconf_get.py
+- name: Get configuration and state data from startup datastore
+
+  ansible.netcommon.netconf_get:
+    source: startup

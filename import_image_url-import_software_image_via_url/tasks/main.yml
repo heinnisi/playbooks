@@ -1,0 +1,16 @@
+---
+# tasks file forimport_image_url
+# From file: import_image_url.py
+- name: import_software_image_via_url
+
+  cisco.dnac.import_image_url:
+    state: create  # required
+    payload:  # required
+    - applicationType: SomeValue  # string
+      imageFamily: SomeValue  # string
+      sourceURL: SomeValue  # string
+      thirdParty: True  # boolean
+      vendor: SomeValue  # string
+    schedule_at: SomeValue  # string
+    schedule_desc: SomeValue  # string
+    schedule_origin: SomeValue  # string

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_ospfv3-Parse-the-provided-configuration-with-the-exisiting-running-configuration

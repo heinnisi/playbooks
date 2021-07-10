@@ -1,0 +1,9 @@
+---
+# tasks file fortag
+# From file: tag.py
+- name: get_tag_by_id
+
+  cisco.dnac.tag:
+    state: query  # required
+    id: SomeValue  # string, required
+  register: nm_get_tag_by_id

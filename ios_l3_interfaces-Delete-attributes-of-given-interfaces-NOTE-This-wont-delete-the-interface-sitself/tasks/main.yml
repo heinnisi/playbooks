@@ -1,0 +1,10 @@
+---
+# tasks file forios_l3_interfaces
+# From file: ios_l3_interfaces.py
+- name: "Delete attributes of given interfaces (NOTE: This won't delete the interface sitself)"
+
+  cisco.ios.ios_l3_interfaces:
+    config:
+    - name: GigabitEthernet0/2
+    - name: GigabitEthernet0/3.100
+    state: deleted

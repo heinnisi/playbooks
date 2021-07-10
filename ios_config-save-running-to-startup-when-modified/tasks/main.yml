@@ -1,0 +1,7 @@
+---
+# tasks file forios_config
+# From file: ios_config.py
+- name: save running to startup when modified
+
+  cisco.ios.ios_config:
+    save_when: modified

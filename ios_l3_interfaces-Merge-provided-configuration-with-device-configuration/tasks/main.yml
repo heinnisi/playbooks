@@ -1,0 +1,21 @@
+---
+# tasks file forios_l3_interfaces
+# From file: ios_l3_interfaces.py
+- name: Merge provided configuration with device configuration
+
+  cisco.ios.ios_l3_interfaces:
+    config:
+    - name: GigabitEthernet0/1
+      ipv4:
+      - address: 192.168.0.1/24
+        secondary: true
+    - name: GigabitEthernet0/2
+      ipv4:
+      - address: 192.168.0.2/24
+    - name: GigabitEthernet0/3
+      ipv6:
+      - address: fd5d:12c9:2201:1::1/64
+    - name: GigabitEthernet0/3.100
+      ipv4:
+      - address: 192.168.0.3/24
+    state: merged

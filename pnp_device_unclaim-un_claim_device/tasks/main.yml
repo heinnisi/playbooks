@@ -1,0 +1,9 @@
+---
+# tasks file forpnp_device_unclaim
+# From file: pnp_device_unclaim.py
+- name: un_claim_device
+
+  cisco.dnac.pnp_device_unclaim:
+    state: create  # required
+    deviceIdList:
+    - SomeValue  # string

@@ -1,0 +1,8 @@
+---
+# tasks file fortemplate_project
+# From file: template_project.py
+- name: delete_project
+
+  cisco.dnac.template_project:
+    state: delete  # required
+    project_id: SomeValue  # string, required

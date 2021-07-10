@@ -1,0 +1,18 @@
+---
+# tasks file forglobal_credential_http_write
+# From file: global_credential_http_write.py
+- name: create_http_write_credentials
+
+  cisco.dnac.global_credential_http_write:
+    state: create  # required
+    payload:  # required
+    - password: SomeValue  # string, required
+      port: 1  #  integer, required
+      username: SomeValue  # string, required
+      comments: SomeValue  # string
+      credentialType: SomeValue  # string
+      description: SomeValue  # string
+      id: SomeValue  # string
+      instanceTenantId: SomeValue  # string
+      instanceUuid: SomeValue  # string
+      secure: True  # boolean

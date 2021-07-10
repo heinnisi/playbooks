@@ -1,0 +1,38 @@
+---
+# tasks file forios_user
+# From file: ios_user.py
+- name: Delete users with aggregate
+
+  cisco.ios.ios_user:
+    aggregate:
+    - name: ansibletest1
+    - name: ansibletest2
+    - name: ansibletest3
+    state: absent
+"""
+RETURN = """
+commands:
+  description: The list of configuration mode commands to send to the device
+  returned: always
+  type: list
+  sample:
+    - username ansible secret password
+    - username admin secret admin
+"""
+import base64
+import hashlib
+import re
+from copy import deepcopy
+from functools import partial
+from ansible.module_utils.basic import AnsibleModule
+from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.utils import (
+    remove_default_spec,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    get_config,
+    load_config,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    ios_argument_spec,
+)
+from ansible.module_utils.six import iteritems

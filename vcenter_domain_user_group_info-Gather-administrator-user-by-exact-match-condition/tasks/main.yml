@@ -1,0 +1,15 @@
+---
+# tasks file forvcenter_domain_user_group_info
+# From file: vcenter_domain_user_group_info.py
+- name: Gather administrator user by exact match condition
+
+  community.vmware.vcenter_domain_user_group_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    validate_certs: false
+    domain: vsphere.local
+    search_string: "vsphere.local\\administrator"
+    exact_match: true
+  register: gather_administrator_user_exact_match_result
+'''

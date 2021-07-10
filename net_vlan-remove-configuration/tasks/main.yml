@@ -1,0 +1,7 @@
+---
+# tasks file fornet_vlan
+# From file: net_vlan.py
+- name: remove configuration
+
+  ansible.netcommon.net_vlan:
+    state: absent

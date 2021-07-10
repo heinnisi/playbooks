@@ -1,0 +1,9 @@
+---
+# tasks file fortask
+# From file: task.py
+- name: get_task_by_id
+
+  cisco.dnac.task:
+    state: query  # required
+    task_id: SomeValue  # string, required
+  register: nm_get_task_by_id

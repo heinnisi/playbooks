@@ -1,0 +1,7 @@
+---
+# tasks file fornet_system
+# From file: net_system.py
+- name: domain search on single domain
+
+  ansible.netcommon.net_system:
+    domain_search: ansible.com

@@ -1,0 +1,8 @@
+---
+# tasks file forpnp_settings
+# From file: pnp_settings.py
+- name: get_pnp_global_settings
+
+  cisco.dnac.pnp_settings:
+    state: query  # required
+  register: nm_get_pnp_global_settings

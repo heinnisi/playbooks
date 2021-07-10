@@ -1,0 +1,20 @@
+---
+# tasks file forios_bgp
+# From file: ios_bgp.py
+- name: Configure BGP neighbors under address family mode
+
+  cisco.ios.ios_bgp:
+    config:
+      bgp_as: 64496
+      address_family:
+      - afi: ipv4
+        safi: unicast
+        neighbors:
+        - neighbor: 203.0.113.10
+          activate: yes
+          maximum_prefix: 250
+          advertisement_interval: 120
+        - neighbor: 192.0.2.15
+          activate: yes
+          route_reflector_client: true
+    operation: merge

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - net_l2_interface-remove-Layer-2-interface-configuration

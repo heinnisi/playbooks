@@ -1,0 +1,14 @@
+---
+# tasks file forios_facts
+# From file: ios_facts.py
+- name: Gather L3 interfaces resource and minimal legacy facts
+
+  cisco.ios.ios_facts:
+    gather_subset: min
+    gather_network_resources: l3_interfaces
+"""
+RETURN = """
+ansible_net_gather_subset:
+  description: The list of fact subsets collected from the device
+  returned: always
+  type: list

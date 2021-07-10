@@ -1,0 +1,12 @@
+---
+# tasks file fornetconf_rpc
+# From file: netconf_rpc.py
+- name: copy running to startup
+
+  ansible.netcommon.netconf_rpc:
+    rpc: copy-config
+    content:
+      source:
+        running:
+      target:
+        startup:

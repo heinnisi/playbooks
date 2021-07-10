@@ -1,0 +1,35 @@
+---
+# tasks file forios_vlan
+# From file: ios_vlan.py
+- name: Move interfaces to a different VLAN
+
+  cisco.ios.ios_vlan:
+    vlan_id: 102
+    interfaces:
+    - GigabitEthernet0/0
+    - GigabitEthernet0/1
+"""
+RETURN = """
+commands:
+  description: The list of configuration mode commands to send to the device
+  returned: always
+  type: list
+  sample:
+    - vlan 100
+    - name test-vlan
+"""
+import re
+import time
+from copy import deepcopy
+from ansible.module_utils.basic import AnsibleModule
+from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.utils import (
+    remove_default_spec,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    load_config,
+    run_commands,
+    normalize_interface,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    ios_argument_spec,
+)

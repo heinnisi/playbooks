@@ -1,0 +1,19 @@
+---
+# tasks file fordiscovery_network_device
+# From file: discovery_network_device.py
+- name: get_network_devices_from_discovery
+
+  cisco.dnac.discovery_network_device:
+    state: query  # required
+    id: SomeValue  # string, required
+    summary: True  # boolean, required
+    cli_status: SomeValue  # string
+    http_status: SomeValue  # string
+    ip_address: SomeValue  # string
+    netconf_status: SomeValue  # string
+    ping_status: SomeValue  # string
+    snmp_status: SomeValue  # string
+    sort_by: SomeValue  # string
+    sort_order: SomeValue  # string
+    task_id: SomeValue  # string
+  register: nm_get_network_devices_from_discovery

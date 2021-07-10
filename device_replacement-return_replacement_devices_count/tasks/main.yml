@@ -1,0 +1,10 @@
+---
+# tasks file fordevice_replacement
+# From file: device_replacement.py
+- name: return_replacement_devices_count
+
+  cisco.dnac.device_replacement:
+    state: query  # required
+    count: True  # boolean, required
+    replacement_status: SomeValue  # string
+  register: nm_return_replacement_devices_count

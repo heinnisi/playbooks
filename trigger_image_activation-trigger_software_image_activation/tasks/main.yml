@@ -1,0 +1,17 @@
+---
+# tasks file fortrigger_image_activation
+# From file: trigger_image_activation.py
+- name: trigger_software_image_activation
+
+  cisco.dnac.trigger_image_activation:
+    state: create  # required
+    payload:  # required
+    - activateLowerImageVersion: True  # boolean
+      deviceUpgradeMode: SomeValue  # string
+      deviceUuid: SomeValue  # string
+      distributeIfNeeded: True  # boolean
+      imageUuidList:
+      - SomeValue  # string
+      smuImageUuidList:
+      - SomeValue  # string
+    schedule_validate: True  # boolean

@@ -1,0 +1,10 @@
+---
+# tasks file fortopology
+# From file: topology.py
+- name: get_physical_topology
+
+  cisco.dnac.topology:
+    state: query  # required
+    physical: True  # boolean, required
+    node_type: SomeValue  # string
+  register: nm_get_physical_topology

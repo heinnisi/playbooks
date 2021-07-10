@@ -1,0 +1,9 @@
+---
+# tasks file fornetwork_device_module
+# From file: network_device_module.py
+- name: get_module_info_by_id
+
+  cisco.dnac.network_device_module:
+    state: query  # required
+    id: SomeValue  # string, required
+  register: nm_get_module_info_by_id

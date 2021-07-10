@@ -1,0 +1,14 @@
+---
+# tasks file forios_lag_interfaces
+# From file: ios_lag_interfaces.py
+- name: Override device configuration of all interfaces with provided configuration
+
+  cisco.ios.ios_lag_interfaces:
+    config:
+    - name: 20
+      members:
+      - member: GigabitEthernet0/2
+        mode: auto
+      - member: GigabitEthernet0/3
+        mode: auto
+    state: overridden

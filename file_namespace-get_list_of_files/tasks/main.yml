@@ -1,0 +1,9 @@
+---
+# tasks file forfile_namespace
+# From file: file_namespace.py
+- name: get_list_of_files
+
+  cisco.dnac.file_namespace:
+    state: query  # required
+    name_space: SomeValue  # string, required
+  register: nm_get_list_of_files

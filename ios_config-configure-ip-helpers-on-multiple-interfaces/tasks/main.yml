@@ -1,0 +1,14 @@
+---
+# tasks file forios_config
+# From file: ios_config.py
+- name: configure ip helpers on multiple interfaces
+
+  cisco.ios.ios_config:
+    lines:
+    - ip helper-address 172.26.1.10
+    - ip helper-address 172.26.3.8
+    parents: '{{ item }}'
+  with_items:
+  - interface Ethernet1
+  - interface Ethernet2
+  - interface GigabitEthernet1
