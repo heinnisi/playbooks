@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_about_facts-Provide-information-about-a-standalone-ESXi-server

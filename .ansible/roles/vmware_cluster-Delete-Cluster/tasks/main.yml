@@ -1,0 +1,17 @@
+---
+# tasks file forvmware_cluster
+# From file: vmware_cluster.py
+- name: Delete Cluster
+
+  community.vmware.vmware_cluster:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter_name: datacenter
+    cluster_name: cluster
+    enable_ha: true
+    enable_drs: true
+    enable_vsan: true
+    state: absent
+  delegate_to: localhost
+'''

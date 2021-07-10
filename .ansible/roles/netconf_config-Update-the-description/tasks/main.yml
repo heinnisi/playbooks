@@ -1,0 +1,10 @@
+---
+# tasks file fornetconf_config
+# From file: netconf_config.py
+- name: Update the description
+
+  ansible.utils.update_fact:
+    updates:
+    - path: pre.output.data.interfaces.interface.config.description
+      value: "Configured by ansible {{ 100 | random }}"
+  register: updated

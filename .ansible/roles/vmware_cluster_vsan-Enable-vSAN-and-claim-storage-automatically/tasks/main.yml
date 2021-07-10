@@ -1,0 +1,15 @@
+---
+# tasks file forvmware_cluster_vsan
+# From file: vmware_cluster_vsan.py
+- name: Enable vSAN and claim storage automatically
+
+  community.vmware.vmware_cluster_vsan:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter_name: DC0
+    cluster_name: "{{ cluster_name }}"
+    enable: True
+    vsan_auto_claim_storage: True
+  delegate_to: localhost
+'''

@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_datastore_maintenancemode
+# From file: vmware_datastore_maintenancemode.py
+- name: Exit datastore into Maintenance Mode
+
+  community.vmware.vmware_datastore_maintenancemode:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datastore: '{{ datastore_name }}'
+    state: absent
+  delegate_to: localhost
+'''

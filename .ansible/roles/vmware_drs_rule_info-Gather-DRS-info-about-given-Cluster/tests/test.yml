@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_drs_rule_info-Gather-DRS-info-about-given-Cluster

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_dns_config-Configure-ESXi-hostname-and-DNS-servers

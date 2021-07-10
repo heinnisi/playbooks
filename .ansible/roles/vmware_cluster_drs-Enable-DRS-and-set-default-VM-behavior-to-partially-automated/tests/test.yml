@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_cluster_drs-Enable-DRS-and-set-default-VM-behavior-to-partially-automated

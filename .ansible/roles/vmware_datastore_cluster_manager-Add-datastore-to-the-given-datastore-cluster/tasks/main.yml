@@ -1,0 +1,17 @@
+---
+# tasks file forvmware_datastore_cluster_manager
+# From file: vmware_datastore_cluster_manager.py
+- name: Add datastore to the given datastore cluster
+
+  community.vmware.vmware_datastore_cluster_manager:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter_name: '{{ datacenter_name }}'
+    datastore_cluster_name: '{{ datastore_cluster_name }}'
+    datastores:
+    - ds_001
+    - ds_002
+    - ds_003
+    state: present
+  delegate_to: localhost

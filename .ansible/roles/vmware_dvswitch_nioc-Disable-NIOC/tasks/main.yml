@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_dvswitch_nioc
+# From file: vmware_dvswitch_nioc.py
+- name: Disable NIOC
+
+  community.vmware.vmware_dvswitch_nioc:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    switch: dvSwitch
+    state: absent
+  delegate_to: localhost
+'''

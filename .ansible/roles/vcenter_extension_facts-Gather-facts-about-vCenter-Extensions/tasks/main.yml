@@ -1,0 +1,12 @@
+---
+# tasks file forvcenter_extension_facts
+# From file: vcenter_extension_facts.py
+- name: Gather facts about vCenter Extensions
+
+  community.vmware.vcenter_extension_facts:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+  register: ext_facts
+  delegate_to: localhost
+'''

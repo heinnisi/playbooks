@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_cluster_drs
+# From file: vmware_cluster_drs.py
+- name: Enable DRS
+
+  community.vmware.vmware_cluster_drs:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter_name: datacenter
+    cluster_name: cluster
+    enable: true
+  delegate_to: localhost

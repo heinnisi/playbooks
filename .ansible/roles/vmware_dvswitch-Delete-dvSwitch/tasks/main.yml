@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_dvswitch
+# From file: vmware_dvswitch.py
+- name: Delete dvSwitch
+
+  community.vmware.vmware_dvswitch:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter: '{{ datacenter }}'
+    switch: dvSwitch
+    state: absent
+  delegate_to: localhost
+'''

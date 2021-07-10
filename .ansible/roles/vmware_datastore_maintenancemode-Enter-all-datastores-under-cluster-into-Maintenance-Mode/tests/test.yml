@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_datastore_maintenancemode-Enter-all-datastores-under-cluster-into-Maintenance-Mode

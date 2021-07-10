@@ -1,0 +1,15 @@
+---
+# tasks file forvmware_cluster_drs
+# From file: vmware_cluster_drs.py
+- name: Enable DRS and set default VM behavior to partially automated
+
+  community.vmware.vmware_cluster_drs:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter_name: DC0
+    cluster_name: "{{ cluster_name }}"
+    enable: True
+    drs_default_vm_behavior: partiallyAutomated
+  delegate_to: localhost
+'''

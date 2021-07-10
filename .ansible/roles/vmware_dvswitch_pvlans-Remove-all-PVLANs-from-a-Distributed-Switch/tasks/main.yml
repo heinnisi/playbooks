@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_dvswitch_pvlans
+# From file: vmware_dvswitch_pvlans.py
+- name: Remove all PVLANs from a Distributed Switch
+
+  community.vmware.vmware_dvswitch_pvlans:
+    hostname: '{{ inventory_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    switch: dvSwitch
+    primary_pvlans: []
+    secondary_pvlans: []
+  delegate_to: localhost
+'''

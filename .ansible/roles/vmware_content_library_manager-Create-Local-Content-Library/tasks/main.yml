@@ -1,0 +1,15 @@
+---
+# tasks file forvmware_content_library_manager
+# From file: vmware_content_library_manager.py
+- name: Create Local Content Library
+
+  community.vmware.vmware_content_library_manager:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    library_name: test-content-lib
+    library_description: 'Library with Datastore Backing'
+    library_type: local
+    datastore_name: datastore
+    state: present
+  delegate_to: localhost

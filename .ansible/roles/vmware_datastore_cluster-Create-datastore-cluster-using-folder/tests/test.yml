@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_datastore_cluster-Create-datastore-cluster-using-folder

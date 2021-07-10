@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_drs_group_manager-Remove-VM-from-an-existing-DRS-VM-group

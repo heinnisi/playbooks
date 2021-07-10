@@ -1,0 +1,5 @@
+---
+# tasks file fornetconf_get
+# From file: netconf_get.py
+- name: Get system configuration data from running datastore state (junos)
+

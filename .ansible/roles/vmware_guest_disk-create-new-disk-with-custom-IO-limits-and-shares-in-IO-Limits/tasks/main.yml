@@ -1,0 +1,25 @@
+---
+# tasks file forvmware_guest_disk
+# From file: vmware_guest_disk.py
+- name: create new disk with custom IO limits and shares in IO Limits
+
+  community.vmware.vmware_guest_disk:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    disk:
+      - size_gb: 1
+        type: thin
+        datastore: datacluster0
+        state: present
+        scsi_controller: 1
+        unit_number: 1
+        disk_mode: 'independent_persistent'
+        iolimit:
+            limit: 1506
+            shares:
+              level: custom
+              level_value: 1305
+  delegate_to: localhost
+  register: test_custom_IoLimit_shares

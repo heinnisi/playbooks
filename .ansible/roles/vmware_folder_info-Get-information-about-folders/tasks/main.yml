@@ -1,0 +1,11 @@
+---
+# tasks file forvmware_folder_info
+# From file: vmware_folder_info.py
+- name: Get information about folders
+
+  community.vmware.vmware_folder_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter: 'Asia-Datacenter1'
+  register: r

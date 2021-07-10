@@ -1,0 +1,18 @@
+---
+# tasks file forvmware_dvswitch_info
+# From file: vmware_dvswitch_info.py
+- name: Gather some info from a dvswitch using the vSphere API output schema
+
+  community.vmware.vmware_dvswitch_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    schema: vsphere
+    properties:
+      - summary.name
+      - summary.numPorts
+      - config.maxMtu
+      - overallStatus
+    switch_name: DVSwitch01
+  register: dvswitch_info
+'''

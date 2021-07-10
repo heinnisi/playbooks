@@ -1,0 +1,17 @@
+---
+# tasks file fornetconf_config
+# From file: netconf_config.py
+- name: wipe ntp configuration
+
+  ansible.netcommon.netconf_config:
+    content: |
+      <config xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
+          <system xmlns="urn:ietf:params:xml:ns:yang:ietf-system">
+              <ntp>
+                  <enabled>false</enabled>
+                  <server operation="remove">
+                      <name>ntp1</name>
+                  </server>
+              </ntp>
+          </system>
+      </config>

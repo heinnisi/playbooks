@@ -1,0 +1,23 @@
+---
+# tasks file forvmware_guest_controller
+# From file: vmware_guest_controller.py
+- name: Remove disk controllers and USB 2.0 from virtual machine located by moid
+
+  community.vmware.vmware_guest_controller:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    moid: vm-33
+    controllers:
+      - state: absent
+        controller_number: 1
+        type: sata
+      - state: absent
+        controller_number: 0
+        type: nvme
+      - state: absent
+        type: usb2
+  delegate_to: localhost
+  register: disk_controller_facts
+'''

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vcenter_license-Add-vSAN-license-and-assign-to-the-given-cluster

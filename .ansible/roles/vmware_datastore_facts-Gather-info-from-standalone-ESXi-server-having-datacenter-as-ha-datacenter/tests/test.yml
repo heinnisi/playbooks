@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_datastore_facts-Gather-info-from-standalone-ESXi-server-having-datacenter-as-ha-datacenter

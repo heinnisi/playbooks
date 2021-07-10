@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_drs_rule_info
+# From file: vmware_drs_rule_info.py
+- name: Gather DRS info about all Clusters in given datacenter
+
+  community.vmware.vmware_drs_rule_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter: '{{ datacenter_name }}'
+  delegate_to: localhost
+  register: datacenter_drs_info
+'''

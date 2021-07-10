@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_guest_customization_info
+# From file: vmware_guest_customization_info.py
+- name: Gather info about customization specification with the given name
+
+  community.vmware.vmware_guest_customization_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    spec_name: custom_linux_spec
+  delegate_to: localhost
+  register: custom_spec_info
+'''

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - netconf_get-Get-system-configuration-data-from-running-datastore-state-junos

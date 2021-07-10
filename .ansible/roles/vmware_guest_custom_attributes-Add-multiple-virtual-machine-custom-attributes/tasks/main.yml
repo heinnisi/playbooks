@@ -1,0 +1,18 @@
+---
+# tasks file forvmware_guest_custom_attributes
+# From file: vmware_guest_custom_attributes.py
+- name: Add multiple virtual machine custom attributes
+
+  community.vmware.vmware_guest_custom_attributes:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    uuid: 421e4592-c069-924d-ce20-7e7533fab926
+    state: present
+    attributes:
+      - name: MyAttribute
+        value: MyValue
+      - name: MyAttribute2
+        value: MyValue2
+  delegate_to: localhost
+  register: attributes

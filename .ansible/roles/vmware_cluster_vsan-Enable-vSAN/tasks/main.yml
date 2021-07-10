@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_cluster_vsan
+# From file: vmware_cluster_vsan.py
+- name: Enable vSAN
+
+  community.vmware.vmware_cluster_vsan:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter_name: datacenter
+    cluster_name: cluster
+    enable: true
+  delegate_to: localhost

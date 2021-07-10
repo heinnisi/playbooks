@@ -1,0 +1,17 @@
+---
+# tasks file forvmware_dvs_portgroup
+# From file: vmware_dvs_portgroup.py
+- name: Create private vlan portgroup
+
+  vmware_dvs_portgroup:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    portgroup_name: private-vlan-portrgoup
+    switch_name: dvSwitch
+    vlan_id: 1001
+    vlan_private: True
+    num_ports: 120
+    port_binding: static
+    state: present
+  delegate_to: localhost

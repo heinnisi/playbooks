@@ -1,0 +1,16 @@
+---
+# tasks file forvmware_drs_group_manager
+# From file: vmware_drs_group_manager.py
+- name: Remove VM from an existing DRS VM group
+
+  delegate_to: localhost
+  community.vmware.vmware_drs_group_manager:
+    hostname: "{{ vcenter_hostname }}"
+    password: "{{ vcenter_password }}"
+    username: "{{ vcenter_username }}"
+    cluster: DC0_C0
+    datacenter: DC0
+    group_name: TEST_VM_01
+    vms:
+      - DC0_C0_RP0_VM0
+    state: absent

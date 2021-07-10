@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_about_facts
+# From file: vmware_about_facts.py
+- name: Provide information about a standalone ESXi server
+
+  community.vmware.vmware_about_facts:
+    hostname: '{{ esxi_hostname }}'
+    username: '{{ esxi_username }}'
+    password: '{{ esxi_password }}'
+  delegate_to: localhost
+  register: esxi_about_info
+'''

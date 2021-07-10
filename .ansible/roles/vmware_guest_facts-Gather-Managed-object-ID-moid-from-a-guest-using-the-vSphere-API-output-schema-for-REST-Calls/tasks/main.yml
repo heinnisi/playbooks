@@ -1,0 +1,16 @@
+---
+# tasks file forvmware_guest_facts
+# From file: vmware_guest_facts.py
+- name: Gather Managed object ID (moid) from a guest using the vSphere API output schema for REST Calls
+
+  community.vmware.vmware_guest_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    name: "{{ vm_name }}"
+    schema: "vsphere"
+    properties:
+      - _moId
+  delegate_to: localhost
+  register: moid_info

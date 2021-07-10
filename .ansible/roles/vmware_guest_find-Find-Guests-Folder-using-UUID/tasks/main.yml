@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_guest_find
+# From file: vmware_guest_find.py
+- name: Find Guest's Folder using UUID
+
+  community.vmware.vmware_guest_find:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    uuid: 38c4c89c-b3d7-4ae6-ae4e-43c5118eae49
+  delegate_to: localhost
+  register: vm_folder
+'''

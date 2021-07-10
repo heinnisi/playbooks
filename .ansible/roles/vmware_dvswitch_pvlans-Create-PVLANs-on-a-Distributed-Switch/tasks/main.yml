@@ -1,0 +1,24 @@
+---
+# tasks file forvmware_dvswitch_pvlans
+# From file: vmware_dvswitch_pvlans.py
+- name: Create PVLANs on a Distributed Switch
+
+  community.vmware.vmware_dvswitch_pvlans:
+    hostname: '{{ inventory_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    switch: dvSwitch
+    primary_pvlans:
+      - primary_pvlan_id: 1
+      - primary_pvlan_id: 4
+    secondary_pvlans:
+      - primary_pvlan_id: 1
+        secondary_pvlan_id: 2
+        pvlan_type: isolated
+      - primary_pvlan_id: 1
+        secondary_pvlan_id: 3
+        pvlan_type: community
+      - primary_pvlan_id: 4
+        secondary_pvlan_id: 5
+        pvlan_type: community
+  delegate_to: localhost

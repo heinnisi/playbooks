@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_guest_custom_attribute_defs
+# From file: vmware_guest_custom_attribute_defs.py
+- name: Add VMware Attribute Definition
+
+  community.vmware.vmware_guest_custom_attribute_defs:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    state: present
+    attribute_key: custom_attr_def_1
+  delegate_to: localhost
+  register: defs

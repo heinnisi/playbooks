@@ -1,0 +1,18 @@
+---
+# tasks file forvmware_content_library_manager
+# From file: vmware_content_library_manager.py
+- name: Create Subscribed Content Library
+
+  community.vmware.vmware_content_library_manager:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    library_name: test-content-lib
+    library_description: 'Subscribed Library with Datastore Backing'
+    library_type: subscribed
+    datastore_name: datastore
+    subscription_url: 'https://library.url'
+    ssl_thumbprint: 'aa:bb:cc:dd:ee:ff:gg:hh:ii:jj:kk:ll:mm:nn:oo:pp:qq:rr:ss:tt'
+    update_on_demand: true
+    state: present
+  delegate_to: localhost

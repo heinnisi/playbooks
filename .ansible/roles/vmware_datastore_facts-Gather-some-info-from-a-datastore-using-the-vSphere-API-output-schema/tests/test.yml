@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_datastore_facts-Gather-some-info-from-a-datastore-using-the-vSphere-API-output-schema

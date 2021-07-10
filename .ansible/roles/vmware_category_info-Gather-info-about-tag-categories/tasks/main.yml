@@ -1,0 +1,11 @@
+---
+# tasks file forvmware_category_info
+# From file: vmware_category_info.py
+- name: Gather info about tag categories
+
+  community.vmware.vmware_category_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+  delegate_to: localhost
+  register: all_tag_category_info

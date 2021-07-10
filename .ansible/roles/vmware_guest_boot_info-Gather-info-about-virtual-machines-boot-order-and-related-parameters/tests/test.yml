@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_boot_info-Gather-info-about-virtual-machines-boot-order-and-related-parameters

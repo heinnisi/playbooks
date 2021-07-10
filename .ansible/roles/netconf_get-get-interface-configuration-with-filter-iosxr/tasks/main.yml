@@ -1,0 +1,9 @@
+---
+# tasks file fornetconf_get
+# From file: netconf_get.py
+- name: get interface configuration with filter (iosxr)
+
+  ansible.netcommon.netconf_get:
+    display: pretty
+    filter: <interface-configurations xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ifmgr-cfg"></interface-configurations>
+    lock: if-supported

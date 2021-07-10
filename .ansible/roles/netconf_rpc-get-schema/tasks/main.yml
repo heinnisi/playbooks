@@ -1,0 +1,11 @@
+---
+# tasks file fornetconf_rpc
+# From file: netconf_rpc.py
+- name: get-schema
+
+  ansible.netcommon.netconf_rpc:
+    rpc: get-schema
+    xmlns: urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring
+    content:
+      identifier: ietf-netconf
+      version: '2011-06-01'

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vcenter_license-Add-ESXi-license-and-assign-to-the-ESXi-host

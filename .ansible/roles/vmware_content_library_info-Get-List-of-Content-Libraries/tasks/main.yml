@@ -1,0 +1,10 @@
+---
+# tasks file forvmware_content_library_info
+# From file: vmware_content_library_info.py
+- name: Get List of Content Libraries
+
+  community.vmware.vmware_content_library_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+  delegate_to: localhost

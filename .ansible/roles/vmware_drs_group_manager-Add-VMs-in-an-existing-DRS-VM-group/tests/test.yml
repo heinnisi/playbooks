@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_drs_group_manager-Add-VMs-in-an-existing-DRS-VM-group

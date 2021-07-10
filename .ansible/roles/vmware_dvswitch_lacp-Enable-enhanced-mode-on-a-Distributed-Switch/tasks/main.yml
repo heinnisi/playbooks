@@ -1,0 +1,16 @@
+---
+# tasks file forvmware_dvswitch_lacp
+# From file: vmware_dvswitch_lacp.py
+- name: Enable enhanced mode on a Distributed Switch
+
+  community.vmware.vmware_dvswitch_lacp:
+    hostname: '{{ inventory_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    switch: dvSwitch
+    support_mode: enhanced
+    validate_certs: "{{ validate_vcenter_certs }}"
+  delegate_to: localhost
+  loop_control:
+    label: "{{ item.name }}"
+  with_items: "{{ vcenter_distributed_switches }}"

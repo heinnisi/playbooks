@@ -1,0 +1,5 @@
+---
+# tasks file forvmware_datacenter_info
+# From file: vmware_datacenter_info.py
+- name: Gather information about a particular datacenter
+

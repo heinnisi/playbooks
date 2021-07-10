@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_disk-Remove-disk-from-virtual-machine-but-keep-the-VMDK-file-on-the-datastore

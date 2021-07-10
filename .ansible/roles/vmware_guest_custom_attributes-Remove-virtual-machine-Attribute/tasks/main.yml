@@ -1,0 +1,15 @@
+---
+# tasks file forvmware_guest_custom_attributes
+# From file: vmware_guest_custom_attributes.py
+- name: Remove virtual machine Attribute
+
+  community.vmware.vmware_guest_custom_attributes:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    uuid: 421e4592-c069-924d-ce20-7e7533fab926
+    state: absent
+    attributes:
+      - name: MyAttribute
+  delegate_to: localhost
+  register: attributes

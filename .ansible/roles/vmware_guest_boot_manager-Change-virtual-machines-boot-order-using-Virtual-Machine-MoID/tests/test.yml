@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_boot_manager-Change-virtual-machines-boot-order-using-Virtual-Machine-MoID

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_disk-Add-disks-to-virtual-machine-using-UUID

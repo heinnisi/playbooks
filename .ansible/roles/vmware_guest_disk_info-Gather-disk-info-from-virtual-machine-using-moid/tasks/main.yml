@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_guest_disk_info
+# From file: vmware_guest_disk_info.py
+- name: Gather disk info from virtual machine using moid
+
+  community.vmware.vmware_guest_disk_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: ha-datacenter
+    moid: vm-42
+  delegate_to: localhost
+  register: disk_info
+'''

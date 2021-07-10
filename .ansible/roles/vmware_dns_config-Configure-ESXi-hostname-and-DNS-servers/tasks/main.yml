@@ -1,0 +1,16 @@
+---
+# tasks file forvmware_dns_config
+# From file: vmware_dns_config.py
+- name: Configure ESXi hostname and DNS servers
+
+  community.vmware.vmware_dns_config:
+    hostname: '{{ esxi_hostname }}'
+    username: '{{ esxi_username }}'
+    password: '{{ esxi_password }}'
+    change_hostname_to: esx01
+    domainname: foo.org
+    dns_servers:
+        - 8.8.8.8
+        - 8.8.4.4
+  delegate_to: localhost
+'''

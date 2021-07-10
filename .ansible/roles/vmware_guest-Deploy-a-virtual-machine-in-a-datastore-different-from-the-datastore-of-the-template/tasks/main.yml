@@ -1,0 +1,19 @@
+---
+# tasks file forvmware_guest
+# From file: vmware_guest.py
+- name: Deploy a virtual machine in a datastore different from the datastore of the template
+
+  community.vmware.vmware_guest:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    name: "{{ vm_name }}"
+    state: present
+    template: "{{ template_name }}"
+    # Here datastore can be different which holds template
+    datastore: "{{ virtual_machine_datastore }}"
+    hardware:
+      memory_mb: 512
+      num_cpus: 2
+      scsi: paravirtual
+  delegate_to: localhost

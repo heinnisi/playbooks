@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_datastore_cluster
+# From file: vmware_datastore_cluster.py
+- name: Create datastore cluster using folder
+
+  community.vmware.vmware_datastore_cluster:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    folder: '/{{ datacenter_name }}/datastore/ds_folder'
+    datastore_cluster_name: '{{ datastore_cluster_name }}'
+    state: present
+  delegate_to: localhost

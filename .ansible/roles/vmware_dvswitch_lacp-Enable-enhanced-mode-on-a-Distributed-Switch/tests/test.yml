@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_dvswitch_lacp-Enable-enhanced-mode-on-a-Distributed-Switch

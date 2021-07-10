@@ -1,0 +1,11 @@
+---
+# tasks file forvmware_dvs_portgroup_find
+# From file: vmware_dvs_portgroup_find.py
+- name: Get all portgroups in dvswitch vDS
+
+  community.vmware.vmware_dvs_portgroup_find:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    dvswitch: 'vDS'
+  delegate_to: localhost

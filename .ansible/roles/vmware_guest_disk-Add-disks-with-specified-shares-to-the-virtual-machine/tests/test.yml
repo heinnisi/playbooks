@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_disk-Add-disks-with-specified-shares-to-the-virtual-machine

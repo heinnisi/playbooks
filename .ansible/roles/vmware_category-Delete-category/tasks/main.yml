@@ -1,0 +1,11 @@
+---
+# tasks file forvmware_category
+# From file: vmware_category.py
+- name: Delete category
+
+  community.vmware.vmware_category:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    category_name: Sample_Category_0002
+    state: absent

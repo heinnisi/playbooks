@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_cfg_backup-Save-the-ESXi-configuration-locally-by-authenticating-directly-against-the-ESXi-host

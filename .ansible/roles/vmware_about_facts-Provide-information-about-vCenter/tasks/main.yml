@@ -1,0 +1,11 @@
+---
+# tasks file forvmware_about_facts
+# From file: vmware_about_facts.py
+- name: Provide information about vCenter
+
+  community.vmware.vmware_about_facts:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+  delegate_to: localhost
+  register: vcenter_about_info

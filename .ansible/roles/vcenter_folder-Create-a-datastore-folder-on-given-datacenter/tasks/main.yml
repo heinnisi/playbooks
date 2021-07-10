@@ -1,0 +1,15 @@
+---
+# tasks file forvcenter_folder
+# From file: vcenter_folder.py
+- name: Create a datastore folder on given datacenter
+
+  community.vmware.vcenter_folder:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter_name: datacenter_name
+    folder_name: sample_datastore_folder
+    folder_type: datastore
+    state: present
+  register: datastore_folder_creation_result
+  delegate_to: localhost

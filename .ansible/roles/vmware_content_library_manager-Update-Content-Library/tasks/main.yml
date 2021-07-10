@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_content_library_manager
+# From file: vmware_content_library_manager.py
+- name: Update Content Library
+
+  community.vmware.vmware_content_library_manager:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    library_name: test-content-lib
+    library_description: 'Library with Datastore Backing'
+    state: present
+  delegate_to: localhost

@@ -1,0 +1,8 @@
+---
+# tasks file fornetconf_get
+# From file: netconf_get.py
+- name: get schema list using xpath
+
+  ansible.netcommon.netconf_get:
+    display: xml
+    filter: /netconf-state/schemas/schema

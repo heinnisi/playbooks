@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_content_deploy_template-Deploy-Virtual-Machine-from-template-in-content-library-with-PowerON-State

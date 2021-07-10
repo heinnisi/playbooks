@@ -1,0 +1,20 @@
+---
+# tasks file forvmware_guest
+# From file: vmware_guest.py
+- name: Manipulate vApp properties
+
+  community.vmware.vmware_guest:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    name: vm_name
+    state: present
+    vapp_properties:
+      - id: remoteIP
+        category: Backup
+        label: Backup server IP
+        type: string
+        value: 10.10.10.1
+      - id: old_property
+        operation: remove
+  delegate_to: localhost

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_dvswitch_info-Gather-some-info-from-a-dvswitch-using-the-vSphere-API-output-schema

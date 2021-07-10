@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_dvs_portgroup_info
+# From file: vmware_dvs_portgroup_info.py
+- name: Get number of ports for portgroup 'dvpg_001' in 'dvs_001'
+
+  debug:
+    msg: "{{ item.num_ports }}"
+  with_items:
+    - "{{ dvpg_info.dvs_portgroup_info['dvs_001'] | json_query(query) }}"
+  vars:
+    query: "[?portgroup_name=='dvpg_001']"
+'''

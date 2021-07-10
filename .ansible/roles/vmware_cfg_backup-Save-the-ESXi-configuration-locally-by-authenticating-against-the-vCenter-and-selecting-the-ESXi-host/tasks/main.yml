@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_cfg_backup
+# From file: vmware_cfg_backup.py
+- name: Save the ESXi configuration locally by authenticating against the vCenter and selecting the ESXi host
+
+  community.vmware.vmware_cfg_backup:
+    hostname: '{{ vcenter_hostname }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+    username: '{{ esxi_username }}'
+    password: '{{ esxi_password }}'
+    state: saved
+    dest: /tmp/
+  delegate_to: localhost
+'''

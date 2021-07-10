@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_custom_attribute_defs-Add-VMware-Attribute-Definition

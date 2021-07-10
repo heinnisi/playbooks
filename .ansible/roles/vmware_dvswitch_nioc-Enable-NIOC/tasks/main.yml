@@ -1,0 +1,23 @@
+---
+# tasks file forvmware_dvswitch_nioc
+# From file: vmware_dvswitch_nioc.py
+- name: Enable NIOC
+
+  community.vmware.vmware_dvswitch_nioc:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    switch: dvSwitch
+    version: version3
+    resources:
+        - name: vmotion
+          limit: -1
+          reservation: 128
+          shares_level: normal
+        - name: vsan
+          limit: -1
+          shares_level: custom
+          shares: 99
+          reservation: 256
+    state: present
+  delegate_to: localhost

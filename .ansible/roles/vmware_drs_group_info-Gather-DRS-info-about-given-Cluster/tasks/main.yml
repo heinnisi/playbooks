@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_drs_group_info
+# From file: vmware_drs_group_info.py
+- name: "Gather DRS info about given Cluster"
+
+  register: cluster_drs_group_info
+  community.vmware.vmware_drs_group_info:
+    hostname: "{{ vcenter_hostname }}"
+    password: "{{ vcenter_password }}"
+    username: "{{ vcenter_username }}"
+    cluster_name: "{{ cluster_name }}"
+  delegate_to: localhost

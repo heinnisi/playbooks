@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_dvswitch_uplink_pg-Enabled-LACP-on-Uplink-portgroup

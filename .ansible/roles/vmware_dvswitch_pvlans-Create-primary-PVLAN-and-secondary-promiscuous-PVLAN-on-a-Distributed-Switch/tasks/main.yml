@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_dvswitch_pvlans
+# From file: vmware_dvswitch_pvlans.py
+- name: Create primary PVLAN and secondary promiscuous PVLAN on a Distributed Switch
+
+  community.vmware.vmware_dvswitch_pvlans:
+    hostname: '{{ inventory_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    switch: dvSwitch
+    primary_pvlans:
+      - primary_pvlan_id: 1
+  delegate_to: localhost

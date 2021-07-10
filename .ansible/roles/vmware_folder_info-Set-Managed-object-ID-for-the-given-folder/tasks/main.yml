@@ -1,0 +1,8 @@
+---
+# tasks file forvmware_folder_info
+# From file: vmware_folder_info.py
+- name: Set Managed object ID for the given folder
+
+  ansible.builtin.set_fact:
+    folder_mo_id: "{{ (r.flat_folder_info | selectattr('path', 'equalto', '/Asia-Datacenter1/vm/tier1/tier2') | map(attribute='moid'))[0] }}"
+'''

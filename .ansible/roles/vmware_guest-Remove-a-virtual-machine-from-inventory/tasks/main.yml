@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_guest
+# From file: vmware_guest.py
+- name: Remove a virtual machine from inventory
+
+  community.vmware.vmware_guest:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    name: vm_name
+    delete_from_inventory: True
+    state: absent
+  delegate_to: localhost

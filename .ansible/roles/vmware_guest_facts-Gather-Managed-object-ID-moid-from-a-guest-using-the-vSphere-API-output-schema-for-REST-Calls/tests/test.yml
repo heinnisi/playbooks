@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_facts-Gather-Managed-object-ID-moid-from-a-guest-using-the-vSphere-API-output-schema-for-REST-Calls

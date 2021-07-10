@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_dvswitch_lacp-Enable-enhanced-mode-and-create-two-LAGs-on-a-Distributed-Switch

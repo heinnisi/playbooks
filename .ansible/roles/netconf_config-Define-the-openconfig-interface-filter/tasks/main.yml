@@ -1,0 +1,11 @@
+---
+# tasks file fornetconf_config
+# From file: netconf_config.py
+- name: Define the openconfig interface filter
+
+  set_fact:
+    filter:
+      interfaces:
+        "@xmlns": "http://openconfig.net/yang/interfaces"
+        interface:
+          name: Ethernet2

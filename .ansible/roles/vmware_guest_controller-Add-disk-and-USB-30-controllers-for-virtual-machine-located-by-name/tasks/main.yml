@@ -1,0 +1,20 @@
+---
+# tasks file forvmware_guest_controller
+# From file: vmware_guest_controller.py
+- name: Add disk and USB 3.0 controllers for virtual machine located by name
+
+  community.vmware.vmware_guest_controller:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    name: test_VM
+    controllers:
+      - state: present
+        type: sata
+      - state: present
+        type: nvme
+      - state: present
+        type: usb3
+  delegate_to: localhost
+  register: disk_controller_facts

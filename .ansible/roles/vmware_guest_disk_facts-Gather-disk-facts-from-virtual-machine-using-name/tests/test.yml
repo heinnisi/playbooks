@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_disk_facts-Gather-disk-facts-from-virtual-machine-using-name

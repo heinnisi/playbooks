@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_guest
+# From file: vmware_guest.py
+- name: Set powerstate of a virtual machine to poweroff by using UUID
+
+  community.vmware.vmware_guest:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    uuid: "{{ vm_uuid }}"
+    state: poweredoff
+  delegate_to: localhost

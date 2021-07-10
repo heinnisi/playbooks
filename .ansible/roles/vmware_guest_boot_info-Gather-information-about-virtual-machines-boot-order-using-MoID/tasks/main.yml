@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_guest_boot_info
+# From file: vmware_guest_boot_info.py
+- name: Gather information about virtual machine's boot order using MoID
+
+  community.vmware.vmware_guest_boot_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    moid: "vm-42"
+  register: vm_moid_boot_order_info
+'''

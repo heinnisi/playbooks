@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_cluster_info
+# From file: vmware_cluster_info.py
+- name: Gather cluster info from given datacenter
+
+  community.vmware.vmware_cluster_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter: ha-datacenter
+  delegate_to: localhost
+  register: cluster_info

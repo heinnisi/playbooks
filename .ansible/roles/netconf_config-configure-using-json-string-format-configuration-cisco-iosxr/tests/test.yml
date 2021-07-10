@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - netconf_config-configure-using-json-string-format-configuration-cisco-iosxr

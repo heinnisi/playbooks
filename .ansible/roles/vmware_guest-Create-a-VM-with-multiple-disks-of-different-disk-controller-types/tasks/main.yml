@@ -1,0 +1,37 @@
+---
+# tasks file forvmware_guest
+# From file: vmware_guest.py
+- name: Create a VM with multiple disks of different disk controller types
+
+  community.vmware.vmware_guest:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    folder: /DC1/vm/
+    name: test_vm_multi_disks
+    state: poweredoff
+    guest_id: centos64Guest
+    datastore: datastore1
+    disk:
+    - size_gb: 10
+      controller_type: 'nvme'
+      controller_number: 0
+      unit_number: 0
+    - size_gb: 10
+      controller_type: 'paravirtual'
+      controller_number: 0
+      unit_number: 1
+    - size_gb: 10
+      controller_type: 'sata'
+      controller_number: 0
+      unit_number: 2
+    hardware:
+      memory_mb: 512
+      num_cpus: 4
+      version: 14
+    networks:
+    - name: VM Network
+      device_type: vmxnet3
+  delegate_to: localhost
+  register: deploy_vm
+'''

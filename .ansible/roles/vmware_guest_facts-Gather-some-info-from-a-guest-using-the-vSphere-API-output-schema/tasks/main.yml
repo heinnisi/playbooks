@@ -1,0 +1,15 @@
+---
+# tasks file forvmware_guest_facts
+# From file: vmware_guest_facts.py
+- name: Gather some info from a guest using the vSphere API output schema
+
+  community.vmware.vmware_guest_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    name: "{{ vm_name }}"
+    schema: "vsphere"
+    properties: ["config.hardware.memoryMB", "guest.disk", "overallStatus"]
+  delegate_to: localhost
+  register: info

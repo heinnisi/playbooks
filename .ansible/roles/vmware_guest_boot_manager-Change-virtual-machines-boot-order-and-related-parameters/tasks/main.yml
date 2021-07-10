@@ -1,0 +1,23 @@
+---
+# tasks file forvmware_guest_boot_manager
+# From file: vmware_guest_boot_manager.py
+- name: Change virtual machine's boot order and related parameters
+
+  community.vmware.vmware_guest_boot_manager:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    name: testvm
+    boot_delay: 2000
+    enter_bios_setup: True
+    boot_retry_enabled: True
+    boot_retry_delay: 22300
+    boot_firmware: bios
+    secure_boot_enabled: False
+    boot_order:
+      - floppy
+      - cdrom
+      - ethernet
+      - disk
+  delegate_to: localhost
+  register: vm_boot_order

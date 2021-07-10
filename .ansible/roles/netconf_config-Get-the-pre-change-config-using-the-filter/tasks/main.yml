@@ -1,0 +1,10 @@
+---
+# tasks file fornetconf_config
+# From file: netconf_config.py
+- name: Get the pre-change config using the filter
+
+  ansible.netcommon.netconf_get:
+    source: running
+    filter: "{{ filter }}"
+    display: native
+  register: pre

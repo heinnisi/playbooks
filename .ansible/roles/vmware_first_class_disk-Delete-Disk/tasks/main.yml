@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_first_class_disk
+# From file: vmware_first_class_disk.py
+- name: Delete Disk
+
+  community.vmware.vmware_first_class_disk:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datastore_name: '{{ datastore_name }}'
+    disk_name: 'FirstClassDisk'
+    state: absent
+  delegate_to: localhost
+'''

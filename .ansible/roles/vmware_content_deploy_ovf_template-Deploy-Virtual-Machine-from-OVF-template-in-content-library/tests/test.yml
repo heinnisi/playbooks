@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_content_deploy_ovf_template-Deploy-Virtual-Machine-from-OVF-template-in-content-library

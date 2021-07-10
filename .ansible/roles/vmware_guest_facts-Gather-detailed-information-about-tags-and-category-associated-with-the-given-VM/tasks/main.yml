@@ -1,0 +1,15 @@
+---
+# tasks file forvmware_guest_facts
+# From file: vmware_guest_facts.py
+- name: Gather detailed information about tags and category associated with the given VM
+
+  community.vmware.vmware_guest_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter: "{{ datacenter_name }}"
+    name: "{{ vm_name }}"
+    tags: True
+    tag_details: True
+  register: detailed_tag_info
+'''

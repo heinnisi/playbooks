@@ -1,0 +1,16 @@
+---
+# tasks file forvmware_dvs_portgroup
+# From file: vmware_dvs_portgroup.py
+- name: Create no-vlan portgroup
+
+  community.vmware.vmware_dvs_portgroup:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    portgroup_name: no-vlan-portrgoup
+    switch_name: dvSwitch
+    vlan_id: 0
+    num_ports: 120
+    port_binding: static
+    state: present
+  delegate_to: localhost

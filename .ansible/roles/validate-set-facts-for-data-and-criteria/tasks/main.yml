@@ -1,0 +1,8 @@
+---
+# tasks file forvalidate
+# From file: validate.py
+- name: set facts for data and criteria
+
+  ansible.builtin.set_fact:
+    data: "{{ lookup('ansible.builtin.file', './validate/data/show_interfaces_iosxr.json')}}"
+    criteria: "{{ lookup('ansible.builtin.file', './validate/criteria/jsonschema/show_interfaces_iosxr.json')}}"

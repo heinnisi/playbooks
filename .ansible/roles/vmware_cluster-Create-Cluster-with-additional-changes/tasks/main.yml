@@ -1,0 +1,18 @@
+---
+# tasks file forvmware_cluster
+# From file: vmware_cluster.py
+- name: Create Cluster with additional changes
+
+  community.vmware.vmware_cluster:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    datacenter_name: DC0
+    cluster_name: "{{ cluster_name }}"
+    enable_ha: True
+    ha_vm_monitoring: vmMonitoringOnly
+    enable_drs: True
+    drs_default_vm_behavior: partiallyAutomated
+    enable_vsan: True
+  register: cl_result
+  delegate_to: localhost

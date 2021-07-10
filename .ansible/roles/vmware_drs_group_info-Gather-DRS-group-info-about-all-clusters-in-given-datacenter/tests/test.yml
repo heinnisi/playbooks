@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_drs_group_info-Gather-DRS-group-info-about-all-clusters-in-given-datacenter

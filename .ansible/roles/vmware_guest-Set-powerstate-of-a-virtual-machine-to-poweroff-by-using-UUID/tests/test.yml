@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest-Set-powerstate-of-a-virtual-machine-to-poweroff-by-using-UUID

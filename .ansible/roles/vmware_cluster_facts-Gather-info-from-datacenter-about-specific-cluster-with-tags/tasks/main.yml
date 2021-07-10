@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_cluster_facts
+# From file: vmware_cluster_facts.py
+- name: Gather info from datacenter about specific cluster with tags
+
+  community.vmware.vmware_cluster_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    cluster_name: DC0_C0
+    show_tag: True
+  delegate_to: localhost
+  register: cluster_info

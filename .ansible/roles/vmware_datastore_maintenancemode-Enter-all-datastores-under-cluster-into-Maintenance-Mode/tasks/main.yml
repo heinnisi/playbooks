@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_datastore_maintenancemode
+# From file: vmware_datastore_maintenancemode.py
+- name: Enter all datastores under cluster into Maintenance Mode
+
+  community.vmware.vmware_datastore_maintenancemode:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    cluster_name: '{{ cluster_name }}'
+    state: present
+  delegate_to: localhost

@@ -1,0 +1,11 @@
+---
+# tasks file forvmware_guest_customization_facts
+# From file: vmware_guest_customization_facts.py
+- name: Gather facts about all customization specification
+
+  community.vmware.vmware_guest_customization_facts:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+  delegate_to: localhost
+  register: all_custom_spec_facts

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_cluster_facts-Gather-info-from-datacenter-about-specific-cluster-with-tags

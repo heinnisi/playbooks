@@ -1,0 +1,19 @@
+---
+# tasks file forvmware_datastore_info
+# From file: vmware_datastore_info.py
+- name: Gather some info from a datastore using the vSphere API output schema
+
+  community.vmware.vmware_datastore_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter_name: '{{ datacenter_name }}'
+    schema: vsphere
+    properties:
+      - name
+      - info.vmfs.ssd
+      - capability.vsanSparseSupported
+      - overallStatus
+  delegate_to: localhost
+  register: info
+'''

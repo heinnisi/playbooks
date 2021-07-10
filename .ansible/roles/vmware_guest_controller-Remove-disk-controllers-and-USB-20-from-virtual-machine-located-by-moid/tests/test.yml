@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_controller-Remove-disk-controllers-and-USB-20-from-virtual-machine-located-by-moid

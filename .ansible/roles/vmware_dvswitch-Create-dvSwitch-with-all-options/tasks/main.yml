@@ -1,0 +1,25 @@
+---
+# tasks file forvmware_dvswitch
+# From file: vmware_dvswitch.py
+- name: Create dvSwitch with all options
+
+  community.vmware.vmware_dvswitch:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter: '{{ datacenter }}'
+    switch: dvSwitch
+    version: 6.5.0
+    mtu: 9000
+    uplink_quantity: 2
+    uplink_prefix: 'Uplink_'
+    discovery_protocol: cdp
+    discovery_operation: both
+    multicast_filtering_mode: snooping
+    health_check:
+      vlan_mtu: true
+      vlan_mtu_interval: 1
+      teaming_failover: true
+      teaming_failover_interval: 1
+    state: present
+  delegate_to: localhost

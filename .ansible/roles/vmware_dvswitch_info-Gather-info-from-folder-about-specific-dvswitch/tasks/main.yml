@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_dvswitch_info
+# From file: vmware_dvswitch_info.py
+- name: Gather info from folder about specific dvswitch
+
+  community.vmware.vmware_dvswitch_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    folder: /datacenter1/network/F01
+    switch_name: DVSwitch02
+  delegate_to: localhost
+  register: dvswitch_info

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - netconf_get-Get-configuration-and-state-data-from-startup-datastore

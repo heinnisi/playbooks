@@ -1,0 +1,12 @@
+---
+# tasks file forvmware_datacenter
+# From file: vmware_datacenter.py
+- name: Create Datacenter
+
+  community.vmware.vmware_datacenter:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter_name: '{{ datacenter_name }}'
+    state: present
+  delegate_to: localhost

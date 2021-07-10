@@ -1,0 +1,13 @@
+---
+# tasks file forvcenter_domain_user_group_info
+# From file: vcenter_domain_user_group_info.py
+- name: Gather all domain user and group included the administrator string
+
+  community.vmware.vcenter_domain_user_group_info:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    validate_certs: false
+    domain: vsphere.local
+    search_string: administrator
+  register: gather_domain_user_group_result

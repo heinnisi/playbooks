@@ -1,0 +1,6 @@
+---
+# tasks file fornetconf_get
+# From file: netconf_get.py
+- name: Get running configuration and state data
+
+  ansible.netcommon.netconf_get:

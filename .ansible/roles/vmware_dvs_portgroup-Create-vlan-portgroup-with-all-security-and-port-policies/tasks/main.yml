@@ -1,0 +1,33 @@
+---
+# tasks file forvmware_dvs_portgroup
+# From file: vmware_dvs_portgroup.py
+- name: Create vlan portgroup with all security and port policies
+
+  community.vmware.vmware_dvs_portgroup:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    portgroup_name: vlan-123-portrgoup
+    switch_name: dvSwitch
+    vlan_id: 123
+    num_ports: 120
+    port_binding: static
+    state: present
+    network_policy:
+      promiscuous: true
+      forged_transmits: true
+      mac_changes: true
+    port_policy:
+      block_override: true
+      ipfix_override: true
+      live_port_move: true
+      network_rp_override: true
+      port_config_reset_at_disconnect: true
+      security_override: true
+      shaping_override: true
+      traffic_filter_override: true
+      uplink_teaming_override: true
+      vendor_config_override: true
+      vlan_override: true
+  delegate_to: localhost
+'''

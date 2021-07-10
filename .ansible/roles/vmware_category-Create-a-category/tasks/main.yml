@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_category
+# From file: vmware_category.py
+- name: Create a category
+
+  community.vmware.vmware_category:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    category_name: Sample_Cat_0001
+    category_description: Sample Description
+    category_cardinality: 'multiple'
+    state: present

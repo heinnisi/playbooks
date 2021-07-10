@@ -1,0 +1,25 @@
+---
+# tasks file fornetconf_config
+# From file: netconf_config.py
+- name: "configure using direct native format configuration (cisco iosxr)"
+
+  ansible.netcommon.netconf_config:
+    format: json
+    content: {
+                "config": {
+                    "interface-configurations": {
+                        "@xmlns": "http://cisco.com/ns/yang/Cisco-IOS-XR-ifmgr-cfg",
+                        "interface-configuration": {
+                            "active": "act",
+                            "description": "test for ansible Loopback999",
+                            "interface-name": "Loopback999"
+                        }
+                    }
+                }
+            }
+    get_filter: {
+                  "interface-configurations": {
+                      "@xmlns": "http://cisco.com/ns/yang/Cisco-IOS-XR-ifmgr-cfg",
+                      "interface-configuration": null
+                  }
+              }

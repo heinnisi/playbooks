@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_dvswitch_pvlans-Create-primary-PVLAN-and-secondary-promiscuous-PVLAN-on-a-Distributed-Switch

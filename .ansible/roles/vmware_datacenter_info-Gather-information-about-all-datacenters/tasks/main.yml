@@ -1,0 +1,10 @@
+---
+# tasks file forvmware_datacenter_info
+# From file: vmware_datacenter_info.py
+- name: Gather information about all datacenters
+
+  community.vmware.vmware_datacenter_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+  delegate_to: localhost

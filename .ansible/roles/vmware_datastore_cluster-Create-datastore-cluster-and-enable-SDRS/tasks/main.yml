@@ -1,0 +1,14 @@
+---
+# tasks file forvmware_datastore_cluster
+# From file: vmware_datastore_cluster.py
+- name: Create datastore cluster and enable SDRS
+
+  community.vmware.vmware_datastore_cluster:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter_name: '{{ datacenter_name }}'
+    datastore_cluster_name: '{{ datastore_cluster_name }}'
+    enable_sdrs: True
+    state: present
+  delegate_to: localhost

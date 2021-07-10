@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_guest_info-Gather-some-info-from-a-guest-using-the-vSphere-API-output-schema

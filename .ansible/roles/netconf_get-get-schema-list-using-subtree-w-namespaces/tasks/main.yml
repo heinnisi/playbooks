@@ -1,0 +1,9 @@
+---
+# tasks file fornetconf_get
+# From file: netconf_get.py
+- name: get schema list using subtree w/ namespaces
+
+  ansible.netcommon.netconf_get:
+    display: json
+    filter: <netconf-state xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring"><schemas><schema/></schemas></netconf-state>
+    lock: never

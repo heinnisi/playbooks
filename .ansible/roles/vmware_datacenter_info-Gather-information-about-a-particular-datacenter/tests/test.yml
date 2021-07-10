@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - vmware_datacenter_info-Gather-information-about-a-particular-datacenter

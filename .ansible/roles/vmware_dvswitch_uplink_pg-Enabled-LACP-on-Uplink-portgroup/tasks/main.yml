@@ -1,0 +1,15 @@
+---
+# tasks file forvmware_dvswitch_uplink_pg
+# From file: vmware_dvswitch_uplink_pg.py
+- name: Enabled LACP on Uplink portgroup
+
+  community.vmware.vmware_dvswitch_uplink_pg:
+    hostname: '{{ inventory_hostname }}'
+    username: '{{ vcsa_username }}'
+    password: '{{ vcsa_password }}'
+    switch: dvSwitch
+    lacp:
+      status: enabled
+      mode: active
+  delegate_to: localhost
+'''

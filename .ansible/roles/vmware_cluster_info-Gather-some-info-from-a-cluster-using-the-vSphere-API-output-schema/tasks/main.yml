@@ -1,0 +1,18 @@
+---
+# tasks file forvmware_cluster_info
+# From file: vmware_cluster_info.py
+- name: Gather some info from a cluster using the vSphere API output schema
+
+  vmware_cluster_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    cluster_name: DC0_C0
+    schema: vsphere
+    properties:
+      - name
+      - configuration.dasConfig.enabled
+      - summary.totalCpu
+  delegate_to: localhost
+  register: cluster_info
+'''

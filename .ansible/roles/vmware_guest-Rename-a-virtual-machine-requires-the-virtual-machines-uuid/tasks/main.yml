@@ -1,0 +1,13 @@
+---
+# tasks file forvmware_guest
+# From file: vmware_guest.py
+- name: Rename a virtual machine (requires the virtual machine's uuid)
+
+  community.vmware.vmware_guest:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    uuid: "{{ vm_uuid }}"
+    name: new_name
+    state: present
+  delegate_to: localhost

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - fact_diff-Show-the-difference-in-yaml-format

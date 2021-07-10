@@ -1,0 +1,18 @@
+---
+# tasks file forvmware_content_deploy_ovf_template
+# From file: vmware_content_deploy_ovf_template.py
+- name: Deploy Virtual Machine from OVF template in content library with eagerZeroedThick storage
+
+  vmware_content_deploy_ovf_template:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    ovf_template: rhel_test_template
+    datastore: Shared_NFS_Volume
+    folder: vm
+    datacenter: Sample_DC_1
+    name: Sample_VM
+    resource_pool: test_rp
+    storage_provisioning: eagerZeroedThick
+  delegate_to: localhost
+'''

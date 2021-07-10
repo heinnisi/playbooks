@@ -1,0 +1,17 @@
+---
+# tasks file forvmware_content_deploy_template
+# From file: vmware_content_deploy_template.py
+- name: Deploy Virtual Machine from template in content library
+
+  community.vmware.vmware_content_deploy_template:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    template: rhel_test_template
+    datastore: Shared_NFS_Volume
+    folder: vm
+    datacenter: Sample_DC_1
+    name: Sample_VM
+    resource_pool: test_rp
+    state: present
+  delegate_to: localhost

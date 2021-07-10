@@ -1,0 +1,15 @@
+---
+# tasks file forvmware_drs_group
+# From file: vmware_drs_group.py
+- name: "Delete DRS Host group"
+
+  delegate_to: localhost
+  community.vmware.vmware_drs_group:
+    hostname: "{{ vcenter_hostname }}"
+    password: "{{ vcenter_password }}"
+    username: "{{ vcenter_username }}"
+    cluster_name: DC0_C0
+    datacenter_name: DC0
+    group_name: TEST_HOST_01
+    state: absent
+'''
