@@ -1,0 +1,8 @@
+---
+# tasks file forios_ping
+# From file: ios_ping.py
+- name: Test reachability to 10.20.20.20 using prod vrf
+
+  cisco.ios.ios_ping:
+    dest: 10.20.20.20
+    vrf: prod

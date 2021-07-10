@@ -1,0 +1,8 @@
+---
+# tasks file forios_bgp_address_family
+# From file: ios_bgp_address_family.py
+- name: Parse the commands for provided configuration
+
+  cisco.ios.ios_bgp_address_family:
+    running_config: "{{ lookup('file', 'parsed.cfg') }}"
+    state: parsed

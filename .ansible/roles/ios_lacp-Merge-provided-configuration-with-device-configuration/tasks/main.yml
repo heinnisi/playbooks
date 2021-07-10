@@ -1,0 +1,10 @@
+---
+# tasks file forios_lacp
+# From file: ios_lacp.py
+- name: Merge provided configuration with device configuration
+
+  cisco.ios.ios_lacp:
+    config:
+      system:
+        priority: 123
+    state: merged

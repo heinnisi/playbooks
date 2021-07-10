@@ -1,0 +1,11 @@
+---
+# tasks file forios_linkagg
+# From file: ios_linkagg.py
+- name: set link aggregation group to members
+
+  cisco.ios.ios_linkagg:
+    group: 200
+    mode: active
+    members:
+    - GigabitEthernet0/0
+    - GigabitEthernet0/1

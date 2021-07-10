@@ -1,0 +1,5 @@
+---
+# vars file for ansible-network.cisco_ios
+#
+
+ansible_network_os: ios

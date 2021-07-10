@@ -1,0 +1,20 @@
+---
+# tasks file forios_l3_interfaces
+# From file: ios_l3_interfaces.py
+- name: Replaces device configuration of listed interfaces with provided configuration
+
+  cisco.ios.ios_l3_interfaces:
+    config:
+    - name: GigabitEthernet0/2
+      ipv4:
+      - address: 192.168.2.0/24
+    - name: GigabitEthernet0/3
+      ipv4:
+      - address: dhcp
+        dhcp_client: 2
+        dhcp_hostname: test.com
+    - name: GigabitEthernet0/3.100
+      ipv4:
+      - address: 192.168.0.3/24
+        secondary: true
+    state: replaced

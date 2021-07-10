@@ -1,0 +1,7 @@
+---
+# tasks file forios_interfaces
+# From file: ios_interfaces.py
+- name: "Delete module attributes of all interfaces (Note: This won't delete the interface itself)"
+
+  cisco.ios.ios_interfaces:
+    state: deleted

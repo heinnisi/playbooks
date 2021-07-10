@@ -1,0 +1,16 @@
+---
+- hosts: sydney
+  gather_facts: false
+# test mit setzen von connection 
+
+  connection: network_cli
+  tasks:
+    - name: Include vars
+      include_vars:
+        file: "{{ playbook_dir }}/../vars/default.yml"
+
+    - name: executing 'get' function tests
+      include_tasks: get.yml
+
+    - name: executing 'load' function tests
+      include_tasks: load.yml

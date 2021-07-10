@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_ospfv3-Delete-provided-OSPF-V3-processes

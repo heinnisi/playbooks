@@ -1,0 +1,10 @@
+---
+# tasks file forios_lldp_global
+# From file: ios_lldp_global.py
+- name: Replaces LLDP device configuration with provided configuration
+
+  cisco.ios.ios_lldp_global:
+    config:
+      holdtime: 20
+      reinit: 5
+    state: replaced

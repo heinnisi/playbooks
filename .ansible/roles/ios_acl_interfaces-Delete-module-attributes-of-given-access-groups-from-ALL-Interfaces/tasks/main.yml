@@ -1,0 +1,8 @@
+---
+# tasks file forios_acl_interfaces
+# From file: ios_acl_interfaces.py
+- name: Delete module attributes of given access-groups from ALL Interfaces
+
+  cisco.ios.ios_acl_interfaces:
+    config:
+    state: deleted

@@ -1,0 +1,11 @@
+---
+# tasks file fortag_member
+# From file: tag_member.py
+- name: updates_tag_membership
+
+  cisco.dnac.tag_member:
+    state: update  # required
+    memberToTags:
+      key:
+      - SomeValue  # string
+    memberType: SomeValue  # string

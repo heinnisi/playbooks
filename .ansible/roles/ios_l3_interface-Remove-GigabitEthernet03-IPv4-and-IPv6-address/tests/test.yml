@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_l3_interface-Remove-GigabitEthernet03-IPv4-and-IPv6-address

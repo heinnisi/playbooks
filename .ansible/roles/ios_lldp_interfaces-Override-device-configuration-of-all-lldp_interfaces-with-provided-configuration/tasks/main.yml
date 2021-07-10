@@ -1,0 +1,11 @@
+---
+# tasks file forios_lldp_interfaces
+# From file: ios_lldp_interfaces.py
+- name: Override device configuration of all lldp_interfaces with provided configuration
+
+  cisco.ios.ios_lldp_interfaces:
+    config:
+    - name: GigabitEthernet0/2
+      receive: true
+      transmit: true
+    state: overridden

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_l3_interfaces-Gather-listed-l3-interfaces-with-provided-configurations

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_bgp_address_family-Delete-AF-BGP-Note-This-wont-delete-the-all-configured-AF-BGP

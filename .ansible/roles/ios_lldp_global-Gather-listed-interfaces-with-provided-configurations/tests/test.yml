@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_lldp_global-Gather-listed-interfaces-with-provided-configurations

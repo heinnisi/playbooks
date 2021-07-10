@@ -1,0 +1,11 @@
+---
+# tasks file forios_vlans
+# From file: ios_vlans.py
+- name: Override device configuration of all VLANs with provided configuration
+
+  cisco.ios.ios_vlans:
+    config:
+    - name: Vlan_10
+      vlan_id: 10
+      mtu: 1000
+    state: overridden

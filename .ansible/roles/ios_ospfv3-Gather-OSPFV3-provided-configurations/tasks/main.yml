@@ -1,0 +1,8 @@
+---
+# tasks file forios_ospfv3
+# From file: ios_ospfv3.py
+- name: Gather OSPFV3 provided configurations
+
+  cisco.ios.ios_ospfv3:
+    config:
+    state: gathered

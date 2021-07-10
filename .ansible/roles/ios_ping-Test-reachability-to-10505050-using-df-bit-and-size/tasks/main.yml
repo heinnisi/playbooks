@@ -1,0 +1,45 @@
+---
+# tasks file forios_ping
+# From file: ios_ping.py
+- name: Test reachability to 10.50.50.50 using df-bit and size
+
+  cisco.ios.ios_ping:
+    dest: 10.50.50.50
+    df_bit: true
+    size: 1400
+"""
+RETURN = """
+commands:
+  description: Show the command sent.
+  returned: always
+  type: list
+  sample: ["ping vrf prod 10.40.40.40 count 20 source loopback0"]
+packet_loss:
+  description: Percentage of packets lost.
+  returned: always
+  type: str
+  sample: "0%"
+packets_rx:
+  description: Packets successfully received.
+  returned: always
+  type: int
+  sample: 20
+packets_tx:
+  description: Packets successfully transmitted.
+  returned: always
+  type: int
+  sample: 20
+rtt:
+  description: Show RTT stats.
+  returned: always
+  type: dict
+  sample: {"avg": 2, "max": 8, "min": 1}
+"""
+from ansible.module_utils.basic import AnsibleModule
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    run_commands,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    ios_argument_spec,
+)
+import re

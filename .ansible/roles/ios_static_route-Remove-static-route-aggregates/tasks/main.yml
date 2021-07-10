@@ -1,0 +1,33 @@
+---
+# tasks file forios_static_route
+# From file: ios_static_route.py
+- name: Remove static route aggregates
+
+  cisco.ios.ios_static_route:
+    aggregate:
+    - {prefix: 172.16.32.0, mask: 255.255.255.0, next_hop: 10.0.0.8}
+    - {prefix: 172.16.33.0, mask: 255.255.255.0, next_hop: 10.0.0.8}
+    state: absent
+"""
+RETURN = """
+commands:
+  description: The list of configuration mode commands to send to the device
+  returned: always
+  type: list
+  sample:
+    - ip route 192.168.2.0 255.255.255.0 10.0.0.1
+"""
+from copy import deepcopy
+from re import findall
+from ansible.module_utils.basic import AnsibleModule
+from ansible_collections.ansible.netcommon.plugins.module_utils.network.common.utils import (
+    remove_default_spec,
+    validate_ip_address,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    get_config,
+    load_config,
+)
+from ansible_collections.cisco.ios.plugins.module_utils.network.ios.ios import (
+    ios_argument_spec,
+)

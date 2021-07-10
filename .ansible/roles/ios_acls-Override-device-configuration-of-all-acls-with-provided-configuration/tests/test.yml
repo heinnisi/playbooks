@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_acls-Override-device-configuration-of-all-acls-with-provided-configuration

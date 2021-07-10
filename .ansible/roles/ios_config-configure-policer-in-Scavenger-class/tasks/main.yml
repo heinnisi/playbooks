@@ -1,0 +1,13 @@
+---
+# tasks file forios_config
+# From file: ios_config.py
+- name: configure policer in Scavenger class
+
+  cisco.ios.ios_config:
+    lines:
+    - conform-action transmit
+    - exceed-action drop
+    parents:
+    - policy-map Foo
+    - class Scavenger
+    - police cir 64000

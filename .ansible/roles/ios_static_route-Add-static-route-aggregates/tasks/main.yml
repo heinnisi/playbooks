@@ -1,0 +1,9 @@
+---
+# tasks file forios_static_route
+# From file: ios_static_route.py
+- name: Add static route aggregates
+
+  cisco.ios.ios_static_route:
+    aggregate:
+    - {prefix: 172.16.32.0, mask: 255.255.255.0, next_hop: 10.0.0.8}
+    - {prefix: 172.16.33.0, mask: 255.255.255.0, next_hop: 10.0.0.8}

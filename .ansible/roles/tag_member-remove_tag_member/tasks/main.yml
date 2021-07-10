@@ -1,0 +1,9 @@
+---
+# tasks file fortag_member
+# From file: tag_member.py
+- name: remove_tag_member
+
+  cisco.dnac.tag_member:
+    state: delete  # required
+    id: SomeValue  # string, required
+    member_id: SomeValue  # string, required

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_vlans-Gather-listed-vlans-with-provided-configurations

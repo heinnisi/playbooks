@@ -1,0 +1,9 @@
+---
+# tasks file forios_logging
+# From file: ios_logging.py
+- name: remove host logging configuration
+
+  cisco.ios.ios_logging:
+    dest: host
+    name: 172.16.0.1
+    state: absent

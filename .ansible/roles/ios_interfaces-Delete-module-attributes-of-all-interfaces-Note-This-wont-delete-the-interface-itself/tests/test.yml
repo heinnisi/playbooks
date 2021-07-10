@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_interfaces-Delete-module-attributes-of-all-interfaces-Note-This-wont-delete-the-interface-itself

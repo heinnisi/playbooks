@@ -1,0 +1,16 @@
+---
+# tasks file forios_lag_interfaces
+# From file: ios_lag_interfaces.py
+- name: Render the commands for provided  configuration
+
+  cisco.ios.ios_lag_interfaces:
+    config:
+      - name: Port-channel11
+        members:
+          - member: GigabitEthernet0/1
+            mode: active
+      - name: Port-channel22
+        members:
+          - member: GigabitEthernet0/2
+            mode: passive
+    state: rendered

@@ -1,0 +1,7 @@
+---
+# tasks file forios_logging
+# From file: ios_logging.py
+- name: enable logging to all
+
+  cisco.ios.ios_logging:
+    dest: on

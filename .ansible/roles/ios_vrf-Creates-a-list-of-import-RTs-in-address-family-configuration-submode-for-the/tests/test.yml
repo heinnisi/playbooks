@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_vrf-Creates-a-list-of-import-RTs-in-address-family-configuration-submode-for-the

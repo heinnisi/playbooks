@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_l3_interfaces-Delete-L3-attributes-of-ALL-interfaces-together-NOTE-This-wont-delete-the-interface-itself

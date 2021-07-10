@@ -1,0 +1,8 @@
+---
+# tasks file forios_vrf
+# From file: ios_vrf.py
+- name: remove a vrf named test
+
+  cisco.ios.ios_vrf:
+    name: test
+    state: absent

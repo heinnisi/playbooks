@@ -1,0 +1,16 @@
+---
+# tasks file for backup-prep
+   - name: Get ansible date/time facts
+     setup:
+       filter: "ansible_date_time"
+       gather_subset: "!all"
+
+   - name: Store DTG as fact
+     set_fact:
+       DTG: "{{ ansible_date_time.date }}"
+
+   - name: Create Directory {{hostvars.localhost.DTG}}
+     file:
+      path: ~/network-programmability/backups/{{hostvars.localhost.DTG}}
+      state: directory
+

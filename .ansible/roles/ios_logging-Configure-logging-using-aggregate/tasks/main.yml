@@ -1,0 +1,9 @@
+---
+# tasks file forios_logging
+# From file: ios_logging.py
+- name: Configure logging using aggregate
+
+  cisco.ios.ios_logging:
+    aggregate:
+    - {dest: console, level: notifications}
+    - {dest: buffered, size: 9000}

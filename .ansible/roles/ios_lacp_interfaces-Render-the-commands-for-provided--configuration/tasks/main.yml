@@ -1,0 +1,15 @@
+---
+# tasks file forios_lacp_interfaces
+# From file: ios_lacp_interfaces.py
+- name: Render the commands for provided  configuration
+
+  cisco.ios.ios_lacp_interfaces:
+    config:
+    - name: GigabitEthernet0/1
+      port_priority: 10
+    - name: GigabitEthernet0/2
+      port_priority: 20
+    - name: Port-channel10
+      fast_switchover: true
+      max_bundle: 2
+    state: rendered

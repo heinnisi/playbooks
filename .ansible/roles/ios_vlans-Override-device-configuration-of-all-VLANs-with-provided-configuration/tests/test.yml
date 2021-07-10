@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_vlans-Override-device-configuration-of-all-VLANs-with-provided-configuration

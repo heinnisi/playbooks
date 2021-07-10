@@ -1,0 +1,25 @@
+---
+# tasks file forpnp_device_claim
+# From file: pnp_device_claim.py
+- name: claim_device
+
+  cisco.dnac.pnp_device_claim:
+    state: create  # required
+    configFileUrl: SomeValue  # string
+    configId: SomeValue  # string
+    deviceClaimList:
+    - configList:
+      - configId: SomeValue  # string
+        configParameters:
+        - key: SomeValue  # string
+          value: SomeValue  # string
+      deviceId: SomeValue  # string
+      licenseLevel: SomeValue  # string
+      licenseType: SomeValue  # string
+      topOfStackSerialNumber: SomeValue  # string
+    fileServiceId: SomeValue  # string
+    imageId: SomeValue  # string
+    imageUrl: SomeValue  # string
+    populateInventory: True  # boolean
+    projectId: SomeValue  # string
+    workflowId: SomeValue  # string

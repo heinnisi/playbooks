@@ -1,0 +1,10 @@
+---
+# tasks file forios_user
+# From file: ios_user.py
+- name: Aggregate of users
+
+  cisco.ios.ios_user:
+    aggregate:
+    - name: ansibletest2
+    - name: ansibletest3
+    view: network-admin

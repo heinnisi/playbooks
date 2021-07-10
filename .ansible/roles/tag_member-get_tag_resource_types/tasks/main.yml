@@ -1,0 +1,8 @@
+---
+# tasks file fortag_member
+# From file: tag_member.py
+- name: get_tag_resource_types
+
+  cisco.dnac.tag_member:
+    state: query  # required
+  register: nm_get_tag_resource_types

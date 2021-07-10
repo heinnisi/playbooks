@@ -1,0 +1,8 @@
+---
+# tasks file forios_acls
+# From file: ios_acls.py
+- name: Gather listed acls with provided configurations
+
+  cisco.ios.ios_acls:
+    config:
+    state: gathered

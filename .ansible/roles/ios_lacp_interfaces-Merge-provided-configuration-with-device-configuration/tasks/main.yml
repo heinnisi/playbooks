@@ -1,0 +1,17 @@
+---
+# tasks file forios_lacp_interfaces
+# From file: ios_lacp_interfaces.py
+- name: Merge provided configuration with device configuration
+
+  cisco.ios.ios_lacp_interfaces:
+    config:
+    - name: GigabitEthernet0/1
+      port_priority: 10
+    - name: GigabitEthernet0/2
+      port_priority: 20
+    - name: GigabitEthernet0/3
+      port_priority: 30
+    - name: Port-channel10
+      fast_switchover: true
+      max_bundle: 5
+    state: merged

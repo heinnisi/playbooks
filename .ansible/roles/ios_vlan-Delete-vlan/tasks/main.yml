@@ -1,0 +1,8 @@
+---
+# tasks file forios_vlan
+# From file: ios_vlan.py
+- name: Delete vlan
+
+  cisco.ios.ios_vlan:
+    vlan_id: 100
+    state: absent

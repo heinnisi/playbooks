@@ -1,0 +1,15 @@
+---
+# tasks file forios_config
+# From file: ios_config.py
+- name: SETTING BOOT IMAGE
+
+  cisco.ios.ios_config:
+    lines:
+    - no boot system
+    - boot system flash bootflash:{{new_image}}
+    host: '{{ inventory_hostname }}'
+  when: ansible_net_version != version
+- name: render a Jinja2 template onto an IOS device
+  cisco.ios.ios_config:
+    backup: yes
+    src: ios_template.j2

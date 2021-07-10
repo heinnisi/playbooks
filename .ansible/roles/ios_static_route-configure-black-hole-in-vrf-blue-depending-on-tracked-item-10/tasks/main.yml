@@ -1,0 +1,11 @@
+---
+# tasks file forios_static_route
+# From file: ios_static_route.py
+- name: configure black hole in vrf blue depending on tracked item 10
+
+  cisco.ios.ios_static_route:
+    prefix: 192.168.2.0
+    mask: 255.255.255.0
+    vrf: blue
+    interface: null0
+    track: 10

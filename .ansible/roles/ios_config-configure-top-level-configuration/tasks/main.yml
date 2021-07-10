@@ -1,0 +1,7 @@
+---
+# tasks file forios_config
+# From file: ios_config.py
+- name: configure top level configuration
+
+  cisco.ios.ios_config:
+    lines: hostname {{ inventory_hostname }}

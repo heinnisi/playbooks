@@ -1,0 +1,16 @@
+---
+# tasks file forios_acls
+# From file: ios_acls.py
+- name: "Delete ACLs (Note: This won't delete the all configured ACLs)"
+
+  cisco.ios.ios_acls:
+    config:
+    - afi: ipv4
+      acls:
+      - name: test
+        acl_type: extended
+      - name: 110
+    - afi: ipv6
+      acls:
+      - name: R1_TRAFFIC
+    state: deleted

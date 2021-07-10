@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_l3_interfaces-Delete-attributes-of-given-interfaces-NOTE-This-wont-delete-the-interface-sitself

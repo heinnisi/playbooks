@@ -1,0 +1,12 @@
+---
+# tasks file forios_lldp_global
+# From file: ios_lldp_global.py
+- name: Merge provided configuration with device configuration
+
+  cisco.ios.ios_lldp_global:
+    config:
+      holdtime: 10
+      enabled: true
+      reinit: 3
+      timer: 10
+    state: merged

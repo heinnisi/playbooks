@@ -1,0 +1,8 @@
+---
+# tasks file forservice_provider
+# From file: service_provider.py
+- name: get_service_provider_details
+
+  cisco.dnac.service_provider:
+    state: query  # required
+  register: nm_get_service_provider_details

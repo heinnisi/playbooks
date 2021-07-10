@@ -1,0 +1,18 @@
+---
+# tasks file forios_static_routes
+# From file: ios_static_routes.py
+- name: Override provided configuration with device configuration
+
+  cisco.ios.ios_static_routes:
+    config:
+    - vrf: blue
+      address_families:
+      - afi: ipv4
+        routes:
+        - dest: 192.0.2.0/24
+          next_hops:
+          - forward_router_address: 192.0.2.1
+            name: override_vrf
+            tag: 50
+            track: 150
+    state: overridden

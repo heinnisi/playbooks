@@ -1,0 +1,8 @@
+---
+# tasks file fortag_member
+# From file: tag_member.py
+- name: add_members_to_the_tag
+
+  cisco.dnac.tag_member:
+    state: create  # required
+    id: SomeValue  # string, required

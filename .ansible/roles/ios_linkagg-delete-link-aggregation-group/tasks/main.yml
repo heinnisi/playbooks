@@ -1,0 +1,8 @@
+---
+# tasks file forios_linkagg
+# From file: ios_linkagg.py
+- name: delete link aggregation group
+
+  cisco.ios.ios_linkagg:
+    group: 10
+    state: absent

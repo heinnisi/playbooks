@@ -1,0 +1,8 @@
+---
+# tasks file forios_interfaces
+# From file: ios_interfaces.py
+- name: Gather listed interfaces with provided configurations
+
+  cisco.ios.ios_interfaces:
+    config:
+    state: gathered

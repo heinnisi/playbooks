@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_facts-Gather-interfaces-resource-and-minimal-legacy-facts

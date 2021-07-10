@@ -1,0 +1,10 @@
+---
+# tasks file forios_linkagg
+# From file: ios_linkagg.py
+- name: remove link aggregation group from GigabitEthernet0/0
+
+  cisco.ios.ios_linkagg:
+    group: 200
+    mode: active
+    members:
+    - GigabitEthernet0/1

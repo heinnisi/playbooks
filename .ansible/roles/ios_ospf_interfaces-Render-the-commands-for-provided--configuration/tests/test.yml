@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_ospf_interfaces-Render-the-commands-for-provided--configuration

@@ -1,0 +1,8 @@
+---
+# tasks file forios_ospf_interfaces
+# From file: ios_ospf_interfaces.py
+- name: Gather OSPF Interfaces provided configurations
+
+  cisco.ios.ios_ospf_interfaces:
+    config:
+    state: gathered

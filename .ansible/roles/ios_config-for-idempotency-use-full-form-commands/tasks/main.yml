@@ -1,0 +1,11 @@
+---
+# tasks file forios_config
+# From file: ios_config.py
+- name: for idempotency, use full-form commands
+
+  cisco.ios.ios_config:
+    lines:
+      # - shut
+    - shutdown
+    # parents: int gig1/0/11
+    parents: interface GigabitEthernet1/0/11

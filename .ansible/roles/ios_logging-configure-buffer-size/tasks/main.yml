@@ -1,0 +1,8 @@
+---
+# tasks file forios_logging
+# From file: ios_logging.py
+- name: configure buffer size
+
+  cisco.ios.ios_logging:
+    dest: buffered
+    size: 5000

@@ -1,0 +1,22 @@
+---
+# tasks file forios_lag_interfaces
+# From file: ios_lag_interfaces.py
+- name: Merge provided configuration with device configuration
+
+  cisco.ios.ios_lag_interfaces:
+    config:
+    - name: 10
+      members:
+      - member: GigabitEthernet0/1
+        mode: auto
+      - member: GigabitEthernet0/2
+        mode: auto
+    - name: 20
+      members:
+      - member: GigabitEthernet0/3
+        mode: on
+    - name: 30
+      members:
+      - member: GigabitEthernet0/4
+        mode: active
+    state: merged

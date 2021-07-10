@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_acl_interfaces-Gather-listed-acl-interfaces-with-provided-configurations

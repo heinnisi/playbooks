@@ -1,0 +1,14 @@
+---
+# tasks file fortag_member
+# From file: tag_member.py
+- name: get_tag_members_by_id
+
+  cisco.dnac.tag_member:
+    state: query  # required
+    id: SomeValue  # string, required
+    member_type: SomeValue  # string, required
+    level: SomeValue  # string
+    limit: SomeValue  # string
+    member_association_type: SomeValue  # string
+    offset: SomeValue  # string
+  register: nm_get_tag_members_by_id

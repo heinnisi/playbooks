@@ -1,0 +1,8 @@
+---
+# tasks file forios_vlans
+# From file: ios_vlans.py
+- name: Gather listed vlans with provided configurations
+
+  cisco.ios.ios_vlans:
+    config:
+    state: gathered

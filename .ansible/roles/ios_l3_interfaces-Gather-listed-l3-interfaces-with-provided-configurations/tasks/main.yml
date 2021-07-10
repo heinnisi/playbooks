@@ -1,0 +1,8 @@
+---
+# tasks file forios_l3_interfaces
+# From file: ios_l3_interfaces.py
+- name: Gather listed l3 interfaces with provided configurations
+
+  cisco.ios.ios_l3_interfaces:
+    config:
+    state: gathered

@@ -1,0 +1,8 @@
+---
+# tasks file forios_config
+# From file: ios_config.py
+- name: check the running-config against master config
+
+  cisco.ios.ios_config:
+    diff_against: intended
+    intended_config: "{{ lookup('file', 'master.cfg') }}"

@@ -1,0 +1,9 @@
+---
+# tasks file forios_ospf_interfaces
+# From file: ios_ospf_interfaces.py
+- name: Delete provided OSPF Interface config
+
+  cisco.ios.ios_ospf_interfaces:
+    config:
+      - name: GigabitEthernet0/1
+    state: deleted

@@ -1,0 +1,16 @@
+---
+# tasks file forios_interfaces
+# From file: ios_interfaces.py
+- name: Override device configuration of all interfaces with provided configuration
+
+  cisco.ios.ios_interfaces:
+    config:
+    - name: GigabitEthernet0/2
+      description: Configured and Overridden by Ansible Network
+      speed: 1000
+    - name: GigabitEthernet0/3
+      description: Configured and Overridden by Ansible Network
+      enabled: false
+      duplex: full
+      mtu: 2000
+    state: overridden

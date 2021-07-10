@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - issue_enrichment_details-get_issue_enrichment_details

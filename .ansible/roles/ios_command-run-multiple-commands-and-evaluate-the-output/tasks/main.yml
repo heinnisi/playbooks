@@ -1,0 +1,12 @@
+---
+# tasks file forios_command
+# From file: ios_command.py
+- name: run multiple commands and evaluate the output
+
+  cisco.ios.ios_command:
+    commands:
+    - show version
+    - show interfaces
+    wait_for:
+    - result[0] contains IOS
+    - result[1] contains Loopback0

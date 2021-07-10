@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_config-configure-ip-helpers-on-multiple-interfaces

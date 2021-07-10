@@ -1,0 +1,5 @@
+vars:
+  ansible_user: admin
+  ansible_password: aoii
+  ansible_network_os: ios
+

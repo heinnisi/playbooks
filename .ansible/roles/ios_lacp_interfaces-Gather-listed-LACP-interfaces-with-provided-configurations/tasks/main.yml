@@ -1,0 +1,8 @@
+---
+# tasks file forios_lacp_interfaces
+# From file: ios_lacp_interfaces.py
+- name: Gather listed LACP interfaces with provided configurations
+
+  cisco.ios.ios_lacp_interfaces:
+    config:
+    state: gathered

@@ -1,0 +1,8 @@
+---
+# tasks file forios_lldp_global
+# From file: ios_lldp_global.py
+- name: Parse the commands for provided configuration
+
+  cisco.ios.ios_lldp_global:
+    running_config: "{{ lookup('file', 'parsed.cfg') }}"
+    state: parsed

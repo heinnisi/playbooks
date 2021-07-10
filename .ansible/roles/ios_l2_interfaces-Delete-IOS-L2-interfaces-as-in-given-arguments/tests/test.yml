@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_l2_interfaces-Delete-IOS-L2-interfaces-as-in-given-arguments

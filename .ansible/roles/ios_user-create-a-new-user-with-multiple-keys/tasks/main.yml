@@ -1,0 +1,11 @@
+---
+# tasks file forios_user
+# From file: ios_user.py
+- name: create a new user with multiple keys
+
+  cisco.ios.ios_user:
+    name: ansible
+    sshkey:
+    - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+    - "{{ lookup('file', '~/path/to/public_key') }}"
+    state: present

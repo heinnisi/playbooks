@@ -1,0 +1,8 @@
+---
+# tasks file forios_interface
+# From file: ios_interface.py
+- name: make interface up
+
+  cisco.ios.ios_interface:
+    name: GigabitEthernet0/2
+    enabled: true

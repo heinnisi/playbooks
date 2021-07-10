@@ -1,0 +1,7 @@
+---
+# tasks file forios_lldp_interfaces
+# From file: ios_lldp_interfaces.py
+- name: "Delete LLDP attributes for all configured interfaces (Note: This won't delete the interface itself)"
+
+  cisco.ios.ios_lldp_interfaces:
+    state: deleted

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ios_lacp_interfaces-Replaces-device-configuration-of-listed-lacp_interfaces-with-provided-configuration

@@ -1,0 +1,8 @@
+---
+# tasks file forios_acls
+# From file: ios_acls.py
+- name: 'Delete ALL of configured ACLs (Note: This WILL delete the all configured
+
+    ACLs)'
+  cisco.ios.ios_acls:
+    state: deleted
