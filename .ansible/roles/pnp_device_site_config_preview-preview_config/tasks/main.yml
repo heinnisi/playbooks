@@ -1,0 +1,15 @@
+---
+# tasks file forpnp_device_site_config_preview
+# From file: pnp_device_site_config_preview.py
+- name: preview_config
+
+  cisco.dnac.pnp_device_site_config_preview:
+    state: create  # required
+    deviceId: SomeValue  # string
+    siteId: SomeValue  # string
+    type: # valid values are 'Default',
+      # 'AccessPoint',
+      # 'StackSwitch',
+      # 'Sensor',
+      # 'MobilityExpress'.
+      SomeValue  # string

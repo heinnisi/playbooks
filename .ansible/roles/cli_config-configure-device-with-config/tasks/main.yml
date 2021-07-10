@@ -1,0 +1,7 @@
+---
+# tasks file forcli_config
+# From file: cli_config.py
+- name: configure device with config
+
+  ansible.netcommon.cli_config:
+    config: "{{ lookup('template', 'basic/config.j2') }}"

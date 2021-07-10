@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - sda_virtual_network_ip_pool-delete_ip_pool_from_sda_virtual_network

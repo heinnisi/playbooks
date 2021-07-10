@@ -1,0 +1,9 @@
+---
+# tasks file forsda_virtual_network
+# From file: sda_virtual_network.py
+- name: delete_vn
+
+  cisco.dnac.sda_virtual_network:
+    state: delete  # required
+    site_name_hierarchy: SomeValue  # string, required
+    virtual_network_name: SomeValue  # string, required

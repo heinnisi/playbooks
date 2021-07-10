@@ -1,0 +1,10 @@
+---
+# tasks file forsda_edge_device
+# From file: sda_edge_device.py
+- name: add_edge_device
+
+  cisco.dnac.sda_edge_device:
+    state: create  # required
+    payload:  # required
+    - deviceManagementIpAddress: SomeValue  # string
+      siteNameHierarchy: SomeValue  # string

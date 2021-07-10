@@ -1,0 +1,8 @@
+---
+# tasks file forwireless_profile
+# From file: wireless_profile.py
+- name: delete_wireless_profile
+
+  cisco.dnac.wireless_profile:
+    state: delete  # required
+    wireless_profile_name: SomeValue  # string, required

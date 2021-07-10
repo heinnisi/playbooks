@@ -1,0 +1,22 @@
+---
+# tasks file fortask
+# From file: task.py
+- name: get_tasks
+
+  cisco.dnac.task:
+    state: query  # required
+    data: SomeValue  # string
+    end_time: SomeValue  # string
+    error_code: SomeValue  # string
+    failure_reason: SomeValue  # string
+    is_error: SomeValue  # string
+    limit: SomeValue  # string
+    offset: SomeValue  # string
+    order: SomeValue  # string
+    parent_id: SomeValue  # string
+    progress: SomeValue  # string
+    service_type: SomeValue  # string
+    sort_by: SomeValue  # string
+    start_time: SomeValue  # string
+    username: SomeValue  # string
+  register: nm_get_tasks

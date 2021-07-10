@@ -1,0 +1,30 @@
+---
+# tasks file fornetwork_device_autocomplete
+# From file: network_device_autocomplete.py
+- name: retrieves_all_network_devices
+
+  cisco.dnac.network_device_autocomplete:
+    state: query  # required
+    associated_wlc_ip: SomeValue  # string
+    collection_interval: SomeValue  # string
+    collection_status: SomeValue  # string
+    error_code: SomeValue  # string
+    family: SomeValue  # string
+    hostname: SomeValue  # string
+    limit: SomeValue  # string
+    mac_address: SomeValue  # string
+    management_ip_address: SomeValue  # string
+    offset: SomeValue  # string
+    platform_id: SomeValue  # string
+    reachability_failure_reason: SomeValue  # string
+    reachability_status: SomeValue  # string
+    role: SomeValue  # string
+    role_source: SomeValue  # string
+    serial_number: SomeValue  # string
+    series: SomeValue  # string
+    software_type: SomeValue  # string
+    software_version: SomeValue  # string
+    type: SomeValue  # string
+    up_time: SomeValue  # string
+    vrf_name: SomeValue  # string
+  register: nm_retrieves_all_network_devices

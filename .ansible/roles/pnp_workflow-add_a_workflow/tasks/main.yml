@@ -1,0 +1,44 @@
+---
+# tasks file forpnp_workflow
+# From file: pnp_workflow.py
+- name: add_a_workflow
+
+  cisco.dnac.pnp_workflow:
+    state: create  # required
+    _id: SomeValue  # string
+    addToInventory: True  # boolean
+    addedOn: 1  #  integer
+    configId: SomeValue  # string
+    currTaskIdx: 1  #  integer
+    description: SomeValue  # string
+    endTime: 1  #  integer
+    execTime: 1  #  integer
+    imageId: SomeValue  # string
+    instanceType: # valid values are 'SystemWorkflow',
+      # 'UserWorkflow',
+      # 'SystemResetWorkflow'.
+      SomeValue  # string
+    lastupdateOn: 1  #  integer
+    name: SomeValue  # string
+    startTime: 1  #  integer
+    _state: SomeValue  # string
+    tasks:
+    - currWorkItemIdx: 1  #  integer
+      endTime: 1  #  integer
+      name: SomeValue  # string
+      startTime: 1  #  integer
+      state: SomeValue  # string
+      taskSeqNo: 1  #  integer
+      timeTaken: 1  #  integer
+      type: SomeValue  # string
+      workItemList:
+      - command: SomeValue  # string
+        endTime: 1  #  integer
+        outputStr: SomeValue  # string
+        startTime: 1  #  integer
+        state: SomeValue  # string
+        timeTaken: 1  #  integer
+    tenantId: SomeValue  # string
+    type: SomeValue  # string
+    useState: SomeValue  # string
+    version: 1  #  integer

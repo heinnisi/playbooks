@@ -1,0 +1,10 @@
+---
+# tasks file forsite_device
+# From file: site_device.py
+- name: assign_device_to_site
+
+  cisco.dnac.site_device:
+    state: create  # required
+    site_id: SomeValue  # string, required
+    device:  # required
+    - ip: SomeValue  # string, required

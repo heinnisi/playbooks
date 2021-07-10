@@ -1,0 +1,8 @@
+---
+# tasks file forsmart_virtual_account
+# From file: smart_virtual_account.py
+- name: get_smart_account_list
+
+  cisco.dnac.smart_virtual_account:
+    state: query  # required
+  register: nm_get_smart_account_list

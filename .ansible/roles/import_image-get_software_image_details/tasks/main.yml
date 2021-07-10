@@ -1,0 +1,26 @@
+---
+# tasks file forimport_image
+# From file: import_image.py
+- name: get_software_image_details
+
+  cisco.dnac.import_image:
+    state: query  # required
+    application_type: SomeValue  # string
+    created_time: 1  #  integer
+    family: SomeValue  # string
+    image_integrity_status: SomeValue  # string
+    image_name: SomeValue  # string
+    image_series: SomeValue  # string
+    image_size_greater_than: 1  #  integer
+    image_size_lesser_than: 1  #  integer
+    image_uuid: SomeValue  # string
+    is_cco_latest: True  # boolean
+    is_cco_recommended: True  # boolean
+    is_tagged_golden: True  # boolean
+    limit: 1  #  integer
+    name: SomeValue  # string
+    offset: 1  #  integer
+    sort_by: SomeValue  # string
+    sort_order: SomeValue  # string
+    version: SomeValue  # string
+  register: nm_get_software_image_details

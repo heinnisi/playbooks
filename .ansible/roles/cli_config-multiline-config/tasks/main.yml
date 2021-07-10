@@ -1,0 +1,9 @@
+---
+# tasks file forcli_config
+# From file: cli_config.py
+- name: multiline config
+
+  ansible.netcommon.cli_config:
+    config: |
+      hostname foo
+      feature nxapi

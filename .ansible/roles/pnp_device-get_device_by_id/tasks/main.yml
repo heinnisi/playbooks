@@ -1,0 +1,9 @@
+---
+# tasks file forpnp_device
+# From file: pnp_device.py
+- name: get_device_by_id
+
+  cisco.dnac.pnp_device:
+    state: query  # required
+    id: SomeValue  # string, required
+  register: nm_get_device_by_id

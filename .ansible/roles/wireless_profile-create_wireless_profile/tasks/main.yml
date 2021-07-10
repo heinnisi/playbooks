@@ -1,0 +1,19 @@
+---
+# tasks file forwireless_profile
+# From file: wireless_profile.py
+- name: create_wireless_profile
+
+  cisco.dnac.wireless_profile:
+    state: create  # required
+    profileDetails:  # required
+      name: SomeValue  # string
+      sites:
+      - SomeValue  # string
+      ssidDetails:
+      - name: SomeValue  # string
+        type: SomeValue  # string
+        enableFabric: True  # boolean
+        flexConnect:
+          enableFlexConnect: True  # boolean
+          localToVlan: 1  #  integer
+        interfaceName: SomeValue  # string

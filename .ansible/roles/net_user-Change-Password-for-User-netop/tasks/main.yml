@@ -1,0 +1,11 @@
+---
+# tasks file fornet_user
+# From file: net_user.py
+- name: Change Password for User netop
+
+  ansible.netcommon.net_user:
+    name: netop
+    configured_password: '{{ new_password }}'
+    update_password: always
+    state: present
+"""

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - discovery_job-get_discovery_jobs_by_ip

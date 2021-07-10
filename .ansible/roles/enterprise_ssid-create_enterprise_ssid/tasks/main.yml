@@ -1,0 +1,28 @@
+---
+# tasks file forenterprise_ssid
+# From file: enterprise_ssid.py
+- name: create_enterprise_ssid
+
+  cisco.dnac.enterprise_ssid:
+    state: create  # required
+    name: SomeValue  # string, required
+    securityLevel: # valid values are 'WPA2_ENTERPRISE',
+      # 'WPA2_PERSONAL',
+      # 'OPEN'.
+      SomeValue  # string, required
+    enableBroadcastSSID: True  # boolean
+    enableFastLane: True  # boolean
+    enableMACFiltering: True  # boolean
+    fastTransition: # valid values are 'Adaptive',
+      # 'Enable',
+      # 'Disable'.
+      SomeValue  # string
+    passphrase: SomeValue  # string
+    radioPolicy: # valid values are 'Dual band operation (2.4GHz and 5GHz)',
+      # 'Dual band operation with band select',
+      # '5GHz only',
+      # '2.4GHz only'.
+      SomeValue  # string
+    trafficType: # valid values are 'voicedata',
+      # 'data'.
+      SomeValue  # string

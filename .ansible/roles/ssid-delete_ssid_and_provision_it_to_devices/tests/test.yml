@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ssid-delete_ssid_and_provision_it_to_devices

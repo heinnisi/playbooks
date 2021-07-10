@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - global_credential_snmpv2_write_community-update_snmp_write_community

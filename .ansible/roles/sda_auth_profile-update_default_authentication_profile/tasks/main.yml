@@ -1,0 +1,10 @@
+---
+# tasks file forsda_auth_profile
+# From file: sda_auth_profile.py
+- name: update_default_authentication_profile
+
+  cisco.dnac.sda_auth_profile:
+    state: update  # required
+    payload:  # required
+    - siteNameHierarchy: SomeValue  # string
+      authenticateTemplateName: SomeValue  # string

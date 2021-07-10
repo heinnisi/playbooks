@@ -1,0 +1,9 @@
+---
+# tasks file forssid
+# From file: ssid.py
+- name: delete_ssid_and_provision_it_to_devices
+
+  cisco.dnac.ssid:
+    state: delete  # required
+    managed_aplocations: SomeValue  # string, required
+    ssid_name: SomeValue  # string, required

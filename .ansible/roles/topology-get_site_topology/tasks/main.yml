@@ -1,0 +1,9 @@
+---
+# tasks file fortopology
+# From file: topology.py
+- name: get_site_topology
+
+  cisco.dnac.topology:
+    state: query  # required
+    site: True  # boolean, required
+  register: nm_get_site_topology

@@ -1,0 +1,17 @@
+---
+# tasks file forglobal_credential_cli
+# From file: global_credential_cli.py
+- name: create_cli_credentials
+
+  cisco.dnac.global_credential_cli:
+    state: create  # required
+    payload:  # required
+    - enablePassword: SomeValue  # string, required
+      password: SomeValue  # string, required
+      username: SomeValue  # string, required
+      comments: SomeValue  # string
+      credentialType: SomeValue  # string
+      description: SomeValue  # string
+      id: SomeValue  # string
+      instanceTenantId: SomeValue  # string
+      instanceUuid: SomeValue  # string

@@ -1,0 +1,9 @@
+---
+# tasks file fornfv_provision
+# From file: nfv_provision.py
+- name: get_device_details_by_ip
+
+  cisco.dnac.nfv_provision:
+    state: query  # required
+    device_ip: SomeValue  # string, required
+  register: nm_get_device_details_by_ip

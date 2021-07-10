@@ -1,0 +1,8 @@
+---
+# tasks file fornet_interface
+# From file: net_interface.py
+- name: configure interface
+
+  ansible.netcommon.net_interface:
+    name: ge-0/0/1
+    description: test-interface

@@ -1,0 +1,10 @@
+---
+# tasks file fornet_linkagg
+# From file: net_linkagg.py
+- name: configure link aggregation group
+
+  ansible.netcommon.net_linkagg:
+    name: bond0
+    members:
+    - eth0
+    - eth1

@@ -1,0 +1,12 @@
+---
+# tasks file fordiscovery_job
+# From file: discovery_job.py
+- name: get_list_of_discoveries_by_discovery_id
+
+  cisco.dnac.discovery_job:
+    state: query  # required
+    id: SomeValue  # string, required
+    ip_address: SomeValue  # string
+    limit: 1  #  integer
+    offset: 1  #  integer
+  register: nm_get_list_of_discoveries_by_discovery_id

@@ -1,0 +1,8 @@
+---
+# tasks file fornet_vrf
+# From file: net_vrf.py
+- name: remove VRF named MANAGEMENT
+
+  ansible.netcommon.net_vrf:
+    name: MANAGEMENT
+    state: absent

@@ -1,0 +1,12 @@
+---
+# tasks file fordiscovery_network_device
+# From file: discovery_network_device.py
+- name: get_discovered_devices_by_range
+
+  cisco.dnac.discovery_network_device:
+    state: query  # required
+    id: SomeValue  # string, required
+    records_to_return: 1  #  integer, required
+    start_index: 1  #  integer, required
+    task_id: SomeValue  # string
+  register: nm_get_discovered_devices_by_range

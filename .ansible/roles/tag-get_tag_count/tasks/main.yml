@@ -1,0 +1,15 @@
+---
+# tasks file fortag
+# From file: tag.py
+- name: get_tag_count
+
+  cisco.dnac.tag:
+    state: query  # required
+    count: True  # boolean, required
+    attribute_name: SomeValue  # string
+    level: SomeValue  # string
+    name: SomeValue  # string
+    name_space: SomeValue  # string
+    size: SomeValue  # string
+    system_tag: SomeValue  # string
+  register: nm_get_tag_count

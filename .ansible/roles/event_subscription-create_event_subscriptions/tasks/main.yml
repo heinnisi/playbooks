@@ -1,0 +1,22 @@
+---
+# tasks file forevent_subscription
+# From file: event_subscription.py
+- name: create_event_subscriptions
+
+  cisco.dnac.event_subscription:
+    state: create  # required
+    payload:  # required
+    - filter:  # required
+        eventIds:
+        - SomeValue  # string
+      subscriptionId: SomeValue  # string
+      version: SomeValue  # string
+      name: SomeValue  # string
+      description: SomeValue  # string
+      subscriptionEndpoints:
+      - instanceId: SomeValue  # string
+        subscriptionDetails:
+          name: SomeValue  # string
+          url: SomeValue  # string
+          method: SomeValue  # string
+          connectorType: SomeValue  # string

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - net_put-copy-file-at-root-dir-of-flash-in-slot-3-of-sw1ios

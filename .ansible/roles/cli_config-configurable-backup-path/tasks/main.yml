@@ -1,0 +1,12 @@
+---
+# tasks file forcli_config
+# From file: cli_config.py
+- name: configurable backup path
+
+  ansible.netcommon.cli_config:
+    config: "{{ lookup('template', 'basic/config.j2') }}"
+    backup: yes
+    backup_options:
+      filename: backup.cfg
+      dir_path: /home/user
+"""

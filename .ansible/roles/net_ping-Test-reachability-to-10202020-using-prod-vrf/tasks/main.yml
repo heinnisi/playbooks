@@ -1,0 +1,8 @@
+---
+# tasks file fornet_ping
+# From file: net_ping.py
+- name: Test reachability to 10.20.20.20 using prod vrf
+
+  ansible.netcommon.net_ping:
+    dest: 10.20.20.20
+    vrf: prod

@@ -1,0 +1,8 @@
+---
+# tasks file fornet_vlan
+# From file: net_vlan.py
+- name: configure VLAN ID and name
+
+  ansible.netcommon.net_vlan:
+    vlan_id: 20
+    name: test-vlan

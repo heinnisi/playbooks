@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - net_ping-Test-reachability-to-10404040-using-prod-vrf-and-setting-count-and-source

@@ -1,0 +1,10 @@
+---
+# tasks file forsite
+# From file: site.py
+- name: get_site_count
+
+  cisco.dnac.site:
+    state: query  # required
+    count: True  # boolean, required
+    site_id: SomeValue  # string
+  register: nm_get_site_count

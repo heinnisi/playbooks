@@ -1,0 +1,18 @@
+---
+# tasks file forglobal_credential_cli
+# From file: global_credential_cli.py
+- name: update_cli_credentials
+
+  cisco.dnac.global_credential_cli:
+    state: update  # required
+    enablePassword: SomeValue  # string, required
+    password: SomeValue  # string, required
+    username: SomeValue  # string, required
+    comments: SomeValue  # string
+    credentialType: # valid values are 'GLOBAL',
+      # 'APP'.
+      SomeValue  # string
+    description: SomeValue  # string
+    id: SomeValue  # string
+    instanceTenantId: SomeValue  # string
+    instanceUuid: SomeValue  # string

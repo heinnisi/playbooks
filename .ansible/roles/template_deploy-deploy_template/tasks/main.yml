@@ -1,0 +1,17 @@
+---
+# tasks file fortemplate_deploy
+# From file: template_deploy.py
+- name: deploy_template
+
+  cisco.dnac.template_deploy:
+    state: create  # required
+    forcePushTemplate: True  # boolean
+    isComposite: True  # boolean
+    mainTemplateId: SomeValue  # string
+    memberTemplateDeploymentInfo: None
+    targetInfo:
+    - hostName: SomeValue  # string
+      id: SomeValue  # string
+      params:
+      type: SomeValue  # string
+    templateId: SomeValue  # string

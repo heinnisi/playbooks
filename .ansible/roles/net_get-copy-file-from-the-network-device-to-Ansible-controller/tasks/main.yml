@@ -1,0 +1,7 @@
+---
+# tasks file fornet_get
+# From file: net_get.py
+- name: copy file from the network device to Ansible controller
+
+  ansible.netcommon.net_get:
+    src: running_cfg_ios1.txt

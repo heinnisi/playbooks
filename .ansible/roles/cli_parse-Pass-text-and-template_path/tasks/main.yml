@@ -1,0 +1,10 @@
+---
+# tasks file forcli_parse
+# From file: cli_parse.py
+- name: Pass text and template_path
+
+  ansible.netcommon.cli_parse:
+    text: "{{ previous_command['stdout'] }}"
+    parser:
+      name: ansible.netcommon.native
+      template_path: "{{ role_path }}/templates/nxos_show_interface.yaml"

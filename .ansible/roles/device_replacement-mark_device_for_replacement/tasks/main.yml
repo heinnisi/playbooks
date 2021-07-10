@@ -1,0 +1,22 @@
+---
+# tasks file fordevice_replacement
+# From file: device_replacement.py
+- name: mark_device_for_replacement
+
+  cisco.dnac.device_replacement:
+    state: create  # required
+    payload:  # required
+    - faultyDeviceId: SomeValue  # string, required
+      replacementStatus: SomeValue  # string, required
+      creationTime: 1  #  integer
+      family: SomeValue  # string
+      faultyDeviceName: SomeValue  # string
+      faultyDevicePlatform: SomeValue  # string
+      faultyDeviceSerialNumber: SomeValue  # string
+      id: SomeValue  # string
+      neighbourDeviceId: SomeValue  # string
+      networkReadinessTaskId: SomeValue  # string
+      replacementDevicePlatform: SomeValue  # string
+      replacementDeviceSerialNumber: SomeValue  # string
+      replacementTime: 1  #  integer
+      workflowId: SomeValue  # string

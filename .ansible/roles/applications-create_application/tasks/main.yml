@@ -1,0 +1,34 @@
+---
+# tasks file forapplications
+# From file: applications.py
+- name: create_application
+
+  cisco.dnac.applications:
+    state: create  # required
+    payload:  # required
+    - name: SomeValue  # string
+      networkApplications:
+      - appProtocol: SomeValue  # string
+        applicationSubType: SomeValue  # string
+        applicationType: SomeValue  # string
+        categoryId: SomeValue  # string
+        displayName: SomeValue  # string
+        engineId: SomeValue  # string
+        helpString: SomeValue  # string
+        longDescription: SomeValue  # string
+        name: SomeValue  # string
+        popularity: SomeValue  # string
+        rank: SomeValue  # string
+        trafficClass: SomeValue  # string
+        serverName: SomeValue  # string
+        url: SomeValue  # string
+        dscp: SomeValue  # string
+        ignoreConflict: SomeValue  # string
+      networkIdentity:
+      - displayName: SomeValue  # string
+        lowerPort: SomeValue  # string
+        ports: SomeValue  # string
+        protocol: SomeValue  # string
+        upperPort: SomeValue  # string
+      applicationSet:
+        idRef: SomeValue  # string

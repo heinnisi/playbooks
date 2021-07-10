@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - net_ping-Test-reachability-to-10101010-using-default-vrf

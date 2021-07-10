@@ -1,0 +1,10 @@
+---
+# tasks file fornet_interface
+# From file: net_interface.py
+- name: Delete interface using aggregate
+
+  ansible.netcommon.net_interface:
+    aggregate:
+    - {name: ge-0/0/1}
+    - {name: ge-0/0/2}
+    state: absent

@@ -1,0 +1,7 @@
+---
+# tasks file fornet_system
+# From file: net_system.py
+- name: remove configuration
+
+  ansible.netcommon.net_system:
+    state: absent

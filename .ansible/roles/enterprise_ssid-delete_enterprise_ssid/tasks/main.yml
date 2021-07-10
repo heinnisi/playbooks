@@ -1,0 +1,8 @@
+---
+# tasks file forenterprise_ssid
+# From file: enterprise_ssid.py
+- name: delete_enterprise_ssid
+
+  cisco.dnac.enterprise_ssid:
+    state: delete  # required
+    ssid_name: SomeValue  # string, required

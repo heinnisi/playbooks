@@ -1,0 +1,27 @@
+---
+# tasks file forssid
+# From file: ssid.py
+- name: create_and_provision_ssid
+
+  cisco.dnac.ssid:
+    state: create  # required
+    enableFabric: True  # boolean, required
+    managedAPLocations:  # required
+    - SomeValue  # string
+    ssidDetails:  # required
+      name: SomeValue  # string
+      securityLevel: SomeValue  # string
+      enableFastLane: True  # boolean
+      passphrase: SomeValue  # string
+      trafficType: SomeValue  # string
+      enableBroadcastSSID: True  # boolean
+      radioPolicy: SomeValue  # string
+      enableMACFiltering: True  # boolean
+      fastTransition: SomeValue  # string
+      webAuthURL: SomeValue  # string
+    ssidType: # valid values are 'Guest',
+      # 'Enterprise'.
+      SomeValue  # string, required
+    flexConnect:
+      enableFlexConnect: True  # boolean
+      localToVlan: 1  #  integer

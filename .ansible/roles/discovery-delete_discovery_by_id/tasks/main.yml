@@ -1,0 +1,8 @@
+---
+# tasks file fordiscovery
+# From file: discovery.py
+- name: delete_discovery_by_id
+
+  cisco.dnac.discovery:
+    state: delete  # required
+    id: SomeValue  # string, required

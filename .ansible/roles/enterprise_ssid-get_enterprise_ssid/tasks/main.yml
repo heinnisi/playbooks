@@ -1,0 +1,9 @@
+---
+# tasks file forenterprise_ssid
+# From file: enterprise_ssid.py
+- name: get_enterprise_ssid
+
+  cisco.dnac.enterprise_ssid:
+    state: query  # required
+    ssid_name: SomeValue  # string
+  register: nm_get_enterprise_ssid

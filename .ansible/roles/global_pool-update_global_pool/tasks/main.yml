@@ -1,0 +1,16 @@
+---
+# tasks file forglobal_pool
+# From file: global_pool.py
+- name: update_global_pool
+
+  cisco.dnac.global_pool:
+    state: update  # required
+    settings:  # required
+      ippool:
+      - id: SomeValue  # string, required
+        ipPoolName: SomeValue  # string
+        gateway: SomeValue  # string
+        dhcpServerIps:
+        - SomeValue  # string
+        dnsServerIps:
+        - SomeValue  # string

@@ -1,0 +1,9 @@
+---
+# tasks file forsda_edge_device
+# From file: sda_edge_device.py
+- name: get_edge_device
+
+  cisco.dnac.sda_edge_device:
+    state: query  # required
+    device_ipaddress: SomeValue  # string, required
+  register: nm_get_edge_device

@@ -1,0 +1,14 @@
+---
+# tasks file fornetwork_device_poller_read_request
+# From file: network_device_poller_read_request.py
+- name: run_read_only_commands_on_devices
+
+  cisco.dnac.network_device_poller_read_request:
+    state: create  # required
+    commands:  # required
+    - SomeValue  # string
+    deviceUuids:  # required
+    - SomeValue  # string
+    description: SomeValue  # string
+    name: SomeValue  # string
+    timeout: 1  #  integer

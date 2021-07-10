@@ -1,0 +1,12 @@
+---
+# tasks file fornet_system
+# From file: net_system.py
+- name: configure hostname and domain name
+
+  ansible.netcommon.net_system:
+    hostname: ios01
+    domain_name: test.example.com
+    domain_search:
+    - ansible.com
+    - redhat.com
+    - cisco.com

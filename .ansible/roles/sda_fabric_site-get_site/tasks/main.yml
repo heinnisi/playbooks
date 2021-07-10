@@ -1,0 +1,9 @@
+---
+# tasks file forsda_fabric_site
+# From file: sda_fabric_site.py
+- name: get_site
+
+  cisco.dnac.sda_fabric_site:
+    state: query  # required
+    site_name_hierarchy: SomeValue  # string, required
+  register: nm_get_site

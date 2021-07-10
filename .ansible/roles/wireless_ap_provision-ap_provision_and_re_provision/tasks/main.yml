@@ -1,0 +1,11 @@
+---
+# tasks file forwireless_ap_provision
+# From file: wireless_ap_provision.py
+- name: ap_provision_and_re_provision
+
+  cisco.dnac.wireless_ap_provision:
+    state: create  # required
+    payload:  # required
+    - executionId: SomeValue  # string
+      executionUrl: SomeValue  # string
+      message: SomeValue  # string

@@ -1,0 +1,9 @@
+---
+# tasks file fornetwork_device_functional_capability
+# From file: network_device_functional_capability.py
+- name: get_functional_capability_by_id
+
+  cisco.dnac.network_device_functional_capability:
+    state: query  # required
+    id: SomeValue  # string, required
+  register: nm_get_functional_capability_by_id

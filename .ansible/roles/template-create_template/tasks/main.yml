@@ -1,0 +1,89 @@
+---
+# tasks file fortemplate
+# From file: template.py
+- name: create_template
+
+  cisco.dnac.template:
+    state: create  # required
+    project_id: SomeValue  # string, required
+    author: SomeValue  # string
+    composite: True  # boolean
+    containingTemplates:
+    - composite: True  # boolean
+      id: SomeValue  # string
+      name: SomeValue  # string
+      version: SomeValue  # string
+    createTime: 1  #  integer
+    description: SomeValue  # string
+    deviceTypes:
+    - productFamily: SomeValue  # string
+      productSeries: SomeValue  # string
+      productType: SomeValue  # string
+    failurePolicy: # valid values are 'ABORT_ON_ERROR',
+      # 'CONTINUE_ON_ERROR',
+      # 'ROLLBACK_ON_ERROR',
+      # 'ROLLBACK_TARGET_ON_ERROR',
+      # 'ABORT_TARGET_ON_ERROR'.
+      SomeValue  # string
+    id: SomeValue  # string
+    lastUpdateTime: 1  #  integer
+    name: SomeValue  # string
+    parentTemplateId: SomeValue  # string
+    projectId: SomeValue  # string
+    projectName: SomeValue  # string
+    rollbackTemplateContent: SomeValue  # string
+    rollbackTemplateParams:
+    - binding: SomeValue  # string
+      dataType: SomeValue  # string
+      defaultValue: SomeValue  # string
+      description: SomeValue  # string
+      displayName: SomeValue  # string
+      group: SomeValue  # string
+      id: SomeValue  # string
+      instructionText: SomeValue  # string
+      key: SomeValue  # string
+      notParam: True  # boolean
+      order: 1  #  integer
+      paramArray: True  # boolean
+      parameterName: SomeValue  # string
+      provider: SomeValue  # string
+      range:
+      - id: SomeValue  # string
+        maxValue: 1  #  integer
+        minValue: 1  #  integer
+      required: True  # boolean
+      selection:
+        id: SomeValue  # string
+        selectionType: SomeValue  # string
+        selectionValues:
+    softwareType: SomeValue  # string
+    softwareVariant: SomeValue  # string
+    softwareVersion: SomeValue  # string
+    tags:
+    - SomeValue  # string
+    templateContent: SomeValue  # string
+    templateParams:
+    - binding: SomeValue  # string
+      dataType: SomeValue  # string
+      defaultValue: SomeValue  # string
+      description: SomeValue  # string
+      displayName: SomeValue  # string
+      group: SomeValue  # string
+      id: SomeValue  # string
+      instructionText: SomeValue  # string
+      key: SomeValue  # string
+      notParam: True  # boolean
+      order: 1  #  integer
+      paramArray: True  # boolean
+      parameterName: SomeValue  # string
+      provider: SomeValue  # string
+      range:
+      - id: SomeValue  # string
+        maxValue: 1  #  integer
+        minValue: 1  #  integer
+      required: True  # boolean
+      selection:
+        id: SomeValue  # string
+        selectionType: SomeValue  # string
+        selectionValues:
+    version: SomeValue  # string

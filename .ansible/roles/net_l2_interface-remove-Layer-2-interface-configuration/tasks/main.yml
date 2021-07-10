@@ -1,0 +1,9 @@
+---
+# tasks file fornet_l2_interface
+# From file: net_l2_interface.py
+- name: remove Layer-2 interface configuration
+
+  ansible.netcommon.net_l2_interface:
+    name: gigabitethernet0/0/1
+    state: absent
+"""

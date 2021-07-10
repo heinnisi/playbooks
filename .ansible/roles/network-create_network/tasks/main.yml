@@ -1,0 +1,44 @@
+---
+# tasks file fornetwork
+# From file: network.py
+- name: create_network
+
+  cisco.dnac.network:
+    state: create  # required
+    site_id: SomeValue  # string, required
+    settings:  # required
+      dhcpServer:
+      - SomeValue  # string
+      dnsServer:
+        domainName: SomeValue  # string
+        primaryIpAddress: SomeValue  # string
+        secondaryIpAddress: SomeValue  # string
+      syslogServer:
+        ipAddresses:
+        - SomeValue  # string
+        configureDnacIP: True  # boolean
+      snmpServer:
+        ipAddresses:
+        - SomeValue  # string
+        configureDnacIP: True  # boolean
+      netflowcollector:
+        ipAddress: SomeValue  # string
+        port: 1  #  number
+      ntpServer:
+      - SomeValue  # string
+      timezone: SomeValue  # string
+      messageOfTheday:
+        bannerMessage: SomeValue  # string
+        retainExistingBanner: True  # boolean
+      network_aaa:
+        servers: SomeValue  # string
+        ipAddress: SomeValue  # string
+        network: SomeValue  # string
+        protocol: SomeValue  # string
+        sharedSecret: SomeValue  # string
+      clientAndEndpoint_aaa:
+        servers: SomeValue  # string
+        ipAddress: SomeValue  # string
+        network: SomeValue  # string
+        protocol: SomeValue  # string
+        sharedSecret: SomeValue  # string

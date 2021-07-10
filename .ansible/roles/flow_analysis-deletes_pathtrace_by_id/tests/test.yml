@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - flow_analysis-deletes_pathtrace_by_id

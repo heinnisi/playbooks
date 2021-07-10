@@ -1,0 +1,37 @@
+---
+# tasks file fordevice_credential
+# From file: device_credential.py
+- name: create_device_credentials
+
+  cisco.dnac.device_credential:
+    state: create  # required
+    settings:  # required
+      cliCredential:
+      - description: SomeValue  # string, required
+        username: SomeValue  # string, required
+        password: SomeValue  # string, required
+        enablePassword: SomeValue  # string
+      snmpV2cRead:
+      - readCommunity: SomeValue  # string, required
+        description: SomeValue  # string
+      snmpV2cWrite:
+      - writeCommunity: SomeValue  # string, required
+        description: SomeValue  # string
+      snmpV3:
+      - description: SomeValue  # string, required
+        username: SomeValue  # string, required
+        privacyType: SomeValue  # string, required
+        privacyPassword: SomeValue  # string, required
+        authType: SomeValue  # string, required
+        snmpMode: SomeValue  # string, required
+        authPassword: SomeValue  # string
+      httpsRead:
+      - username: SomeValue  # string, required
+        password: SomeValue  # string, required
+        name: SomeValue  # string
+        port: 1  #  number
+      httpsWrite:
+      - username: SomeValue  # string, required
+        password: SomeValue  # string, required
+        name: SomeValue  # string
+        port: 1  #  number

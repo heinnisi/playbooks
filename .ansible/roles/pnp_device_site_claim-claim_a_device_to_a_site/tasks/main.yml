@@ -1,0 +1,15 @@
+---
+# tasks file forpnp_device_site_claim
+# From file: pnp_device_site_claim.py
+- name: claim_a_device_to_a_site
+
+  cisco.dnac.pnp_device_site_claim:
+    state: create  # required
+    deviceId: SomeValue  # string
+    siteId: SomeValue  # string
+    type: # valid values are 'Default',
+      # 'AccessPoint',
+      # 'StackSwitch',
+      # 'Sensor',
+      # 'MobilityExpress'.
+      SomeValue  # string

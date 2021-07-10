@@ -1,0 +1,9 @@
+---
+# tasks file fordevice_replacement_workflow
+# From file: device_replacement_workflow.py
+- name: deploy_device_replacement_workflow
+
+  cisco.dnac.device_replacement_workflow:
+    state: create  # required
+    faultyDeviceSerialNumber: SomeValue  # string, required
+    replacementDeviceSerialNumber: SomeValue  # string, required

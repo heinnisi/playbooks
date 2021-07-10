@@ -1,0 +1,9 @@
+---
+# tasks file fornetwork_device
+# From file: network_device.py
+- name: get_device_count
+
+  cisco.dnac.network_device:
+    state: query  # required
+    count: True  # boolean, required
+  register: nm_get_device_count

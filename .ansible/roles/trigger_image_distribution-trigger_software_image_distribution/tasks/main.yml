@@ -1,0 +1,10 @@
+---
+# tasks file fortrigger_image_distribution
+# From file: trigger_image_distribution.py
+- name: trigger_software_image_distribution
+
+  cisco.dnac.trigger_image_distribution:
+    state: create  # required
+    payload:  # required
+    - deviceUuid: SomeValue  # string
+      imageUuid: SomeValue  # string

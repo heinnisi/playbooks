@@ -1,0 +1,42 @@
+---
+# tasks file fornetwork_device
+# From file: network_device.py
+- name: add_device
+
+  cisco.dnac.network_device:
+    state: create  # required
+    cliTransport: SomeValue  # string, required
+    enablePassword: SomeValue  # string, required
+    ipAddress:  # required
+    - SomeValue  # string
+    password: SomeValue  # string, required
+    snmpAuthPassphrase: SomeValue  # string, required
+    snmpAuthProtocol: SomeValue  # string, required
+    snmpMode: SomeValue  # string, required
+    snmpPrivPassphrase: SomeValue  # string, required
+    snmpPrivProtocol: SomeValue  # string, required
+    snmpROCommunity: SomeValue  # string, required
+    snmpRWCommunity: SomeValue  # string, required
+    snmpRetry: 1  #  integer, required
+    snmpTimeout: 1  #  integer, required
+    snmpUserName: SomeValue  # string, required
+    userName: SomeValue  # string, required
+    computeDevice: True  # boolean
+    extendedDiscoveryInfo: SomeValue  # string
+    httpPassword: SomeValue  # string
+    httpPort: SomeValue  # string
+    httpSecure: True  # boolean
+    httpUserName: SomeValue  # string
+    merakiOrgId:
+    - SomeValue  # string
+    netconfPort: SomeValue  # string
+    serialNumber: SomeValue  # string
+    snmpVersion: SomeValue  # string
+    type: # valid values are 'COMPUTE_DEVICE',
+      # 'MERAKI_DASHBOARD',
+      # 'NETWORK_DEVICE',
+      # 'NODATACHANGE'.
+      SomeValue  # string
+    updateMgmtIPaddressList:
+    - existMgmtIpAddress: SomeValue  # string
+      newMgmtIpAddress: SomeValue  # string

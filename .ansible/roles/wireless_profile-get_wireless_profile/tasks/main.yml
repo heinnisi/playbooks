@@ -1,0 +1,9 @@
+---
+# tasks file forwireless_profile
+# From file: wireless_profile.py
+- name: get_wireless_profile
+
+  cisco.dnac.wireless_profile:
+    state: query  # required
+    profile_name: SomeValue  # string
+  register: nm_get_wireless_profile

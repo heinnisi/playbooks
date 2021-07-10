@@ -1,0 +1,13 @@
+---
+# tasks file forsnmp_property
+# From file: snmp_property.py
+- name: create_update_snmp_properties
+
+  cisco.dnac.snmp_property:
+    state: create  # required
+    payload:  # required
+    - id: SomeValue  # string
+      instanceTenantId: SomeValue  # string
+      instanceUuid: SomeValue  # string
+      intValue: 1  #  integer
+      systemPropertyName: SomeValue  # string

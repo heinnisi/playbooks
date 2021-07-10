@@ -1,0 +1,9 @@
+---
+# tasks file fornetwork_device
+# From file: network_device.py
+- name: delete_device_by_id
+
+  cisco.dnac.network_device:
+    state: delete  # required
+    id: SomeValue  # string, required
+    is_force_delete: True  # boolean

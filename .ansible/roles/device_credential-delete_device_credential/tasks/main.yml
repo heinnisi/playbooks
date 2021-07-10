@@ -1,0 +1,8 @@
+---
+# tasks file fordevice_credential
+# From file: device_credential.py
+- name: delete_device_credential
+
+  cisco.dnac.device_credential:
+    state: delete  # required
+    id: SomeValue  # string, required

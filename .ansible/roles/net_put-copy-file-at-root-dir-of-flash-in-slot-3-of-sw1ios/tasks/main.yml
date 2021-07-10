@@ -1,0 +1,10 @@
+---
+# tasks file fornet_put
+# From file: net_put.py
+- name: copy file at root dir of flash in slot 3 of sw1(ios)
+
+  ansible.netcommon.net_put:
+    src: running_cfg_sw1.txt
+    protocol: sftp
+    dest: flash3:/running_cfg_sw1.txt
+"""

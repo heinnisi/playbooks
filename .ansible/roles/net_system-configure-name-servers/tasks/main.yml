@@ -1,0 +1,10 @@
+---
+# tasks file fornet_system
+# From file: net_system.py
+- name: configure name servers
+
+  ansible.netcommon.net_system:
+    name_servers:
+    - 8.8.8.8
+    - 8.8.4.4
+"""

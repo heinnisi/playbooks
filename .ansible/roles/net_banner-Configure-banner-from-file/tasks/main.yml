@@ -1,0 +1,9 @@
+---
+# tasks file fornet_banner
+# From file: net_banner.py
+- name: Configure banner from file
+
+  ansible.netcommon.net_banner:
+    banner: motd
+    text: "{{ lookup('file', './config_partial/raw_banner.cfg') }}"
+    state: present

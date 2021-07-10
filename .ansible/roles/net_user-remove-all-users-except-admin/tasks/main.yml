@@ -1,0 +1,7 @@
+---
+# tasks file fornet_user
+# From file: net_user.py
+- name: remove all users except admin
+
+  ansible.netcommon.net_user:
+    purge: yes

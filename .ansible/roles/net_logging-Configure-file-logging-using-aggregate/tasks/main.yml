@@ -1,0 +1,26 @@
+---
+# tasks file fornet_logging
+# From file: net_logging.py
+- name: Configure file logging using aggregate
+
+  ansible.netcommon.net_logging:
+    dest: file
+    aggregate:
+    - name: test-1
+      facility: pfe
+      level: critical
+    - name: test-2
+      facility: kernel
+      level: emergency
+- name: Delete file logging using aggregate
+  ansible.netcommon.net_logging:
+    dest: file
+    aggregate:
+    - name: test-1
+      facility: pfe
+      level: critical
+    - name: test-2
+      facility: kernel
+      level: emergency
+    state: absent
+"""

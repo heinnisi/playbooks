@@ -1,0 +1,9 @@
+---
+# tasks file fortemplate_deploy
+# From file: template_deploy.py
+- name: get_template_deployment_status
+
+  cisco.dnac.template_deploy:
+    state: query  # required
+    deployment_id: SomeValue  # string, required
+  register: nm_get_template_deployment_status

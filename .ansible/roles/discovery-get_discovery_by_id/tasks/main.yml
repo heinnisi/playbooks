@@ -1,0 +1,9 @@
+---
+# tasks file fordiscovery
+# From file: discovery.py
+- name: get_discovery_by_id
+
+  cisco.dnac.discovery:
+    state: query  # required
+    id: SomeValue  # string, required
+  register: nm_get_discovery_by_id

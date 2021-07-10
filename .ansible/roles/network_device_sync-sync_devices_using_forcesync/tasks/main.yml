@@ -1,0 +1,9 @@
+---
+# tasks file fornetwork_device_sync
+# From file: network_device_sync.py
+- name: sync_devices_using_forcesync
+
+  cisco.dnac.network_device_sync:
+    state: update  # required
+    payload: None, required
+    force_sync: True  # boolean

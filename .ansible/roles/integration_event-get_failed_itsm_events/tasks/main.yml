@@ -1,0 +1,9 @@
+---
+# tasks file forintegration_event
+# From file: integration_event.py
+- name: get_failed_itsm_events
+
+  cisco.dnac.integration_event:
+    state: query  # required
+    instance_id: SomeValue  # string
+  register: nm_get_failed_itsm_events

@@ -1,0 +1,16 @@
+---
+# tasks file fornetwork_device_export_list
+# From file: network_device_export_list.py
+- name: export_device_list
+
+  cisco.dnac.network_device_export_list:
+    state: create  # required
+    deviceUuids:  # required
+    - SomeValue  # string
+    id: SomeValue  # string
+    operationEnum: # valid values are 'CREDENTIALDETAILS',
+      # 'DEVICEDETAILS'.
+      SomeValue  # string
+    parameters:
+    - SomeValue  # string
+    password: SomeValue  # string

@@ -1,0 +1,8 @@
+---
+# tasks file fornet_logging
+# From file: net_logging.py
+- name: remove console logging configuration
+
+  ansible.netcommon.net_logging:
+    dest: console
+    state: absent

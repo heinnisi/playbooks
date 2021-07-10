@@ -1,0 +1,9 @@
+---
+# tasks file fornet_linkagg
+# From file: net_linkagg.py
+- name: Create aggregate of linkagg definitions
+
+  ansible.netcommon.net_linkagg:
+    aggregate:
+    - {name: bond0, members: [eth1]}
+    - {name: bond1, members: [eth2]}

@@ -1,0 +1,110 @@
+---
+# tasks file fornfv_provision
+# From file: nfv_provision.py
+- name: provision_nfv
+
+  cisco.dnac.nfv_provision:
+    state: create  # required
+    provisioning:  # required
+    - site:  # required
+        siteProfileName: SomeValue  # string
+        area:
+          name: SomeValue  # string
+          parentName: SomeValue  # string
+        building:
+          name: SomeValue  # string
+          address: SomeValue  # string
+          latitude: 1  #  number
+          longitude: 1  #  number
+          parentName: SomeValue  # string
+        floor:
+          name: SomeValue  # string
+          parentName: SomeValue  # string
+          rfModel: SomeValue  # string
+          width: 1  #  number
+          length: 1  #  number
+          height: 1  #  number
+      device:  # required
+      - tagName: SomeValue  # string, required
+        serviceProviders:  # required
+        - serviceProvider: SomeValue  # string, required
+          wanInterface:
+            ipAddress: SomeValue  # string
+            interfaceName: SomeValue  # string
+            subnetmask: SomeValue  # string
+            bandwidth: SomeValue  # string
+            gateway: SomeValue  # string
+        services:  # required
+        - type: SomeValue  # string, required
+          mode: SomeValue  # string
+          systemIp: SomeValue  # string
+          centralManagerIP: SomeValue  # string
+          centralRegistrationKey: SomeValue  # string
+          commonKey: SomeValue  # string
+          adminPasswordHash: SomeValue  # string
+          disk: SomeValue  # string
+        subPools:  # required
+        - type: SomeValue  # string, required
+          name: SomeValue  # string, required
+          ipSubnet: SomeValue  # string, required
+          gateway: SomeValue  # string, required
+          parentPoolName: SomeValue  # string
+        ip: SomeValue  # string
+        deviceSerialNumber: SomeValue  # string
+        vlan:
+        - type: SomeValue  # string, required
+          id: SomeValue  # string, required
+          interfaces: SomeValue  # string, required
+          network: SomeValue  # string
+        customNetworks:
+        - name: SomeValue  # string, required
+          port: SomeValue  # string
+          ipAddressPool: SomeValue  # string
+        templateParam:
+          nfvis:
+            var1: SomeValue  # string
+          asav:
+            var1: SomeValue  # string
+    siteProfile:  # required
+    - siteProfileName: SomeValue  # string, required
+      device:  # required
+      - deviceType: SomeValue  # string, required
+        tagName: SomeValue  # string, required
+        serviceProviders:  # required
+        - serviceProvider: SomeValue  # string, required
+          linkType: SomeValue  # string, required
+          connect: True  # boolean, required
+          defaultGateway: True  # boolean, required
+        dia: True  # boolean, required
+        services:  # required
+        - type: SomeValue  # string, required
+          profile: SomeValue  # string, required
+          name: SomeValue  # string, required
+          imageName: SomeValue  # string, required
+          topology:  # required
+            type: SomeValue  # string
+            name: SomeValue  # string
+            assignIp: SomeValue  # string
+          mode: SomeValue  # string
+        customServices:
+        - name: SomeValue  # string, required
+          applicationType: SomeValue  # string, required
+          profile: SomeValue  # string, required
+          topology:  # required
+            type: SomeValue  # string
+            name: SomeValue  # string
+            assignIp: SomeValue  # string
+          imageName: SomeValue  # string
+        customNetworks:
+        - name: SomeValue  # string, required
+          servicesToConnect:  # required
+          - service: SomeValue  # string, required
+          connectionType: SomeValue  # string, required
+          networkMode: SomeValue  # string, required
+          vlan: SomeValue  # string
+        vlan:
+        - type: SomeValue  # string, required
+          id: SomeValue  # string, required
+        customTemplate:
+        - deviceType: SomeValue  # string, required
+          template: SomeValue  # string, required

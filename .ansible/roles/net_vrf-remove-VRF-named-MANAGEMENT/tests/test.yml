@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - net_vrf-remove-VRF-named-MANAGEMENT

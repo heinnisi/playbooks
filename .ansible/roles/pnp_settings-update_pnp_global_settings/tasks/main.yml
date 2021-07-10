@@ -1,0 +1,53 @@
+---
+# tasks file forpnp_settings
+# From file: pnp_settings.py
+- name: update_pnp_global_settings
+
+  cisco.dnac.pnp_settings:
+    state: update  # required
+    _id: SomeValue  # string
+    aaaCredentials:
+      password: SomeValue  # string
+      username: SomeValue  # string
+    acceptEula: True  # boolean
+    defaultProfile:
+      cert: SomeValue  # string
+      fqdnAddresses:
+      - SomeValue  # string
+      ipAddresses:
+      - SomeValue  # string
+      port: 1  #  integer
+      proxy: True  # boolean
+    savaMappingList:
+    - profile:  # required
+        addressFqdn: SomeValue  # string
+        addressIpV4: SomeValue  # string
+        cert: SomeValue  # string
+        makeDefault: True  # boolean
+        name: SomeValue  # string
+        port: 1  #  integer
+        profileId: SomeValue  # string
+        proxy: True  # boolean
+      smartAccountId: SomeValue  # string, required
+      syncStatus: SomeValue  # string, required
+      virtualAccountId: SomeValue  # string, required
+      autoSyncPeriod: 1  #  integer
+      ccoUser: SomeValue  # string
+      expiry: 1  #  integer
+      lastSync: 1  #  integer
+      syncResult:
+        syncList:
+        - deviceSnList:
+          - SomeValue  # string
+          syncType: SomeValue  # string
+        syncMsg: SomeValue  # string
+      syncResultStr: SomeValue  # string
+      syncStartTime: 1  #  integer
+      tenantId: SomeValue  # string
+      token: SomeValue  # string
+    taskTimeOuts:
+      configTimeOut: 1  #  integer
+      generalTimeOut: 1  #  integer
+      imageDownloadTimeOut: 1  #  integer
+    tenantId: SomeValue  # string
+    version: 1  #  integer

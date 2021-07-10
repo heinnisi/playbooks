@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - flow_analysis-retrives_all_previous_pathtraces_summary

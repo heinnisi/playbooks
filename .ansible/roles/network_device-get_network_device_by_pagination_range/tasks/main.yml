@@ -1,0 +1,10 @@
+---
+# tasks file fornetwork_device
+# From file: network_device.py
+- name: get_network_device_by_pagination_range
+
+  cisco.dnac.network_device:
+    state: query  # required
+    records_to_return: 1  #  integer, required
+    start_index: 1  #  integer, required
+  register: nm_get_network_device_by_pagination_range

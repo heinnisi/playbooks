@@ -1,0 +1,8 @@
+---
+# tasks file forcli_config
+# From file: cli_config.py
+- name: Use diff_match
+
+  ansible.netcommon.cli_config:
+    config: "{{ lookup('file', 'interface_config') }}"
+    diff_match: none

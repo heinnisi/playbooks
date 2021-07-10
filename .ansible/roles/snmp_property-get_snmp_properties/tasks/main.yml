@@ -1,0 +1,8 @@
+---
+# tasks file forsnmp_property
+# From file: snmp_property.py
+- name: get_snmp_properties
+
+  cisco.dnac.snmp_property:
+    state: query  # required
+  register: nm_get_snmp_properties

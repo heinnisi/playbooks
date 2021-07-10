@@ -1,0 +1,10 @@
+---
+# tasks file fordiscovery
+# From file: discovery.py
+- name: get_discoveries_by_range
+
+  cisco.dnac.discovery:
+    state: query  # required
+    records_to_return: 1  #  integer, required
+    start_index: 1  #  integer, required
+  register: nm_get_discoveries_by_range

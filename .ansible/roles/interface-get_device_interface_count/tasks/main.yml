@@ -1,0 +1,9 @@
+---
+# tasks file forinterface
+# From file: interface.py
+- name: get_device_interface_count
+
+  cisco.dnac.interface:
+    state: query  # required
+    count: True  # boolean, required
+  register: nm_get_device_interface_count

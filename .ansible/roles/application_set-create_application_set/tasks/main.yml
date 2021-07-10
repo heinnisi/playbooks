@@ -1,0 +1,9 @@
+---
+# tasks file forapplication_set
+# From file: application_set.py
+- name: create_application_set
+
+  cisco.dnac.application_set:
+    state: create  # required
+    payload:  # required
+    - name: SomeValue  # string

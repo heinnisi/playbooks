@@ -1,0 +1,28 @@
+---
+# tasks file forsite
+# From file: site.py
+- name: update_site
+
+  cisco.dnac.site:
+    state: present  # required
+    site_id: SomeValue  # string, required
+    site:  # required
+      area:
+        name: SomeValue  # string
+        parentName: SomeValue  # string
+      building:
+        name: SomeValue  # string
+        address: SomeValue  # string
+        parentName: SomeValue  # string
+        latitude: 1  #  number
+        longitude: 1  #  number
+      floor:
+        name: SomeValue  # string
+        rfModel: SomeValue  # string
+        width: 1  #  number
+        length: 1  #  number
+        height: 1  #  number
+    type: # valid values are 'area',
+      # 'building',
+      # 'floor'.
+      SomeValue  # string, required

@@ -1,0 +1,23 @@
+---
+# tasks file forpnp_device
+# From file: pnp_device.py
+- name: get_device_count
+
+  cisco.dnac.pnp_device:
+    state: query  # required
+    count: True  # boolean, required
+    cm_state: SomeValue  # string
+    last_contact: True  # boolean
+    name: SomeValue  # string
+    onb_state: SomeValue  # string
+    pid: SomeValue  # string
+    project_id: SomeValue  # string
+    project_name: SomeValue  # string
+    serial_number: SomeValue  # string
+    smart_account_id: SomeValue  # string
+    source: SomeValue  # string
+    _state: SomeValue  # string
+    virtual_account_id: SomeValue  # string
+    workflow_id: SomeValue  # string
+    workflow_name: SomeValue  # string
+  register: nm_get_device_count

@@ -1,0 +1,9 @@
+---
+# tasks file forclient_enrichment_details
+# From file: client_enrichment_details.py
+- name: get_client_enrichment_details
+
+  cisco.dnac.client_enrichment_details:
+    state: query  # required
+    headers:  # required
+  register: nm_get_client_enrichment_details

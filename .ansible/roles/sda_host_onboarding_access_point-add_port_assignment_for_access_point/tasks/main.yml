@@ -1,0 +1,14 @@
+---
+# tasks file forsda_host_onboarding_access_point
+# From file: sda_host_onboarding_access_point.py
+- name: add_port_assignment_for_access_point
+
+  cisco.dnac.sda_host_onboarding_access_point:
+    state: create  # required
+    payload:  # required
+    - siteNameHierarchy: SomeValue  # string
+      deviceManagementIpAddress: SomeValue  # string
+      interfaceName: SomeValue  # string
+      dataIpAddressPoolName: SomeValue  # string
+      voiceIpAddressPoolName: SomeValue  # string
+      authenticateTemplateName: SomeValue  # string

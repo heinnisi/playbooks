@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - net_lldp_interface-Delete-aggregate-of-LLDP-interface-configurations

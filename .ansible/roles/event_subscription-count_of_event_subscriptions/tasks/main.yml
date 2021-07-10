@@ -1,0 +1,10 @@
+---
+# tasks file forevent_subscription
+# From file: event_subscription.py
+- name: count_of_event_subscriptions
+
+  cisco.dnac.event_subscription:
+    state: query  # required
+    event_ids: SomeValue  # string, required
+    count: True  # boolean, required
+  register: nm_count_of_event_subscriptions

@@ -1,0 +1,5 @@
+---
+# tasks file forcli_command
+# From file: cli_command.py
+- name: run command expecting user confirmation
+

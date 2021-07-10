@@ -1,0 +1,10 @@
+---
+# tasks file forinterface
+# From file: interface.py
+- name: get_all_interfaces
+
+  cisco.dnac.interface:
+    state: query  # required
+    limit: 1  #  number
+    offset: 1  #  number
+  register: nm_get_all_interfaces

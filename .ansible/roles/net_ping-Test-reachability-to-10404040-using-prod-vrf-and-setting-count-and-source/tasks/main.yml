@@ -1,0 +1,11 @@
+---
+# tasks file fornet_ping
+# From file: net_ping.py
+- name: Test reachability to 10.40.40.40 using prod vrf and setting count and source
+
+  ansible.netcommon.net_ping:
+    dest: 10.40.40.40
+    source: loopback0
+    vrf: prod
+    count: 20
+"""

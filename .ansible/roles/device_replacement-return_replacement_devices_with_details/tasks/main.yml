@@ -1,0 +1,19 @@
+---
+# tasks file fordevice_replacement
+# From file: device_replacement.py
+- name: return_replacement_devices_with_details
+
+  cisco.dnac.device_replacement:
+    state: query  # required
+    family: SomeValue  # string
+    faulty_device_name: SomeValue  # string
+    faulty_device_platform: SomeValue  # string
+    faulty_device_serial_number: SomeValue  # string
+    limit: 1  #  integer
+    offset: 1  #  integer
+    replacement_device_platform: SomeValue  # string
+    replacement_device_serial_number: SomeValue  # string
+    replacement_status: SomeValue  # string
+    sort_by: SomeValue  # string
+    sort_order: SomeValue  # string
+  register: nm_return_replacement_devices_with_details

@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - network_device_autocomplete-retrieves_all_network_devices

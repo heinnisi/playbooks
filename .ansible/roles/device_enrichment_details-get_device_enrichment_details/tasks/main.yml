@@ -1,0 +1,9 @@
+---
+# tasks file fordevice_enrichment_details
+# From file: device_enrichment_details.py
+- name: get_device_enrichment_details
+
+  cisco.dnac.device_enrichment_details:
+    state: query  # required
+    headers:  # required
+  register: nm_get_device_enrichment_details

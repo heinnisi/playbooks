@@ -1,0 +1,8 @@
+---
+# tasks file forsda_auth_profile
+# From file: sda_auth_profile.py
+- name: delete_default_authentication_profile
+
+  cisco.dnac.sda_auth_profile:
+    state: delete  # required
+    site_name_hierarchy: SomeValue  # string, required

@@ -1,0 +1,8 @@
+---
+# tasks file fornetwork_device_config
+# From file: network_device_config.py
+- name: get_device_config_for_all_devices
+
+  cisco.dnac.network_device_config:
+    state: query  # required
+  register: nm_get_device_config_for_all_devices

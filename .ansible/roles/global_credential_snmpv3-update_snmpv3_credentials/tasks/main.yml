@@ -1,0 +1,28 @@
+---
+# tasks file forglobal_credential_snmpv3
+# From file: global_credential_snmpv3.py
+- name: update_snmpv3_credentials
+
+  cisco.dnac.global_credential_snmpv3:
+    state: update  # required
+    snmpMode: # valid values are 'AUTHPRIV',
+      # 'AUTHNOPRIV',
+      # 'NOAUTHNOPRIV'.
+      SomeValue  # string, required
+    username: SomeValue  # string, required
+    authPassword: SomeValue  # string
+    authType: # valid values are 'SHA',
+      # 'MD5'.
+      SomeValue  # string
+    comments: SomeValue  # string
+    credentialType: # valid values are 'GLOBAL',
+      # 'APP'.
+      SomeValue  # string
+    description: SomeValue  # string
+    id: SomeValue  # string
+    instanceTenantId: SomeValue  # string
+    instanceUuid: SomeValue  # string
+    privacyPassword: SomeValue  # string
+    privacyType: # valid values are 'DES',
+      # 'AES128'.
+      SomeValue  # string

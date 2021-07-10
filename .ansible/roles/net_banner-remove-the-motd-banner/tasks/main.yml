@@ -1,0 +1,8 @@
+---
+# tasks file fornet_banner
+# From file: net_banner.py
+- name: remove the motd banner
+
+  ansible.netcommon.net_banner:
+    banner: motd
+    state: absent

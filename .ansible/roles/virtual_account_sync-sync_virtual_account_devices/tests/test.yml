@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - virtual_account_sync-sync_virtual_account_devices

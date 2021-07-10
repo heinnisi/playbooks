@@ -1,0 +1,8 @@
+---
+# tasks file forpnp_device
+# From file: pnp_device.py
+- name: delete_device_by_id_from_pnp
+
+  cisco.dnac.pnp_device:
+    state: delete  # required
+    id: SomeValue  # string, required

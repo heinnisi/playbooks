@@ -1,0 +1,8 @@
+---
+# tasks file forglobal_pool
+# From file: global_pool.py
+- name: delete_global_ip_pool
+
+  cisco.dnac.global_pool:
+    state: delete  # required
+    id: SomeValue  # string, required

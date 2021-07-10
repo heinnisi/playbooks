@@ -1,0 +1,13 @@
+---
+# tasks file fornet_vrf
+# From file: net_vrf.py
+- name: Delete aggregate of VRFs
+
+  ansible.netcommon.net_vrf:
+    aggregate:
+    - name: test2
+    - name: test3
+    - name: test4
+    - name: test5
+    state: absent
+"""

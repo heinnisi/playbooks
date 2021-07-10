@@ -1,0 +1,11 @@
+---
+# tasks file forapplication_set
+# From file: application_set.py
+- name: get_application_sets
+
+  cisco.dnac.application_set:
+    state: query  # required
+    limit: 1  #  number
+    name: SomeValue  # string
+    offset: 1  #  number
+  register: nm_get_application_sets
