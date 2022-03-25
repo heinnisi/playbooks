@@ -1,5 +1,5 @@
 ---
-# tasks file forglobal_credential_snmpv3
+# tasks file for :global_credential_snmpv3
 # From file: global_credential_snmpv3.py
 - name: update_snmpv3_credentials
 

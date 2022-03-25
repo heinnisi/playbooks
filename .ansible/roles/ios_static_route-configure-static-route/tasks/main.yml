@@ -1,5 +1,5 @@
 ---
-# tasks file forios_static_route
+# tasks file for :ios_static_route
 # From file: ios_static_route.py
 - name: configure static route
 

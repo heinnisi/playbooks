@@ -1,5 +1,5 @@
 ---
-# tasks file forios_lldp_global
+# tasks file for :ios_lldp_global
 # From file: ios_lldp_global.py
 - name: Render the commands for provided  configuration
 

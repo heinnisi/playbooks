@@ -1,5 +1,5 @@
 ---
-# tasks file fornetwork_device_poller_legit_reads
+# tasks file for :network_device_poller_legit_reads
 # From file: network_device_poller_legit_reads.py
 - name: get_all_keywords_of_clis_accepted
 

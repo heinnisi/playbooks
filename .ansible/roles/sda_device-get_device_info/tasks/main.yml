@@ -1,5 +1,5 @@
 ---
-# tasks file forsda_device
+# tasks file for :sda_device
 # From file: sda_device.py
 - name: get_device_info
 

@@ -1,5 +1,5 @@
 ---
-# tasks file forios_config
+# tasks file for :ios_config
 # From file: ios_config.py
 - name: configure top level configuration
 

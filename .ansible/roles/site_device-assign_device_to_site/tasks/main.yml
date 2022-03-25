@@ -1,5 +1,5 @@
 ---
-# tasks file forsite_device
+# tasks file for :site_device
 # From file: site_device.py
 - name: assign_device_to_site
 

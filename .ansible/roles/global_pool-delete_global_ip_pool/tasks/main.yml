@@ -1,5 +1,5 @@
 ---
-# tasks file forglobal_pool
+# tasks file for :global_pool
 # From file: global_pool.py
 - name: delete_global_ip_pool
 

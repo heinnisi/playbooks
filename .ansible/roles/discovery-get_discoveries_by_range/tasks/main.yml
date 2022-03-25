@@ -1,5 +1,5 @@
 ---
-# tasks file fordiscovery
+# tasks file for :discovery
 # From file: discovery.py
 - name: get_discoveries_by_range
 

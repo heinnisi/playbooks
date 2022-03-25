@@ -1,5 +1,5 @@
 ---
-# tasks file fornetwork_device_poller_read_request
+# tasks file for :network_device_poller_read_request
 # From file: network_device_poller_read_request.py
 - name: run_read_only_commands_on_devices
 

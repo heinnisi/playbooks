@@ -1,5 +1,5 @@
 ---
-# tasks file forios_lldp_interfaces
+# tasks file for :ios_lldp_interfaces
 # From file: ios_lldp_interfaces.py
 - name: Render the commands for provided  configuration
 

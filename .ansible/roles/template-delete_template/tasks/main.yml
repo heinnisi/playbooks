@@ -1,5 +1,5 @@
 ---
-# tasks file fortemplate
+# tasks file for :template
 # From file: template.py
 - name: delete_template
 

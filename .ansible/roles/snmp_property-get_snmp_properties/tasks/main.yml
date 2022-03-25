@@ -1,5 +1,5 @@
 ---
-# tasks file forsnmp_property
+# tasks file for :snmp_property
 # From file: snmp_property.py
 - name: get_snmp_properties
 

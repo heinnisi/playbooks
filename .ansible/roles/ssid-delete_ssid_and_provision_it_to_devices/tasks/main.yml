@@ -1,5 +1,5 @@
 ---
-# tasks file forssid
+# tasks file for :ssid
 # From file: ssid.py
 - name: delete_ssid_and_provision_it_to_devices
 

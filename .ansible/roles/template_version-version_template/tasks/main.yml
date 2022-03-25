@@ -1,5 +1,5 @@
 ---
-# tasks file fortemplate_version
+# tasks file for :template_version
 # From file: template_version.py
 - name: version_template
 

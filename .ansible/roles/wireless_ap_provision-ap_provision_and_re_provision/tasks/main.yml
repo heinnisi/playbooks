@@ -1,5 +1,5 @@
 ---
-# tasks file forwireless_ap_provision
+# tasks file for :wireless_ap_provision
 # From file: wireless_ap_provision.py
 - name: ap_provision_and_re_provision
 

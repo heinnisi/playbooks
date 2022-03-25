@@ -1,5 +1,5 @@
 ---
-# tasks file forios_static_routes
+# tasks file for :ios_static_routes
 # From file: ios_static_routes.py
 - name: Override provided configuration with device configuration
 

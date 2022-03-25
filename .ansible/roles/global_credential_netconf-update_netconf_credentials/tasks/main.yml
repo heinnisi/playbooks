@@ -1,5 +1,5 @@
 ---
-# tasks file forglobal_credential_netconf
+# tasks file for :global_credential_netconf
 # From file: global_credential_netconf.py
 - name: update_netconf_credentials
 

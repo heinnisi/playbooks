@@ -1,5 +1,5 @@
 ---
-# tasks file fornetwork_device_sync
+# tasks file for :network_device_sync
 # From file: network_device_sync.py
 - name: sync_devices_using_forcesync
 

@@ -1,5 +1,5 @@
 ---
-# tasks file forios_logging
+# tasks file for :ios_logging
 # From file: ios_logging.py
 - name: remove host logging configuration
 

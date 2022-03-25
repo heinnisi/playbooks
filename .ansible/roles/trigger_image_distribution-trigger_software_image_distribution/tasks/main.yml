@@ -1,5 +1,5 @@
 ---
-# tasks file fortrigger_image_distribution
+# tasks file for :trigger_image_distribution
 # From file: trigger_image_distribution.py
 - name: trigger_software_image_distribution
 

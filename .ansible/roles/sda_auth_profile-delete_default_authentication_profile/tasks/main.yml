@@ -1,5 +1,5 @@
 ---
-# tasks file forsda_auth_profile
+# tasks file for :sda_auth_profile
 # From file: sda_auth_profile.py
 - name: delete_default_authentication_profile
 

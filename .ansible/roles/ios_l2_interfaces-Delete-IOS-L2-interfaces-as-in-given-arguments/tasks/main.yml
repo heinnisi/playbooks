@@ -1,5 +1,5 @@
 ---
-# tasks file forios_l2_interfaces
+# tasks file for :ios_l2_interfaces
 # From file: ios_l2_interfaces.py
 - name: Delete IOS L2 interfaces as in given arguments
 

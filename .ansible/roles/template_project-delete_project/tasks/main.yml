@@ -1,5 +1,5 @@
 ---
-# tasks file fortemplate_project
+# tasks file for :template_project
 # From file: template_project.py
 - name: delete_project
 

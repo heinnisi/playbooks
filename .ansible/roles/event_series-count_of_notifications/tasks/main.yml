@@ -1,5 +1,5 @@
 ---
-# tasks file forevent_series
+# tasks file for :event_series
 # From file: event_series.py
 - name: count_of_notifications
 

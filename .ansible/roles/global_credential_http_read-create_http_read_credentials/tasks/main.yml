@@ -1,5 +1,5 @@
 ---
-# tasks file forglobal_credential_http_read
+# tasks file for :global_credential_http_read
 # From file: global_credential_http_read.py
 - name: create_http_read_credentials
 

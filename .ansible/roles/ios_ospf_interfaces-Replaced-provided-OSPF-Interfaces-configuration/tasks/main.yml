@@ -1,5 +1,5 @@
 ---
-# tasks file forios_ospf_interfaces
+# tasks file for :ios_ospf_interfaces
 # From file: ios_ospf_interfaces.py
 - name: Replaced provided OSPF Interfaces configuration
 

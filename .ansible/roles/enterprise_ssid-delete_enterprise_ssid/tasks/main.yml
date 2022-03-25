@@ -1,5 +1,5 @@
 ---
-# tasks file forenterprise_ssid
+# tasks file for :enterprise_ssid
 # From file: enterprise_ssid.py
 - name: delete_enterprise_ssid
 

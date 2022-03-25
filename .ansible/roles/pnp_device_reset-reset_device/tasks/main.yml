@@ -1,5 +1,5 @@
 ---
-# tasks file forpnp_device_reset
+# tasks file for :pnp_device_reset
 # From file: pnp_device_reset.py
 - name: reset_device
 

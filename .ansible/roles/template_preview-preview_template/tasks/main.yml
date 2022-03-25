@@ -1,5 +1,5 @@
 ---
-# tasks file fortemplate_preview
+# tasks file for :template_preview
 # From file: template_preview.py
 - name: preview_template
 

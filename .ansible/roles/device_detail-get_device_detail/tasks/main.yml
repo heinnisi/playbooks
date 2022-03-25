@@ -1,5 +1,5 @@
 ---
-# tasks file fordevice_detail
+# tasks file for :device_detail
 # From file: device_detail.py
 - name: get_device_detail
 

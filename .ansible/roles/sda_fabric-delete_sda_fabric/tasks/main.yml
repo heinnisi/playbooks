@@ -1,5 +1,5 @@
 ---
-# tasks file forsda_fabric
+# tasks file for :sda_fabric
 # From file: sda_fabric.py
 - name: delete_sda_fabric
 

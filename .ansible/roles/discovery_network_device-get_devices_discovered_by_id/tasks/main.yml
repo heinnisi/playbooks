@@ -1,5 +1,5 @@
 ---
-# tasks file fordiscovery_network_device
+# tasks file for :discovery_network_device
 # From file: discovery_network_device.py
 - name: get_devices_discovered_by_id
 

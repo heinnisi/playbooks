@@ -1,5 +1,5 @@
 ---
-# tasks file forglobal_credential
+# tasks file for :global_credential
 # From file: global_credential.py
 - name: get_credential_sub_type_by_credential_id
 

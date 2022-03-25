@@ -1,5 +1,5 @@
 ---
-# tasks file forglobal_credential_snmpv2_write_community
+# tasks file for :global_credential_snmpv2_write_community
 # From file: global_credential_snmpv2_write_community.py
 - name: update_snmp_write_community
 

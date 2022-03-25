@@ -1,5 +1,5 @@
 ---
-# tasks file forios_lldp
+# tasks file for :ios_lldp
 # From file: ios_lldp.py
 - name: Disable LLDP service
 

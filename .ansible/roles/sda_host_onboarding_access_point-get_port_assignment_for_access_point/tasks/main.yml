@@ -1,5 +1,5 @@
 ---
-# tasks file forsda_host_onboarding_access_point
+# tasks file for :sda_host_onboarding_access_point
 # From file: sda_host_onboarding_access_point.py
 - name: get_port_assignment_for_access_point
 

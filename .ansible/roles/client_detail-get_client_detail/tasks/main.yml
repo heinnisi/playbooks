@@ -1,5 +1,5 @@
 ---
-# tasks file forclient_detail
+# tasks file for :client_detail
 # From file: client_detail.py
 - name: get_client_detail
 

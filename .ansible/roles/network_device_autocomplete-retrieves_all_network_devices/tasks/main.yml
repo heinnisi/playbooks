@@ -1,5 +1,5 @@
 ---
-# tasks file fornetwork_device_autocomplete
+# tasks file for :network_device_autocomplete
 # From file: network_device_autocomplete.py
 - name: retrieves_all_network_devices
 

@@ -1,5 +1,5 @@
 ---
-# tasks file fordiscovery_job
+# tasks file for :discovery_job
 # From file: discovery_job.py
 - name: get_discovery_jobs_by_ip
 

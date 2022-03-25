@@ -1,5 +1,5 @@
 ---
-# tasks file forpnp_device_site_config_preview
+# tasks file for :pnp_device_site_config_preview
 # From file: pnp_device_site_config_preview.py
 - name: preview_config
 

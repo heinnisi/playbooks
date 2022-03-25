@@ -1,5 +1,5 @@
 ---
-# tasks file forios_lag_interfaces
+# tasks file for :ios_lag_interfaces
 # From file: ios_lag_interfaces.py
 - name: "Delete all configured LAG attributes for interfaces (Note: This won't delete the interface itself)"
 

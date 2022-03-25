@@ -1,5 +1,5 @@
 - name:  Set NTP server on node
-  cisco.ios.ios_ntp:
+ ios_ntp:
     server: 16.58.64.14
     source_int: Loopback0
     logging: false

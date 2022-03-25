@@ -1,5 +1,5 @@
 ---
-# tasks file forios_facts
+# tasks file for :ios_facts
 # From file: ios_facts.py
 - name: Gather interfaces resource and minimal legacy facts
 

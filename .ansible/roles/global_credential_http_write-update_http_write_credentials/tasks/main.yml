@@ -1,5 +1,5 @@
 ---
-# tasks file forglobal_credential_http_write
+# tasks file for :global_credential_http_write
 # From file: global_credential_http_write.py
 - name: update_http_write_credentials
 

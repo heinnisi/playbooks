@@ -1,5 +1,5 @@
 ---
-# tasks file fordevice_credential
+# tasks file for :device_credential
 # From file: device_credential.py
 - name: update_device_credentials
 

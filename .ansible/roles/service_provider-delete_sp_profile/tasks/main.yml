@@ -1,5 +1,5 @@
 ---
-# tasks file forservice_provider
+# tasks file for :service_provider
 # From file: service_provider.py
 - name: delete_sp_profile
 

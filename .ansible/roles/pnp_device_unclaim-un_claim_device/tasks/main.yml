@@ -1,5 +1,5 @@
 ---
-# tasks file forpnp_device_unclaim
+# tasks file for :pnp_device_unclaim
 # From file: pnp_device_unclaim.py
 - name: un_claim_device
 

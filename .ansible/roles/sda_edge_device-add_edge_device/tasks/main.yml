@@ -1,5 +1,5 @@
 ---
-# tasks file forsda_edge_device
+# tasks file for :sda_edge_device
 # From file: sda_edge_device.py
 - name: add_edge_device
 

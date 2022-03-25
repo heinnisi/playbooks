@@ -1,5 +1,5 @@
 ---
-# tasks file forapplications
+# tasks file for :applications
 # From file: applications.py
 - name: get_applications_count
 

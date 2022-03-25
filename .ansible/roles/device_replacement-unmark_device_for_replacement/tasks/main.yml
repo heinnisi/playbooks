@@ -1,5 +1,5 @@
 ---
-# tasks file fordevice_replacement
+# tasks file for :device_replacement
 # From file: device_replacement.py
 - name: unmark_device_for_replacement
 

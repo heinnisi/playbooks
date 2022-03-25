@@ -1,5 +1,5 @@
 ---
-# tasks file fortrigger_image_activation
+# tasks file for :trigger_image_activation
 # From file: trigger_image_activation.py
 - name: trigger_software_image_activation
 

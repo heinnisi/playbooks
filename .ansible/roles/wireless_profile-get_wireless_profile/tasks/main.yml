@@ -1,5 +1,5 @@
 ---
-# tasks file forwireless_profile
+# tasks file for :wireless_profile
 # From file: wireless_profile.py
 - name: get_wireless_profile
 

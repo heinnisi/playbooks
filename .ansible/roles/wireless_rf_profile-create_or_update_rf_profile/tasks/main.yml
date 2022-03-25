@@ -1,5 +1,5 @@
 ---
-# tasks file forwireless_rf_profile
+# tasks file for :wireless_rf_profile
 # From file: wireless_rf_profile.py
 - name: create_or_update_rf_profile
 

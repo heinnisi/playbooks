@@ -1,5 +1,5 @@
 ---
-# tasks file forsda_control_plane_device
+# tasks file for :sda_control_plane_device
 # From file: sda_control_plane_device.py
 - name: add_control_plane_device
 

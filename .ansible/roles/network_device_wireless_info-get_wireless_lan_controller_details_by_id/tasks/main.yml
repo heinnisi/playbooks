@@ -1,5 +1,5 @@
 ---
-# tasks file fornetwork_device_wireless_info
+# tasks file for :network_device_wireless_info
 # From file: network_device_wireless_info.py
 - name: get_wireless_lan_controller_details_by_id
 

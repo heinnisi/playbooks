@@ -1,5 +1,5 @@
 ---
-# tasks file fornetwork_device_functional_capability
+# tasks file for :network_device_functional_capability
 # From file: network_device_functional_capability.py
 - name: get_functional_capability_for_devices
 

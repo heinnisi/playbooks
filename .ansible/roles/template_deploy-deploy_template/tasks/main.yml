@@ -1,5 +1,5 @@
 ---
-# tasks file fortemplate_deploy
+# tasks file for :template_deploy
 # From file: template_deploy.py
 - name: deploy_template
 

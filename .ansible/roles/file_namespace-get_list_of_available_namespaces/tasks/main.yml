@@ -1,5 +1,5 @@
 ---
-# tasks file forfile_namespace
+# tasks file for :file_namespace
 # From file: file_namespace.py
 - name: get_list_of_available_namespaces
 

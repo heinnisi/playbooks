@@ -1,5 +1,5 @@
 ---
-# tasks file forsda_virtual_network_ip_pool
+# tasks file for :sda_virtual_network_ip_pool
 # From file: sda_virtual_network_ip_pool.py
 - name: delete_ip_pool_from_sda_virtual_network
 

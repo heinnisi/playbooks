@@ -1,5 +1,5 @@
 ---
-# tasks file forpnp_device_import
+# tasks file for :pnp_device_import
 # From file: pnp_device_import.py
 - name: import_devices_in_bulk
 

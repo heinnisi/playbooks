@@ -1,5 +1,5 @@
 ---
-# tasks file forglobal_credential_cli
+# tasks file for :global_credential_cli
 # From file: global_credential_cli.py
 - name: create_cli_credentials
 

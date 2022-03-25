@@ -1,5 +1,5 @@
 ---
-# tasks file forevent_subscription
+# tasks file for :event_subscription
 # From file: event_subscription.py
 - name: count_of_event_subscriptions
 

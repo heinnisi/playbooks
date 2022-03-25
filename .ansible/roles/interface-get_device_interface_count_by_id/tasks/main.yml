@@ -1,5 +1,5 @@
 ---
-# tasks file forinterface
+# tasks file for :interface
 # From file: interface.py
 - name: get_device_interface_count_by_id
 

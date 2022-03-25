@@ -1,5 +1,5 @@
 ---
-# tasks file forpnp_settings
+# tasks file for :pnp_settings
 # From file: pnp_settings.py
 - name: update_pnp_global_settings
 

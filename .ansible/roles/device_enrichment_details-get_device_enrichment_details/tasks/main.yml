@@ -1,5 +1,5 @@
 ---
-# tasks file fordevice_enrichment_details
+# tasks file for :device_enrichment_details
 # From file: device_enrichment_details.py
 - name: get_device_enrichment_details
 

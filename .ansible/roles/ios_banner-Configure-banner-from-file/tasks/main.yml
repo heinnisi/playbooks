@@ -1,5 +1,5 @@
 ---
-# tasks file forios_banner
+# tasks file for :ios_banner
 # From file: ios_banner.py
 - name: Configure banner from file
 

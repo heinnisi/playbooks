@@ -1,5 +1,5 @@
 ---
-# tasks file forsda_border_device
+# tasks file for :sda_border_device
 # From file: sda_border_device.py
 - name: gets_border_device_detail
 

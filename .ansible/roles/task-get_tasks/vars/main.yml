@@ -1,2 +1,6 @@
 ---
 # vars file for task-get_tasks
+  vars:
+    ansible_user: admin
+    ansible_password: aoii
+

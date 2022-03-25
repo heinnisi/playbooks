@@ -1,5 +1,5 @@
 ---
-# tasks file fornfv_provision_detail
+# tasks file for :nfv_provision_detail
 # From file: nfv_provision_detail.py
 - name: nfv_provisioning_detail
 

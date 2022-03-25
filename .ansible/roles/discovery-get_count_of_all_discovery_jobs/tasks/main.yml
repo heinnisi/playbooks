@@ -1,5 +1,5 @@
 ---
-# tasks file fordiscovery
+# tasks file for :discovery
 # From file: discovery.py
 - name: get_count_of_all_discovery_jobs
 

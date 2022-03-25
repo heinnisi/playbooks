@@ -1,5 +1,5 @@
 ---
-# tasks file forpnp_device
+# tasks file for :pnp_device
 # From file: pnp_device.py
 - name: add_device
 
